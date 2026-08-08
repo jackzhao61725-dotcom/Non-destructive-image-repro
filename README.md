@@ -2,9 +2,7 @@
 
 This release candidate contains the numerical model and inference code used to
 study repeated, conditionally re-equilibrated imaging of a polarised
-`166Er` condensate. It is a code-focused reproduction repository: dissertation
-source, AI operating material, hand-off notes, historical notebooks and retained
-result archives are deliberately absent.
+`166Er` condensate. It is a code-focused reproduction repository.
 
 The model compares two independently minimised equilibrium endpoints,
 `B_parallel_y` and `B_parallel_z`, under a common PCI measurement design. It
