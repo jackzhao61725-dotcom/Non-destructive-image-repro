@@ -59,10 +59,12 @@ hashes in `configs/reference_state.json`; its measured values required by these
 drivers are already transcribed with provenance, so the commands do not download
 data.
 
-## Release status and licence
+## Source snapshot and licence
 
 This is a local release candidate prepared from source commit
-`afc8050fbe86c7ce5741fec608bb354591790f03`. No remote has been configured and
-no licence has yet been selected. Until the copyright holder adds a licence,
-the code is available for inspection but no permission for reuse or
-redistribution is granted.
+`afc8050fbe86c7ce5741fec608bb354591790f03`. The reproduction repository is
+published at
+`https://github.com/jackzhao61725-dotcom/Non-destructive-image-repro`.
+
+The code is released under the BSD 3-Clause License. See `LICENSE` for the
+terms governing reuse and redistribution.

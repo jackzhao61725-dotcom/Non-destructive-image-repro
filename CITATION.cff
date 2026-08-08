@@ -7,3 +7,6 @@ authors:
     given-names: Yifeng
 version: 1.0.0-rc.1
 date-released: 2026-08-08
+repository-code: "https://github.com/jackzhao61725-dotcom/Non-destructive-image-repro"
+url: "https://github.com/jackzhao61725-dotcom/Non-destructive-image-repro"
+license: BSD-3-Clause
