@@ -1,0 +1,212 @@
+{
+  "atomic_constants": {
+    "dipolar_length_bohr": 65.4
+  },
+  "initial_conditions": [
+    {
+      "dipole_orientation_deg": 0.0,
+      "id": "oxford_bimodal_300ms",
+      "multiframe_thermodynamics": {
+        "cadence": {
+          "minimum_period_s": 0.1844,
+          "name": "full_resolution_ultra_quiet",
+          "status": "conditional_on_rethermalisation"
+        },
+        "closure": {
+          "accepted_average_xy": [
+            [
+              0.47081308526875065,
+              1.334518440289256
+            ],
+            [
+              0.4643225473035893,
+              1.3395904089436985
+            ],
+            [
+              0.4325994900100902,
+              1.3036087216842946
+            ],
+            [
+              0.4176881848763432,
+              1.289590141896353
+            ],
+            [
+              0.39226702292682464,
+              1.4171909867349777
+            ],
+            [
+              0.36461003554212523,
+              1.31745820857583
+            ],
+            [
+              0.3542092030363561,
+              1.3179214862211153
+            ],
+            [
+              0.33116277547327666,
+              1.2347685438994767
+            ],
+            [
+              0.3187001477501961,
+              1.3379715798737246
+            ],
+            [
+              0.32043975082469733,
+              1.3071837317499697
+            ],
+            [
+              0.29898608346717026,
+              1.2873983795391388
+            ],
+            [
+              0.27854324833388294,
+              1.2875140538411396
+            ],
+            [
+              0.2551064270721439,
+              1.265360824938664
+            ],
+            [
+              0.23806769345660145,
+              1.2928177372999121
+            ],
+            [
+              0.1987088646752173,
+              1.3190836839797095
+            ],
+            [
+              0.1557927430133937,
+              1.2594782397620807
+            ],
+            [
+              0.11204979202775288,
+              1.2494002217282032
+            ],
+            [
+              0.0716184984423207,
+              1.2251227773314024
+            ],
+            [
+              0.05534791450917296,
+              1.1789040074700623
+            ],
+            [
+              0.04233785492152755,
+              1.1263855781537435
+            ]
+          ],
+          "combined_calibration": {
+            "beta": 0.920276071517736,
+            "epsilon_dd": 0.902435305062547,
+            "magnetic_field_gauss": 1.4,
+            "sha256": "4a97d7599d7707a62ba8ab99b9fafe01d855cb0605d24ae9511851f522062694",
+            "source_csv_line": 10,
+            "zip_member": "DataForDipolarTc/Measurements/calibrations.csv"
+          },
+          "domain": {
+            "temperature_over_initial": [
+              0.9,
+              1.1
+            ],
+            "x_two_fifths": [
+              0.0423,
+              0.4708
+            ]
+          },
+          "measured_scale": {
+            "intercept": 1.10076826195,
+            "slope": 0.31161813155
+          },
+          "source_fit": {
+            "intercept": 1.1961283098330524,
+            "sha256": "e45239c885ff0ca4005e0e7e4c59e40082c55f212ae3d1f3976dd6521bc2b19b",
+            "slope": 0.3275456539102716,
+            "zip_member": "DataForDipolarTc/Fig2/Fig2c_fits.csv"
+          },
+          "validation_source": {
+            "sha256": "13be62c0b8a48d65972393d9fad5f351bdded8ba91fb82f8af4000958d4758d1",
+            "zip_member": "DataForDipolarTc/Fig2/Fig2c_avg_0deg.csv"
+          }
+        },
+        "closure_check_337_5_ms": {
+          "condensate_atoms": 18766.080321563903,
+          "sha256": "2e7bd0dbf144a1f94ec1a6f8ddc2d834791b6a61cc73d84d4d2e16727c7aee75",
+          "temperature_nk": 244.8834383148761,
+          "thermal_atoms": 199067.71730318808,
+          "use": "closure_check_only",
+          "zip_member": "DataForDipolarTc/Measurements/TrapI_edd=0.902_0deg_avg.csv"
+        },
+        "dataset_doi": "10.5287/ora-m8gpvdr2y",
+        "dataset_zip": {
+          "download_url": "https://ora.ox.ac.uk/objects/uuid:2cf11bf8-d45b-47c2-9f81-9e7dde1db3eb/files/sqz20sv821",
+          "filename": "DataForDipolarTc.zip",
+          "sha256": "29866041913ddaba543b1c4fe3f7f26558757a1be6379b97d13fff70dd36ffa5"
+        },
+        "raw_repetitions_source": {
+          "sha256": "1fae4c7b3d3ee3f87a8dfbffed37e6c845866a4361b735522cf22e5d55ed3fec",
+          "temperature_runtime_units": "nK",
+          "temperature_source_units": "K",
+          "zip_member": "DataForDipolarTc/Measurements/TrapI_edd=0.902_0deg_raw.csv"
+        },
+        "repetitions_300_ms": [
+          {
+            "condensate_atoms": 18292.2198430069,
+            "id": "oxford_300ms_rep_1_central",
+            "source_csv_line": 12,
+            "temperature_nk": 245.10243205732763,
+            "thermal_atoms": 199133.90988630912
+          },
+          {
+            "condensate_atoms": 19081.354878500057,
+            "id": "oxford_300ms_rep_2",
+            "source_csv_line": 72,
+            "temperature_nk": 245.2224397126496,
+            "thermal_atoms": 198665.04466909287
+          },
+          {
+            "condensate_atoms": 18726.23571043583,
+            "id": "oxford_300ms_rep_3",
+            "source_csv_line": 156,
+            "temperature_nk": 239.0464381859251,
+            "thermal_atoms": 184464.37972576497
+          }
+        ],
+        "status": "conditionally accepted thermodynamic contract under fixed trapped number, recoil-only deposition and complete inter-frame rethermalisation; retained result generation not authorised",
+        "trap_frequency_record": {
+          "convention": "angular frequencies are 2*pi times the listed Hz values",
+          "frequencies_hz": [
+            294.0,
+            14.0,
+            233.3
+          ],
+          "record_id": "TrapI_edd=0.902_0deg",
+          "source_authority": "docs/multiframe_heating_model_optimisation.md section 3"
+        }
+      },
+      "polarised_dipolar_tf_contract": {
+        "dipolar_length_source": "atomic_constants.dipolar_length_bohr",
+        "dipole_axis": "y",
+        "dipole_axis_index": 1,
+        "dipole_rotation_plane": "y-z",
+        "epsilon_dd_source": "multiframe_thermodynamics.closure.combined_calibration.epsilon_dd",
+        "fully_spin_polarised": true,
+        "imaging_axis": "x",
+        "orientation_sign_status": "the source fixes the y axis but not its signed laboratory direction; the sign is immaterial to dipolar TF and rank-2 response",
+        "scattering_length_policy": "derive dipolar_length_bohr / epsilon_dd; do not divide the two rounded paper display values",
+        "status": "approved conditional analytic target selected by the active optical-core runtime",
+        "theta_d_reference_axis": "y"
+      },
+      "scattering_length_bohr": 72.0,
+      "scattering_length_status": "rounded value reported in the source paper; retained for display/provenance while the active polarised dipolar-TF runtime derives a_s from a_dd/epsilon_dd"
+    }
+  ],
+  "schema_version": 1,
+  "source": {
+    "dataset_doi": "10.5287/ora-m8gpvdr2y",
+    "dataset_zip": {
+      "download_url": "https://ora.ox.ac.uk/objects/uuid:2cf11bf8-d45b-47c2-9f81-9e7dde1db3eb/files/sqz20sv821",
+      "filename": "DataForDipolarTc.zip",
+      "sha256": "29866041913ddaba543b1c4fe3f7f26558757a1be6379b97d13fff70dd36ffa5"
+    }
+  }
+}

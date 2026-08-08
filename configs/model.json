@@ -1,0 +1,203 @@
+{
+  "atom": {
+    "mass_number": 166.0,
+    "natural_linewidth_rad_s": 185353966.5617978,
+    "resonant_cross_section_m2": 7.678673341230137e-14,
+    "species": "166Er",
+    "transition_wavelength_m": 4.01e-07
+  },
+  "camera": {
+    "camera_output_shape": [
+      153,
+      153
+    ],
+    "full_well_electrons": 15000.0,
+    "object_plane_pixel_m": 6.5e-07,
+    "probe_power_mw": 1.0,
+    "quantum_efficiency": 0.65,
+    "read_noise_electrons": 0.7
+  },
+  "condensate": {
+    "atom_number": 18292.2198430069,
+    "dipolar_length_bohr": 65.4,
+    "dipole_axis": "y",
+    "dipole_axis_index": 1,
+    "epsilon_dd": 0.902435305062547,
+    "fully_spin_polarised": true,
+    "model": "polarised_dipolar_thomas_fermi_condensate_core",
+    "scattering_length_bohr": 72.47056895171804,
+    "scattering_length_status": "derived runtime value a_dd/epsilon_dd; source paper display value is retained separately",
+    "source_reported_scattering_length_bohr": 72.0,
+    "source_reported_scattering_length_status": "rounded value reported in the source paper; retained for display/provenance while the active polarised dipolar-TF runtime derives a_s from a_dd/epsilon_dd",
+    "temperature_k": 2.4510243205732764e-07,
+    "trap_frequencies_hz": [
+      294.0,
+      14.0,
+      233.3
+    ]
+  },
+  "constants": {
+    "atomic_mass_unit": 1.66053907e-27,
+    "bohr_radius_m": 5.29177211e-11,
+    "boltzmann_constant": 1.380649e-23,
+    "hbar": 1.054571817e-34,
+    "speed_of_light": 299792458.0
+  },
+  "dgi": {
+    "atom_free_intensity_over_incident": 0.0001,
+    "stop_optical_depth": 4.0,
+    "stop_optical_depth_convention": "base10_intensity"
+  },
+  "grid": {
+    "density_cut_points": 400,
+    "density_cut_span_rmax": 1.5,
+    "field_of_view_m": 0.0001,
+    "ngrid": 1024
+  },
+  "imaging_geometry": {
+    "axis_labels": [
+      "x",
+      "y",
+      "z"
+    ],
+    "camera_model": "Hamamatsu ORCA-Fusion C14440-20UP",
+    "camera_pixel_m": 6.5e-06,
+    "imaging_axis": 0,
+    "magnification": 10.0,
+    "object_plane_pixel_m": 6.5e-07,
+    "probe_diameter_m": 0.024
+  },
+  "pci": {
+    "atom_free_intensity_over_incident": 0.9025,
+    "phase_plate_phase_rad": 1.5707963267948966,
+    "phase_plate_transmittance": 0.95,
+    "phase_plate_transmittance_kind": "field_amplitude"
+  },
+  "readout_selection": {
+    "primary": "pci",
+    "secondary": "dgi",
+    "selection_basis": "both use the same selected transverse-projected rank-0 plus rank-2 eigenmode complex object and differ only in Fourier-plane reference handling",
+    "supported": [
+      "pci",
+      "dgi"
+    ]
+  },
+  "polarised_atomic_response": {
+    "complex_object_convention": "t(y,z) = exp[-OD(y,z)/2 + i*phi(y,z)]; phase and OD are coherent branch sums and the common-detuning selected-mode factor is applied exactly once",
+    "detuning_convention": {
+      "active_branch_treatment": "common_detuning",
+      "common_detuning_boundary": "at B=1.4 G the approximately 2.3 MHz adjacent-branch optical Zeeman scale is below 0.2% of the 1.5 GHz reference detuning; exact branch detunings remain available for coherent-response sensitivity checks",
+      "detuning_hz": "probe frequency minus nominal transition frequency, in cycles per second",
+      "dimensionless_detuning": "delta_q = 2*(2*pi*Delta_q_hz)/Gamma_rad_s",
+      "positive_detuning_phase_sign": "positive"
+    },
+    "eigenmode_line_strengths": {
+      "parallel_pi": 0.14285714285714285,
+      "parallel_pi_exact": "13/91",
+      "perpendicular_sigma_pair": 0.5054945054945055,
+      "perpendicular_sigma_pair_exact": "46/91",
+      "perpendicular_to_parallel_ratio_exact": "46/13",
+      "selected_manifold_scattering_fraction_from_sigma_minus_exact": "91/92"
+    },
+    "excluded": [
+      "nearby erbium levels and a calibrated multilevel complex polarizability",
+      "viewport ellipticity, polarisation impurity and spatial B or spin texture",
+      "cumulative optical pumping and open-channel metastable leakage",
+      "arbitrary Jones superpositions and coherent Raman dynamics"
+    ],
+    "geometry": {
+      "geometry_role": "project-selected ideal across-cigar imaging design; not a transcription of the Oxford absorption arm",
+      "probe_wavevector_unit_vector": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "quantisation_axis_unit_vector": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "rotation_policy": "if B rotates within the y-z plane, keep epsilon_hat proportional to k_hat cross B_hat",
+      "selected_linear_eigenmode": "perpendicular",
+      "selected_polarisation_definition": "epsilon_hat = normalised(k_hat cross B_hat)",
+      "selected_polarisation_unit_vector": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "theta_d_deg": 0.0
+    },
+    "model_status": "ideal isolated-401-nm-line, fully polarised, weak-probe screening model; not a calibrated multilevel apparatus response",
+    "rank_factors": {
+      "full_circular_response_difference": -0.989010989010989,
+      "full_circular_response_difference_exact": "-90/91 = q=+1 minus q=-1",
+      "longitudinal_component_policy": "discard the longitudinal component generated by the unprojected rank-1 term, consistently with a paraxial transverse field; arbitrary non-paraxial or vectorial propagation is outside this model",
+      "operator_convention": "K = k0 I + i k1 [B_hat cross] + (k2/2)(3 B_hat B_hat - I)",
+      "rank0_exact": "35/91 = 5/13",
+      "rank0_factor": 0.38461538461538464,
+      "rank1_helicity_exact": "-45/91",
+      "rank1_helicity_factor": -0.4945054945054945,
+      "rank2_exact": "-22/91",
+      "rank2_factor": -0.24175824175824176,
+      "transverse_projection_convention": "The physical Jones response is K_perp = P_k K P_k on the plane perpendicular to k_hat, with P_k = I - k_hat k_hat^T; all linear-eigenmode labels and eigenvalues in this config refer to K_perp, not to the unprojected three-dimensional K"
+    },
+    "scattering_convention": "construct each non-negative branch saturation numerator, sum them once in the shared denominator, then sum branch rates; never multiply a saturated unit-strength total by 46/91",
+    "selected_branches": [
+      {
+        "closure_status": "cycling within the selected J=6 to J'=7 manifold; metastable leakage is excluded",
+        "intensity_fraction": 0.5,
+        "intensity_fraction_exact": "1/2",
+        "label": "sigma_minus",
+        "q": -1,
+        "relative_line_strength": 1.0,
+        "relative_line_strength_exact": "1"
+      },
+      {
+        "closure_status": "non-cycling control branch; absent from the selected perpendicular eigenmode",
+        "intensity_fraction": 0.0,
+        "intensity_fraction_exact": "0",
+        "label": "pi",
+        "q": 0,
+        "relative_line_strength": 0.14285714285714285,
+        "relative_line_strength_exact": "1/7 = 13/91"
+      },
+      {
+        "closure_status": "weak non-cycling branch within the selected manifold",
+        "intensity_fraction": 0.5,
+        "intensity_fraction_exact": "1/2",
+        "label": "sigma_plus",
+        "q": 1,
+        "relative_line_strength": 0.01098901098901099,
+        "relative_line_strength_exact": "1/91"
+      }
+    ],
+    "sources": [
+      "https://physics.nist.gov/PhysRefData/Handbook/Tables/erbiumtable1.htm",
+      "https://doi.org/10.1103/PhysRevA.73.042112",
+      "https://doi.org/10.1103/PhysRevA.97.012509",
+      "https://doi.org/10.1103/PhysRevA.85.051401",
+      "https://arxiv.org/abs/0802.0836"
+    ],
+    "spherical_basis_convention": "q is defined relative to +B; q=-1 drives m_J=-6 to m_J'=-7, q=+1 drives m_J=-6 to m_J'=-5",
+    "transition": {
+      "excited_J": 7,
+      "ground_J": 6,
+      "ground_m_J": -6,
+      "label": "401 nm J=6,m_J=-6 to J'=7",
+      "line_strength_normalisation": "q=-1 stretched branch equals one",
+      "nuclear_spin": 0,
+      "species": "166Er"
+    },
+    "validity": [
+      "uniform B and a fully prepared J=6,m_J=-6 state",
+      "selected transverse linear eigenpolarisation epsilon_hat proportional to k_hat cross B_hat",
+      "weak probe, isolated J=6 to J'=7 line and common branch detuning",
+      "independent-atom thin complex object within one exposure"
+    ]
+  },
+  "schema_version": 1,
+  "source": {
+    "commit": "afc8050fbe86c7ce5741fec608bb354591790f03",
+    "repository": "https://github.com/jackzhao61725-dotcom/Non-destructive-image"
+  }
+}
