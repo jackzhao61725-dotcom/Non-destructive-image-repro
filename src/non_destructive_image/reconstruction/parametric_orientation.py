@@ -23,6 +23,7 @@ FloatArray = NDArray[np.floating]
 _ENDPOINT_LABELS = ("B_parallel_y", "B_parallel_z")
 _FIELD_ORIENTATIONS = ("y", "z")
 _EXPOSURES = {"atom": 1, "bright_reference": 1, "dark": 1}
+_CONTRACT_LABEL = "independent_orientation_pci_v1"
 
 
 def _immutable(values: ArrayLike) -> FloatArray:
@@ -33,7 +34,7 @@ def _immutable(values: ArrayLike) -> FloatArray:
 
 @dataclass(frozen=True)
 class ParametricOrientationProvenance:
-    """Identity and factorisation boundary for the v2 orientation estimator."""
+    """Identity and factorisation boundary for the public endpoint estimator."""
 
     contract_label: str
     endpoint_labels: tuple[str, str]
@@ -45,7 +46,7 @@ class ParametricOrientationProvenance:
     generator_reference_used: bool
 
     def __post_init__(self) -> None:
-        if self.contract_label != "chapter_5_orientation_information_contract_v2":
+        if self.contract_label != _CONTRACT_LABEL:
             raise ValueError("parametric orientation contract label changed")
         if tuple(self.endpoint_labels) != _ENDPOINT_LABELS:
             raise ValueError("endpoint labels must follow canonical By/Bz order")
@@ -91,7 +92,10 @@ class ParametricEndpointFitInput:
         if not isinstance(self.options, LinkedScalarFitOptions):
             raise TypeError("options must be LinkedScalarFitOptions")
         if dict(self.operator.independent_exposures_by_role) != _EXPOSURES:
-            raise ValueError("v2 requires one independent exposure per PCI raw role")
+            raise ValueError(
+                "the public endpoint estimator requires one independent exposure "
+                "per PCI raw role"
+            )
         if self.raw_block.observed_electrons[0].shape != self.operator.grid.camera_shape:
             raise ValueError("endpoint raw camera shape differs from its operator")
         if not np.array_equal(self.model.y_grid_m, self.operator.grid.y_grid_m) or not np.array_equal(
@@ -150,7 +154,7 @@ class ParametricEndpointFitInput:
 
 @dataclass(frozen=True, eq=False)
 class ParametricStartResult:
-    """One retained optimiser terminal from a predeclared start."""
+    """One optimiser terminal from a predeclared start."""
 
     start_id: str
     status: Literal["success", "fit_failure"]

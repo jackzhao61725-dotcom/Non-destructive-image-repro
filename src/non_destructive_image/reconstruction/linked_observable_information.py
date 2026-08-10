@@ -106,7 +106,7 @@ OBSERVABLE_UNITS: Mapping[str, str] = MappingProxyType(
 
 @dataclass(frozen=True)
 class ReferenceLightInferenceProvenance:
-    """Caller-declared provenance for the Chapter 5 primary inverse route.
+    """Caller-declared provenance for the linked two-exposure inverse route.
 
     The code can verify the flexible model family and reproduce the supplied
     linked fit from that model and operator.  It cannot infer how an upstream
@@ -135,18 +135,18 @@ class ReferenceLightInferenceProvenance:
     truth_derived_affine_calibration_used: bool
 
     def __post_init__(self) -> None:
-        if self.contract_label != "chapter_5_two_frame_information_contract_v1":
+        if self.contract_label != "linked_two_exposure_information_v1":
             raise ValueError("reference-light provenance contract label changed")
         if self.method not in ("PCI", "DGI"):
             raise ValueError("reference-light method must be PCI or DGI")
         fluence = float(self.fluence_mw_us)
         detuning = float(self.detuning_ghz)
         if not np.isfinite(fluence) or fluence != 300.0:
-            raise ValueError("Chapter 5 q1/q2 provenance requires F=300 mW us")
+            raise ValueError("linked two-exposure provenance requires F=300 mW us")
         if not np.isfinite(detuning) or detuning != 1.5:
-            raise ValueError("Chapter 5 q1/q2 provenance requires +1.5 GHz detuning")
+            raise ValueError("linked two-exposure provenance requires +1.5 GHz detuning")
         if self.selected_eigenmode != "perpendicular":
-            raise ValueError("Chapter 5 q1/q2 provenance requires the perpendicular mode")
+            raise ValueError("linked two-exposure provenance requires the perpendicular mode")
         exposure_indices = tuple(self.exposure_indices)
         state_indices = tuple(self.imaged_pre_pulse_state_indices)
         if exposure_indices != (1, 2) or any(
@@ -1858,7 +1858,7 @@ def fit_linked_zero_density_null(
 
 @dataclass(frozen=True, eq=False)
 class LinkedSyntheticBlankReference:
-    """Synthetic blank statistics retained only for development ranking."""
+    """Synthetic blank statistics used only for diagnostic ranking."""
 
     delta_data_gaussian_quasi_deviance: FloatArray
     case_ids: tuple[str, ...]

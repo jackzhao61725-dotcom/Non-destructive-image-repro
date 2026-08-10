@@ -1,0 +1,60 @@
+{
+  "classification": "software_verification_reference_not_experimental_data",
+  "config_sha256": {
+    "model.json": "932411944bd8b8f4e6f37a4683815e648ef24d0542374152ebe90533418e975e",
+    "reference_state.json": "12279bf702cca2f8da91d02a8e80f41b6c5ee396ef4135671745b06c211fc007",
+    "reproduction.json": "030e192cdd082d4a79be24942933f6126061bc3aa0df1a07ee53fdd0da900d50"
+  },
+  "description": "Release regression values for the public forward and fixed-seed inference drivers. These values verify software consistency; they are not experimental measurements or submitted-analysis evidence.",
+  "schema": "equilibrium_imaging_software_verification_reference_v1",
+  "sections": {
+    "forward": {
+      "checks": [
+        {"key": "by_label", "path": ["endpoint_states", 0, "label"], "expected": "B_parallel_y"},
+        {"key": "by_radius_x_um", "path": ["endpoint_states", 0, "radii_um", 0], "expected": 0.6789760547608573, "absolute_tolerance": 1e-6, "relative_tolerance": 5e-7},
+        {"key": "by_radius_y_um", "path": ["endpoint_states", 0, "radii_um", 1], "expected": 16.79882871309593, "absolute_tolerance": 1e-6, "relative_tolerance": 5e-7},
+        {"key": "by_radius_z_um", "path": ["endpoint_states", 0, "radii_um", 2], "expected": 0.8583410285799393, "absolute_tolerance": 1e-6, "relative_tolerance": 5e-7},
+        {"key": "by_sigma_y_um", "path": ["endpoint_states", 0, "projected_rms_widths_um", "sigma_y"], "expected": 6.349360441717577, "absolute_tolerance": 1e-6, "relative_tolerance": 5e-7},
+        {"key": "by_sigma_z_um", "path": ["endpoint_states", 0, "projected_rms_widths_um", "sigma_z"], "expected": 0.3244224145294148, "absolute_tolerance": 1e-6, "relative_tolerance": 5e-7},
+        {"key": "bz_label", "path": ["endpoint_states", 1, "label"], "expected": "B_parallel_z"},
+        {"key": "bz_radius_x_um", "path": ["endpoint_states", 1, "radii_um", 0], "expected": 0.6757963115117238, "absolute_tolerance": 1e-6, "relative_tolerance": 5e-7},
+        {"key": "bz_radius_y_um", "path": ["endpoint_states", 1, "radii_um", 1], "expected": 23.526433029483027, "absolute_tolerance": 1e-6, "relative_tolerance": 5e-7},
+        {"key": "bz_radius_z_um", "path": ["endpoint_states", 1, "radii_um", 2], "expected": 1.8295429401755572, "absolute_tolerance": 1e-6, "relative_tolerance": 5e-7},
+        {"key": "bz_sigma_y_um", "path": ["endpoint_states", 1, "projected_rms_widths_um", "sigma_y"], "expected": 8.892155861775429, "absolute_tolerance": 1e-6, "relative_tolerance": 5e-7},
+        {"key": "bz_sigma_z_um", "path": ["endpoint_states", 1, "projected_rms_widths_um", "sigma_z"], "expected": 0.6915022332312065, "absolute_tolerance": 1e-6, "relative_tolerance": 5e-7},
+        {"key": "delta_sigma_y_um", "path": ["orientation_contrast_um", "delta_sigma_y"], "expected": 2.5427954200578515, "absolute_tolerance": 2e-6, "relative_tolerance": 5e-7},
+        {"key": "delta_sigma_z_um", "path": ["orientation_contrast_um", "delta_sigma_z"], "expected": 0.36707981870179174, "absolute_tolerance": 2e-6, "relative_tolerance": 5e-7},
+        {"key": "scattered_photons_per_atom", "path": ["reference_probe", "total_scattered_photons_per_atom"], "expected": 0.010046446383986262, "absolute_tolerance": 1e-14, "relative_tolerance": 1e-11},
+        {"key": "dimensionless_detuning", "path": ["reference_probe", "dimensionless_detuning"], "expected": 101.69491525423727, "absolute_tolerance": 1e-10, "relative_tolerance": 1e-12},
+        {"key": "incident_saturation_parameter", "path": ["reference_probe", "incident_saturation_parameter"], "expected": 0.007393388273299572, "absolute_tolerance": 1e-14, "relative_tolerance": 1e-11},
+        {"key": "total_saturation_parameter", "path": ["reference_probe", "total_saturation_parameter"], "expected": 0.003737317149140443, "absolute_tolerance": 1e-14, "relative_tolerance": 1e-11},
+        {"key": "state1_core_fraction", "path": ["conditional_thermodynamic_sequence", "states", 1, "condensate_fraction"], "expected": 0.9139646458670534, "absolute_tolerance": 1e-9, "relative_tolerance": 1e-9},
+        {"key": "state1_temperature_nk", "path": ["conditional_thermodynamic_sequence", "states", 1, "temperature_nk"], "expected": 246.0711611362586, "absolute_tolerance": 1e-6, "relative_tolerance": 1e-9},
+        {"key": "state1_accepted", "path": ["conditional_thermodynamic_sequence", "states", 1, "accepted_frame"], "expected": true},
+        {"key": "state4_core_fraction", "path": ["conditional_thermodynamic_sequence", "states", 4, "condensate_fraction"], "expected": 0.6616101949713281, "absolute_tolerance": 1e-9, "relative_tolerance": 1e-9},
+        {"key": "state4_temperature_nk", "path": ["conditional_thermodynamic_sequence", "states", 4, "temperature_nk"], "expected": 249.01582453877705, "absolute_tolerance": 1e-6, "relative_tolerance": 1e-9},
+        {"key": "state4_accepted", "path": ["conditional_thermodynamic_sequence", "states", 4, "accepted_frame"], "expected": false},
+        {"key": "first_excluded_frame", "path": ["conditional_thermodynamic_sequence", "first_excluded_frame"], "expected": 4}
+      ],
+      "summary_keys": ["delta_sigma_y_um", "delta_sigma_z_um", "scattered_photons_per_atom"]
+    },
+    "inference": {
+      "checks": [
+        {"key": "draw_count", "path": ["draw_count"], "expected": 1},
+        {"key": "by_status", "path": ["draws", 0, "endpoints", 0, "status"], "expected": "success"},
+        {"key": "by_sigma_y_um", "path": ["draws", 0, "endpoints", 0, "observables", "sigma_y_um"], "expected": 6.335938325725229, "absolute_tolerance": 0.01, "relative_tolerance": 0.002},
+        {"key": "by_sigma_z_um", "path": ["draws", 0, "endpoints", 0, "observables", "sigma_z_um"], "expected": 0.2844210852304392, "absolute_tolerance": 0.01, "relative_tolerance": 0.002},
+        {"key": "bz_status", "path": ["draws", 0, "endpoints", 1, "status"], "expected": "success"},
+        {"key": "bz_sigma_y_um", "path": ["draws", 0, "endpoints", 1, "observables", "sigma_y_um"], "expected": 8.835162318331918, "absolute_tolerance": 0.01, "relative_tolerance": 0.002},
+        {"key": "bz_sigma_z_um", "path": ["draws", 0, "endpoints", 1, "observables", "sigma_z_um"], "expected": 0.73364208491778, "absolute_tolerance": 0.01, "relative_tolerance": 0.002},
+        {"key": "delta_sigma_y_estimate_um", "path": ["draws", 0, "contrasts", "sigma_y_um", "estimate_um"], "expected": 2.499223992606689, "absolute_tolerance": 0.02, "relative_tolerance": 0.005},
+        {"key": "delta_sigma_y_truth_um", "path": ["draws", 0, "contrasts", "sigma_y_um", "truth_um"], "expected": 2.5427954200578515, "absolute_tolerance": 1e-10, "relative_tolerance": 1e-11},
+        {"key": "delta_sigma_y_sign_correct", "path": ["draws", 0, "contrasts", "sigma_y_um", "sign_correct"], "expected": true},
+        {"key": "delta_sigma_z_estimate_um", "path": ["draws", 0, "contrasts", "sigma_z_um", "estimate_um"], "expected": 0.44922099968734086, "absolute_tolerance": 0.02, "relative_tolerance": 0.005},
+        {"key": "delta_sigma_z_truth_um", "path": ["draws", 0, "contrasts", "sigma_z_um", "truth_um"], "expected": 0.36707981870179174, "absolute_tolerance": 1e-10, "relative_tolerance": 1e-11},
+        {"key": "delta_sigma_z_sign_correct", "path": ["draws", 0, "contrasts", "sigma_z_um", "sign_correct"], "expected": true}
+      ],
+      "summary_keys": ["delta_sigma_y_estimate_um", "delta_sigma_z_estimate_um"]
+    }
+  }
+}

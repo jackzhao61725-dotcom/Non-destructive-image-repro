@@ -352,7 +352,7 @@ def simulate_raw_electron_frame(
     remain valid because Gaussian read noise is applied after photoelectron
     generation. ``seed_components`` creates a self-contained replay record;
     caller-owned ``rng`` is composable but explicitly not self-contained and
-    must not be used alone as retained stochastic provenance.
+    must not be used alone as complete stochastic provenance.
     """
 
     expected = _nonnegative_expected(expected_electrons, "expected_electrons")

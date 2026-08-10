@@ -97,7 +97,7 @@ def _provenance(
     cross_orientation_amplitude_calibration: bool = False,
 ) -> IndependentEndpointPairProvenance:
     return IndependentEndpointPairProvenance(
-        contract_label="chapter_5_orientation_information_contract_v1",
+        contract_label="independent_orientation_information_v1",
         endpoint_labels=("B_parallel_y", "B_parallel_z"),
         field_orientations=("y", "z"),
         imaging_axis="x",

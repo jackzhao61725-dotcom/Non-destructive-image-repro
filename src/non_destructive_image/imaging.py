@@ -280,7 +280,7 @@ def simulate_faraday_image(
     opposite circular phase shifts, the common FFT/pupil propagation, and the
     circular-to-linear recombination. The ``u``/``v`` keys preserve the
     admitted forward-model convention; explicit analyser ``H``/``V`` aliases
-    expose the dissertation convention
+    expose the scalar--tensor convention used by this model
     ``S = (I_H - I_V) / (I_H + I_V)``.
     """
 

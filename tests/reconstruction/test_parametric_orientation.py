@@ -72,7 +72,7 @@ def _operator(grid: ReconstructionGrid) -> PCILinkedRawOperator:
 
 def _provenance() -> ParametricOrientationProvenance:
     return ParametricOrientationProvenance(
-        contract_label="chapter_5_orientation_information_contract_v2",
+        contract_label="independent_orientation_pci_v1",
         endpoint_labels=("B_parallel_y", "B_parallel_z"),
         field_orientations=("y", "z"),
         imaging_axis="x",
@@ -219,7 +219,7 @@ def test_fit_failure_retains_all_starts_without_publishing_observables() -> None
 def test_provenance_forbids_generator_reference_access() -> None:
     with pytest.raises(ValueError, match="generator references"):
         ParametricOrientationProvenance(
-            contract_label="chapter_5_orientation_information_contract_v2",
+            contract_label="independent_orientation_pci_v1",
             endpoint_labels=("B_parallel_y", "B_parallel_z"),
             field_orientations=("y", "z"),
             imaging_axis="x",

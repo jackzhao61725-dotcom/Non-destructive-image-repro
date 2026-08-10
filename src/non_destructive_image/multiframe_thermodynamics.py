@@ -53,7 +53,7 @@ OxfordInitialState = ReferenceState
 
 @dataclass(frozen=True)
 class OxfordMultiframeContract:
-    """Validated measured-scale closure and atomic inputs."""
+    """Oxford Fig. 2c fit, derived runtime coordinates and atomic inputs."""
 
     initial_states: tuple[OxfordInitialState, ...]
     trap_frequencies_hz: tuple[float, float, float]
@@ -65,10 +65,10 @@ class OxfordMultiframeContract:
     atomic_mass_kg: float
     hbar_j_s: float
     boltzmann_constant_j_k: float
-    measured_scale_intercept: float
-    measured_scale_slope: float
-    source_fit_intercept: float
-    source_fit_slope: float
+    measured_fit_intercept: float
+    measured_fit_slope: float
+    fig2c_fit_intercept: float
+    fig2c_fit_slope: float
     measured_x_domain: tuple[float, float]
     temperature_ratio_domain: tuple[float, float]
     closure_validation_xy: tuple[tuple[float, float], ...]
@@ -424,8 +424,12 @@ def oxford_multiframe_contract_from_configs(
             )
 
     closure = _mapping(thermodynamics, "closure")
-    measured_scale = _mapping(closure, "measured_scale")
-    source_fit = _mapping(closure, "source_fit")
+    if "measured_scale" in closure:
+        raise ValueError(
+            "closure.measured_scale must not be stored: runtime measured-coordinate "
+            "coefficients are derived exactly once from the Fig. 2c fit and beta"
+        )
+    fig2c_fit = _mapping(closure, "fig2c_calibrated_fit")
     combined_calibration = _mapping(closure, "combined_calibration")
     domain = _mapping(closure, "domain")
     cadence = _mapping(thermodynamics, "cadence")
@@ -462,28 +466,35 @@ def oxford_multiframe_contract_from_configs(
         raise ValueError("cadence name must be a non-empty string")
 
     beta = _finite_number(combined_calibration, "beta", positive=True)
+    if fig2c_fit.get("coordinate_system") != "beta_corrected_fig2c_coordinates":
+        raise ValueError(
+            "fig2c_calibrated_fit.coordinate_system must identify the beta-corrected "
+            "Fig. 2c coordinates"
+        )
     validation_x = np.asarray([point[0] for point in xy], dtype=float)
-    source_calibrated_x_domain = (
+    fig2c_x_domain = (
         float(np.min(validation_x)),
         float(np.max(validation_x)),
     )
-    legacy_rounded_x_domain = _number_pair(domain, "x_two_fifths")
+    rounded_config_domain = _number_pair(domain, "x_two_fifths")
     rounded_source_domain = tuple(
-        round(value, 4) for value in source_calibrated_x_domain
+        round(value, 4) for value in fig2c_x_domain
     )
     if not np.allclose(
-        legacy_rounded_x_domain,
+        rounded_config_domain,
         rounded_source_domain,
         rtol=0.0,
         atol=5e-15,
     ):
         raise ValueError(
-            "legacy Oxford x domain must equal the accepted source extrema "
+            "Oxford x domain must equal the accepted Fig. 2c extrema "
             "rounded to four decimal places"
         )
     measured_x_domain = tuple(
-        beta ** (2.0 / 5.0) * value for value in source_calibrated_x_domain
+        beta ** (2.0 / 5.0) * value for value in fig2c_x_domain
     )
+    fig2c_fit_intercept = _finite_number(fig2c_fit, "intercept", positive=True)
+    fig2c_fit_slope = _finite_number(fig2c_fit, "slope", positive=True)
 
     return OxfordMultiframeContract(
         initial_states=states,
@@ -496,12 +507,10 @@ def oxford_multiframe_contract_from_configs(
         atomic_mass_kg=atomic_mass,
         hbar_j_s=hbar,
         boltzmann_constant_j_k=boltzmann,
-        measured_scale_intercept=_finite_number(
-            measured_scale, "intercept", positive=True
-        ),
-        measured_scale_slope=_finite_number(measured_scale, "slope", positive=True),
-        source_fit_intercept=_finite_number(source_fit, "intercept", positive=True),
-        source_fit_slope=_finite_number(source_fit, "slope", positive=True),
+        measured_fit_intercept=beta * fig2c_fit_intercept,
+        measured_fit_slope=beta ** (3.0 / 5.0) * fig2c_fit_slope,
+        fig2c_fit_intercept=fig2c_fit_intercept,
+        fig2c_fit_slope=fig2c_fit_slope,
         measured_x_domain=measured_x_domain,
         temperature_ratio_domain=_number_pair(domain, "temperature_over_initial"),
         closure_validation_xy=tuple(xy),
@@ -539,7 +548,7 @@ def measured_scale_non_saturation(
     condensate_atoms: float,
     contract: OxfordMultiframeContract,
 ) -> float:
-    """Return ``F_ns(T, N0)`` without the trajectory-specific anchor."""
+    """Return ``F_ns(T, N0)`` from the published measured-coordinate fit."""
 
     if not np.isfinite(condensate_atoms) or condensate_atoms < 0.0:
         raise ValueError("condensate_atoms must be finite and non-negative")
@@ -548,8 +557,8 @@ def measured_scale_non_saturation(
     return float(
         critical
         * (
-            contract.measured_scale_intercept
-            + contract.measured_scale_slope * x_two_fifths
+            contract.measured_fit_intercept
+            + contract.measured_fit_slope * x_two_fifths
         )
     )
 
@@ -580,7 +589,7 @@ def closure_validation_residuals(
 
     points = np.asarray(contract.closure_validation_xy, dtype=float)
     prediction = (
-        contract.source_fit_intercept + contract.source_fit_slope * points[:, 0]
+        contract.fig2c_fit_intercept + contract.fig2c_fit_slope * points[:, 0]
     )
     residual = (points[:, 1] - prediction) / points[:, 1]
     return (

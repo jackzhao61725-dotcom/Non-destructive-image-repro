@@ -138,7 +138,7 @@ def _case() -> tuple[
             )
         )
     provenance = IndependentEndpointPairProvenance(
-        contract_label="chapter_5_orientation_information_contract_v1",
+        contract_label="independent_orientation_information_v1",
         endpoint_labels=ENDPOINT_LABELS,
         field_orientations=("y", "z"),
         imaging_axis="x",

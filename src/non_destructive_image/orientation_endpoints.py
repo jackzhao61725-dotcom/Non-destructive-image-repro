@@ -39,7 +39,7 @@ _ORIENTATION_V1_IDENTITIES = {
 
 
 class OrientationEndpointScientificFailure(RuntimeError):
-    """A physically unsupported endpoint that should be retained as a result."""
+    """A physically unsupported endpoint that should be reported explicitly."""
 
 
 def _unit_vector(value: object, *, label: str) -> tuple[float, float, float]:

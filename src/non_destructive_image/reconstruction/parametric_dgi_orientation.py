@@ -61,7 +61,7 @@ _EXPOSURES = {
     "open_reference": 1,
     "open_dark": 1,
 }
-_CONTRACT_LABEL = "chapter_5_orientation_dgi_information_contract_v1"
+_CONTRACT_LABEL = "independent_orientation_dgi_v1"
 
 
 def _immutable(values: ArrayLike) -> FloatArray:

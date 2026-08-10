@@ -1,5 +1,7 @@
 """Forward imaging, thermodynamics, and observable-reconstruction models."""
 
+__version__ = "1.0.0"
+
 from .atomic_model import ThomasFermiState, build_thomas_fermi_state, recoil_quantities
 from .acquisition import (
     RawElectronFrame,
@@ -95,6 +97,7 @@ from .reference_state import (
     select_reference_condition,
 )
 __all__ = [
+    "__version__",
     "ThomasFermiState",
     "BranchScatteringResult",
     "CONTACT_TF_CORE",
