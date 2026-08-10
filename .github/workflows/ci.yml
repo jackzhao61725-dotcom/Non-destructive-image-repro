@@ -49,3 +49,6 @@ jobs:
       - name: Check deterministic reference including inference
         if: matrix.os == 'ubuntu-latest'
         run: python scripts/check_reference.py --include-inference
+
+      - name: Check bundled retained evidence
+        run: python scripts/check_evidence.py

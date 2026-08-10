@@ -1,0 +1,7 @@
+observable,q1,q2,delta_21,ratio_21
+A,U,U,P,P
+y_c_um,U,P,U,—
+z_c_um,I,I,I,—
+sigma_y_um,P,U,U,U
+sigma_z_um,P,U,I,P
+aspect_ratio_y_over_z,U,U,U,U

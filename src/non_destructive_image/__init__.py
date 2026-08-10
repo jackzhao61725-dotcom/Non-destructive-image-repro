@@ -1,6 +1,6 @@
 """Forward imaging, thermodynamics, and observable-reconstruction models."""
 
-__version__ = "1.0.0"
+__version__ = "1.1.0"
 
 from .atomic_model import ThomasFermiState, build_thomas_fermi_state, recoil_quantities
 from .acquisition import (

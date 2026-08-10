@@ -1,0 +1,68 @@
+{
+  "camera_shape": [
+    153,
+    153
+  ],
+  "config_sha256": "f4cb4568ffd5e5e8090f0a5bd5f6e1b9fb6ddbf32fbe5508f1550b5c63f9409a",
+  "data_origin": "same_model_synthetic",
+  "full_well_guard_passed": true,
+  "generator_opening_gate": "complete 71-slot inference freeze with unchanged source, config and raw-target identity",
+  "generator_script_sha256": "cdea01c1a4b97d998ce330e27977f073ebde7427c890c82e7eca7d2482bd46e6",
+  "generator_values_may_be_opened_by_inverse": false,
+  "label": "chapter_5_two_frame_stage_b_v1",
+  "method": "PCI",
+  "operator_parity_passed": true,
+  "raw_array_schema": {
+    "observed_electrons": [
+      4,
+      153,
+      153
+    ],
+    "role_names": [
+      4
+    ]
+  },
+  "raw_payload_contains_generator_values": false,
+  "raw_target_sha256": "e6c3cd19909eb72b1e37cf6c3f0fd110321e4fb18d04e291d5eea1ceb2b31041",
+  "raw_units": "electrons",
+  "role_names": [
+    "atom_000",
+    "atom_001",
+    "bright_reference",
+    "dark"
+  ],
+  "sealed_generator_array_schema": {
+    "expected_electrons": [
+      4,
+      153,
+      153
+    ],
+    "expected_role_names": [
+      4
+    ],
+    "generator_density_q1_m2": [
+      1024,
+      1024
+    ],
+    "generator_density_q2_m2": [
+      1024,
+      1024
+    ]
+  },
+  "sealed_generator_sha256": {
+    "sealed_generator_record.json": "e44c09696e53a58238b7b8b83b4cf23655b2143e7a9054f9211c81f6339ec592",
+    "sealed_generator_record.npz": "4c53749bcf7384acd930ceb18af98ea7b8ba0893f46a0932cda5bce1522c4c41"
+  },
+  "source_identity_sha256": "521b68343368c553907fdcbef7f492d93dae75df1c18223b4e502a34c4474156",
+  "status": "sealed_observed_only_same_model_pci_target",
+  "target_seed": {
+    "bit_generator": "PCG64DXSM",
+    "master_seed": 2026072805,
+    "spawn_key": [
+      40,
+      0,
+      0,
+      0
+    ]
+  }
+}

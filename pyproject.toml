@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "equilibrium-dispersive-imaging-reproduction"
-version = "1.0.0"
+version = "1.1.0"
 description = "Reproduction code for equilibrium-conditioned dispersive imaging of a dipolar condensate"
 requires-python = ">=3.12,<3.13"
 license = {file = "LICENSE"}

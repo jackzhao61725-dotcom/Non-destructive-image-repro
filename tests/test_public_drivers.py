@@ -72,7 +72,7 @@ def test_forward_payload_is_finite_and_tracks_orientation_contrast() -> None:
         "repository_pyproject",
     }
     package_identity = identity["software"]["package"]
-    assert package_identity["importable_version"] == "1.0.0"
+    assert package_identity["importable_version"] == "1.1.0"
     if package_identity["distribution_metadata_version"] is not None:
         assert isinstance(package_identity["versions_match"], bool)
 

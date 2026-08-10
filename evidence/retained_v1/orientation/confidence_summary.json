@@ -1,0 +1,28 @@
+{
+  "A_cross_orientation_status": "unresolved_without_effective_response_calibration",
+  "aspect_ratio_inherited_ceiling": "model_sensitive",
+  "comparator_cannot_change_confidence": true,
+  "components": [
+    "fit_and_raw_data",
+    "detector_statistics",
+    "identifiability",
+    "calibration",
+    "profile_model_dependence",
+    "finite_aperture_and_camera_sampling",
+    "reference",
+    "repeatability",
+    "relative_change"
+  ],
+  "global_credible_or_not_credible_label_used": false,
+  "information_level_counts": {
+    "informative_but_inconclusive": 12,
+    "model_conditional_contrast_supported": 4,
+    "model_sensitive": 4,
+    "unresolved": 2
+  },
+  "label": "chapter_5_orientation_stage_b_v2_confidence_summary_v1",
+  "reference_status": "same_model_not_independent",
+  "repeatability_status": "not_assessed",
+  "route_count": 22,
+  "status": "component_specific_confidence_complete"
+}

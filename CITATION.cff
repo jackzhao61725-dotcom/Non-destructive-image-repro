@@ -5,7 +5,7 @@ type: software
 authors:
   - family-names: Zhao
     given-names: Yifeng
-version: 1.0.0
+version: 1.1.0
 date-released: 2026-08-10
 repository-code: "https://github.com/jackzhao61725-dotcom/Non-destructive-image-repro"
 url: "https://github.com/jackzhao61725-dotcom/Non-destructive-image-repro"

@@ -20,7 +20,7 @@ def test_release_version_is_synchronised() -> None:
     match = re.search(r"^version:\s*([^\s]+)\s*$", citation, flags=re.MULTILINE)
 
     assert match is not None
-    assert project_version == "1.0.0"
+    assert project_version == "1.1.0"
     assert non_destructive_image.__version__ == project_version
     assert match.group(1) == project_version
 
@@ -53,6 +53,7 @@ def test_public_top_level_is_allowlisted() -> None:
         "build",
         "configs",
         "docs",
+        "evidence",
         "outputs",
         "reference",
         "scripts",
