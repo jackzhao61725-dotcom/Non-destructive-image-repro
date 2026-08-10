@@ -103,7 +103,7 @@ def _provenance(
     generator_reference_used: bool = False,
 ) -> DGIParametricOrientationProvenance:
     return DGIParametricOrientationProvenance(
-        contract_label="chapter_5_orientation_dgi_information_contract_v1",
+        contract_label="independent_orientation_dgi_v1",
         endpoint_labels=("B_parallel_y", "B_parallel_z"),
         field_orientations=("y", "z"),
         imaging_axis="x",

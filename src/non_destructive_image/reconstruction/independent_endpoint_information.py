@@ -264,7 +264,7 @@ class IndependentEndpointPairProvenance:
     cross_orientation_amplitude_calibration: bool
 
     def __post_init__(self) -> None:
-        if self.contract_label != "chapter_5_orientation_information_contract_v1":
+        if self.contract_label != "independent_orientation_information_v1":
             raise ValueError("independent-endpoint contract label changed")
         if tuple(self.endpoint_labels) != ENDPOINT_LABELS:
             raise ValueError("endpoint labels must follow the canonical By/Bz order")

@@ -5,7 +5,7 @@ from __future__ import annotations
 import argparse
 from dataclasses import asdict
 from pathlib import Path
-from typing import Any
+from typing import Any, Mapping
 
 import numpy as np
 
@@ -26,6 +26,8 @@ try:  # Package import in tests; direct import when executed as a file.
         endpoint_products,
         input_identity,
         load_configs,
+        parsed_invocation_arguments,
+        require_output_available,
         write_json,
     )
 except ModuleNotFoundError:  # pragma: no cover - exercised by CLI acceptance
@@ -34,6 +36,8 @@ except ModuleNotFoundError:  # pragma: no cover - exercised by CLI acceptance
         endpoint_products,
         input_identity,
         load_configs,
+        parsed_invocation_arguments,
+        require_output_available,
         write_json,
     )
 
@@ -47,6 +51,7 @@ def _arguments() -> argparse.Namespace:
         "--output", type=Path, default=REPOSITORY_ROOT / "outputs" / "forward_model.json"
     )
     parser.add_argument("--validate-only", action="store_true")
+    parser.add_argument("--overwrite", action="store_true")
     return parser.parse_args()
 
 
@@ -84,7 +89,11 @@ def _disturbance(model: dict[str, Any], reproduction: dict[str, Any], response: 
     return scattering, recoil_energy
 
 
-def reproduce(config_dir: Path) -> dict[str, Any]:
+def reproduce(
+    config_dir: Path,
+    *,
+    invocation_arguments: Mapping[str, Any] | None = None,
+) -> dict[str, Any]:
     """Return the forward-model payload without writing it."""
 
     model, reference, reproduction = load_configs(config_dir)
@@ -150,8 +159,11 @@ def reproduce(config_dir: Path) -> dict[str, Any]:
     return {
         "schema": "equilibrium_imaging_forward_reproduction_v1",
         "status": "model_conditional_reproduction",
-        "identity": input_identity(config_dir),
-        "source_commit": model["source"]["commit"],
+        "identity": input_identity(
+            config_dir,
+            invocation_arguments=invocation_arguments,
+        ),
+        "upstream_source_commit": model["source"]["commit"],
         "endpoint_states": endpoint_rows,
         "orientation_contrast_um": {
             "delta_sigma_y": widths[1]["sigma_y"] - widths[0]["sigma_y"],
@@ -188,11 +200,22 @@ def reproduce(config_dir: Path) -> dict[str, Any]:
 
 def main() -> None:
     args = _arguments()
-    payload = reproduce(args.config_dir)
+    if not args.validate_only:
+        try:
+            require_output_available(args.output, overwrite=args.overwrite)
+        except FileExistsError as error:
+            raise SystemExit(str(error)) from error
+    payload = reproduce(
+        args.config_dir,
+        invocation_arguments=parsed_invocation_arguments(args),
+    )
     if args.validate_only:
         print("configuration and forward-model contract validated")
         return
-    write_json(args.output, payload)
+    try:
+        write_json(args.output, payload, overwrite=args.overwrite)
+    except FileExistsError as error:
+        raise SystemExit(str(error)) from error
     print(f"wrote {args.output.resolve()}")
 
 

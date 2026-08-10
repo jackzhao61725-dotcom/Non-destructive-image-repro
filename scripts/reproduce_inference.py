@@ -34,6 +34,8 @@ try:  # Package import in tests; direct import when executed as a file.
         endpoint_products,
         input_identity,
         load_configs,
+        parsed_invocation_arguments,
+        require_output_available,
         write_json,
     )
 except ModuleNotFoundError:  # pragma: no cover - exercised by CLI acceptance
@@ -42,6 +44,8 @@ except ModuleNotFoundError:  # pragma: no cover - exercised by CLI acceptance
         endpoint_products,
         input_identity,
         load_configs,
+        parsed_invocation_arguments,
+        require_output_available,
         write_json,
     )
 
@@ -60,6 +64,7 @@ def _arguments() -> argparse.Namespace:
     )
     parser.add_argument("--draws", type=int, default=1)
     parser.add_argument("--validate-only", action="store_true")
+    parser.add_argument("--overwrite", action="store_true")
     return parser.parse_args()
 
 
@@ -246,7 +251,7 @@ def _fit_inputs(
 
 def _provenance() -> ParametricOrientationProvenance:
     return ParametricOrientationProvenance(
-        contract_label="chapter_5_orientation_information_contract_v2",
+        contract_label="independent_orientation_pci_v1",
         endpoint_labels=ENDPOINT_LABELS,
         field_orientations=FIELD_ORIENTATIONS,
         imaging_axis="x",
@@ -306,7 +311,12 @@ def _endpoint_record(endpoint: Any, truth: Mapping[str, float]) -> dict[str, Any
     }
 
 
-def reproduce(config_dir: Path, *, draws: int) -> dict[str, Any]:
+def reproduce(
+    config_dir: Path,
+    *,
+    draws: int,
+    invocation_arguments: Mapping[str, Any] | None = None,
+) -> dict[str, Any]:
     """Run the requested fixed-seed point-fit pairs and return a JSON payload."""
 
     if isinstance(draws, bool) or draws <= 0:
@@ -373,15 +383,18 @@ def reproduce(config_dir: Path, *, draws: int) -> dict[str, Any]:
     return {
         "schema": "equilibrium_imaging_pci_point_fit_reproduction_v1",
         "status": "fixed_seed_point_fits_not_sampling_coverage",
-        "identity": input_identity(config_dir),
-        "source_commit": model["source"]["commit"],
+        "identity": input_identity(
+            config_dir,
+            invocation_arguments=invocation_arguments,
+        ),
+        "upstream_source_commit": model["source"]["commit"],
         "fluence_mw_us": reference_fluence,
         "draw_count": draws,
         "seed_policy": reproduction["stochastic"],
         "generator_truth_used_by_fit": False,
         "draws": draw_rows,
         "limitations": [
-            "point fits do not reproduce the dissertation's 64-draw interval",
+            "point fits do not reproduce the submitted 64-draw intervals",
             "fit uncertainty is conditional on the projected Thomas-Fermi family",
             "endpoints are independent equilibrium states",
         ],
@@ -399,8 +412,19 @@ def main() -> None:
         _options(reproduction)
         print("configuration and inference contract validated")
         return
-    payload = reproduce(args.config_dir, draws=args.draws)
-    write_json(args.output, payload)
+    try:
+        require_output_available(args.output, overwrite=args.overwrite)
+    except FileExistsError as error:
+        raise SystemExit(str(error)) from error
+    payload = reproduce(
+        args.config_dir,
+        draws=args.draws,
+        invocation_arguments=parsed_invocation_arguments(args),
+    )
+    try:
+        write_json(args.output, payload, overwrite=args.overwrite)
+    except FileExistsError as error:
+        raise SystemExit(str(error)) from error
     print(f"wrote {args.output.resolve()}")
 
 

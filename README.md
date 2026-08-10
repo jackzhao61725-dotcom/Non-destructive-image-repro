@@ -1,68 +1,108 @@
 # Equilibrium-conditioned dispersive imaging
 
-This release candidate contains the numerical model and inference code used to
-study repeated, conditionally re-equilibrated imaging of a polarised
-`166Er` condensate. It is a code-focused reproduction repository.
+This repository is a compact, code-focused reproduction of the deterministic
+equilibrium, optical, detector and conditional thermodynamic chain used to study
+repeated dispersive imaging of a polarised `166Er` condensate. It also provides
+one fixed-seed PCI endpoint-inference workflow.
 
-The model compares two independently minimised equilibrium endpoints,
-`B_parallel_y` and `B_parallel_z`, under a common PCI measurement design. It
-also includes the Oxford-anchored, fixed-trapped-number state update used to
-describe recoil heating between exposures. These endpoints are model states;
-they are not a simulated magnetic-field rotation trajectory.
+It reproduces software calculations, not the complete submitted result set.
+In particular, it does **not** reproduce the 64-draw linked two-exposure analysis, the
+17-point PCI or DGI ensembles, their qualification procedures, later-exposure
+camera fits, or the slope regressions. It contains neither experimental raw images nor
+a calibrated installed-imaging-arm model.
 
-## What can be reproduced
+## Quick start
 
-- the two dipolar Thomas-Fermi equilibrium endpoints and their projected widths;
-- the polarised 401 nm complex response, finite-aperture PCI raw counts and
-  per-pulse scattering;
-- the conditional post-exposure thermodynamic sequence at the reference probe
-  setting;
-- a deterministic, fixed-seed PCI endpoint fit using the same projected
-  Thomas-Fermi family, bounds, four starts and detector model as the dissertation.
-
-The one-draw inference command is a workflow check and point estimate. It is not
-the dissertation's 64-draw uncertainty ensemble and must not be cited as one.
-The repository does not contain experimental raw images or claim a calibrated
-installed imaging arm.
-
-## Environment
-
-The verified environment is Python 3.12.13, NumPy 2.3.5, SciPy 1.18.0 and
-pytest 9.1.1. Create an isolated environment, install the project and test
-extra, then run:
+Use Python 3.12 in a fresh environment, then run from the repository root:
 
 ```text
-python -m pip install -e ".[test]"
+python -m pip install ".[test]"
 python -m pytest -q
 python scripts/reproduce_forward_model.py --validate-only
-python scripts/reproduce_forward_model.py
 python scripts/reproduce_inference.py --validate-only
-python scripts/reproduce_inference.py --draws 1
+python scripts/check_reference.py
 ```
 
-The two run commands write JSON to `outputs/`. A fixed `PCG64DXSM` seed tree is
-recorded in `configs/reproduction.json`; changing a draw count does not alter
-earlier draws.
+Use the tagged GitHub source archive or a repository checkout: the scripts and
+configuration files are source-tree assets, so this release is not advertised
+as a standalone PyPI distribution.
+
+A successful run prints both validation messages and returns exit status zero
+from the reference checker. The expected validation messages are:
+
+```text
+configuration and forward-model contract validated
+configuration and inference contract validated
+```
+
+The default checker then prints `PASS forward (...)`; with
+`--include-inference` it also prints `PASS inference (...)`.
+
+The default reference check covers the deterministic forward-model reference.
+To include the fixed-seed PCI endpoint fit, run:
+
+```text
+python scripts/check_reference.py --include-inference
+```
+
+The inference check is optional because it is slower. These checks compare the
+current software with the repository's verification reference; they do not
+compare a simulation with raw experimental images or recreate the numerical
+evidence supporting the submitted analysis. See
+[docs/results.md](docs/results.md) for the precise
+coverage boundary.
+
+## Generate local JSON outputs
+
+The public drivers keep validation separate from writing output:
+
+```text
+python scripts/reproduce_forward_model.py --output outputs/forward_model.json
+python scripts/reproduce_inference.py --draws 1 --output outputs/inference.json
+```
+
+Existing output paths are refused by default. Pass `--overwrite` only after
+inspecting the file you intend to replace.
+
+What you should see:
+
+- `outputs/forward_model.json` has status
+  `model_conditional_reproduction` and records the two independently minimised
+  equilibrium endpoints, optical response, mean raw counts, scattering and the
+  conditional thermodynamic sequence;
+- `outputs/inference.json` has status
+  `fixed_seed_point_fits_not_sampling_coverage`, records one fixed-seed draw by
+  default, and states that generator truth was not used by the fit;
+- rerunning with unchanged inputs reproduces the deterministic forward payload
+  and seed policy. Generated files remain local artefacts, not submitted
+  experimental or submitted-analysis evidence.
+
+The two endpoints, `B_parallel_y` and `B_parallel_z`, are independent
+equilibrium states under a common PCI design. They are not a simulated magnetic
+field-rotation trajectory. The repeated-exposure update is likewise conditional:
+it assumes fixed trapped number, recoil-only deposited energy and complete
+re-equilibration between exposures.
 
 ## Repository map
 
 - `src/non_destructive_image/`: physical, detector and inverse models;
 - `configs/`: frozen numerical inputs and source-data identity;
-- `scripts/`: public reproduction entry points;
+- `scripts/`: validation, reproduction and reference-checking entry points;
 - `tests/`: unit and contract tests;
-- `docs/`: model boundary, inference contract and exact reproduction procedure.
+- `docs/`: model, inference, result-boundary and reproduction documentation;
+- `THIRD_PARTY.md`: data, article and dependency attribution.
 
-The original Oxford dataset is identified by DOI, member names and SHA-256
-hashes in `configs/reference_state.json`; its measured values required by these
-drivers are already transcribed with provenance, so the commands do not download
-data.
+The Oxford ORA dataset identified by DOI `10.5287/ora-m8gpvdr2y` is not bundled.
+Only the values required by the public drivers are transcribed in the
+configuration with provenance and integrity metadata. See `THIRD_PARTY.md`
+before obtaining or redistributing the original dataset.
 
-## Source snapshot and licence
+## Identity, citation and licence
 
-This is a local release candidate prepared from source commit
-`afc8050fbe86c7ce5741fec608bb354591790f03`. The reproduction repository is
-published at
-`https://github.com/jackzhao61725-dotcom/Non-destructive-image-repro`.
+Version `1.0.0` records upstream source snapshot commit
+`afc8050fbe86c7ce5741fec608bb354591790f03`. Citation metadata is in
+`CITATION.cff`.
 
-The code is released under the BSD 3-Clause License. See `LICENSE` for the
-terms governing reuse and redistribution.
+The repository code is released under the BSD 3-Clause License; see `LICENSE`.
+Third-party data, publications and dependencies remain governed by their own
+terms.

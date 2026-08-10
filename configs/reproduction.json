@@ -76,7 +76,7 @@
         10000000000000.0,
         5000000000000000.0
       ],
-      "provenance": "reconstruction_v3 provisional physical bounds with the y-radius upper bound capped by the finite 100-um object field",
+      "provenance": "fixed physical search bounds; the y-radius upper bound is capped by the 100-um object field",
       "radius_y_um": [
         5.0,
         40.0

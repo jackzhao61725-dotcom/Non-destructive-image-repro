@@ -26,9 +26,9 @@
     "fully_spin_polarised": true,
     "model": "polarised_dipolar_thomas_fermi_condensate_core",
     "scattering_length_bohr": 72.47056895171804,
-    "scattering_length_status": "derived runtime value a_dd/epsilon_dd; source paper display value is retained separately",
+    "scattering_length_status": "runtime value derived from a_dd/epsilon_dd; the rounded source value is recorded separately",
     "source_reported_scattering_length_bohr": 72.0,
-    "source_reported_scattering_length_status": "rounded value reported in the source paper; retained for display/provenance while the active polarised dipolar-TF runtime derives a_s from a_dd/epsilon_dd",
+    "source_reported_scattering_length_status": "rounded value reported in the source paper; the model derives a_s from a_dd/epsilon_dd",
     "temperature_k": 2.4510243205732764e-07,
     "trap_frequencies_hz": [
       294.0,
@@ -198,6 +198,6 @@
   "schema_version": 1,
   "source": {
     "commit": "afc8050fbe86c7ce5741fec608bb354591790f03",
-    "repository": "https://github.com/jackzhao61725-dotcom/Non-destructive-image"
+    "role": "upstream scientific source snapshot"
   }
 }

@@ -57,7 +57,7 @@ from non_destructive_image.reconstruction.scalar_measurements import (
 
 
 PRIMARY_PROVENANCE = ReferenceLightInferenceProvenance(
-    contract_label="chapter_5_two_frame_information_contract_v1",
+    contract_label="linked_two_exposure_information_v1",
     method="PCI",
     fluence_mw_us=300.0,
     detuning_ghz=1.5,

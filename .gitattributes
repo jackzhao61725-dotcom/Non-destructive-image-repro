@@ -7,7 +7,3 @@
 *.npz binary
 *.pdf binary
 *.png binary
-
-# Generated result trees are byte-level provenance records.  Preserve their
-# exact on-disk representation and keep whitespace checks out of opaque output.
-results/** binary

@@ -113,11 +113,8 @@
               0.4708
             ]
           },
-          "measured_scale": {
-            "intercept": 1.10076826195,
-            "slope": 0.31161813155
-          },
-          "source_fit": {
+          "fig2c_calibrated_fit": {
+            "coordinate_system": "beta_corrected_fig2c_coordinates",
             "intercept": 1.1961283098330524,
             "sha256": "e45239c885ff0ca4005e0e7e4c59e40082c55f212ae3d1f3976dd6521bc2b19b",
             "slope": 0.3275456539102716,
@@ -134,11 +131,13 @@
           "temperature_nk": 244.8834383148761,
           "thermal_atoms": 199067.71730318808,
           "use": "closure_check_only",
+          "x_two_fifths": 0.4184593297220354,
+          "y_thermal_over_critical": 1.1996799131878804,
           "zip_member": "DataForDipolarTc/Measurements/TrapI_edd=0.902_0deg_avg.csv"
         },
         "dataset_doi": "10.5287/ora-m8gpvdr2y",
         "dataset_zip": {
-          "download_url": "https://ora.ox.ac.uk/objects/uuid:2cf11bf8-d45b-47c2-9f81-9e7dde1db3eb/files/sqz20sv821",
+          "record_url": "https://ora.ox.ac.uk/objects/uuid:2cf11bf8-d45b-47c2-9f81-9e7dde1db3eb",
           "filename": "DataForDipolarTc.zip",
           "sha256": "29866041913ddaba543b1c4fe3f7f26558757a1be6379b97d13fff70dd36ffa5"
         },
@@ -171,7 +170,7 @@
             "thermal_atoms": 184464.37972576497
           }
         ],
-        "status": "conditionally accepted thermodynamic contract under fixed trapped number, recoil-only deposition and complete inter-frame rethermalisation; retained result generation not authorised",
+        "status": "conditional endpoint model with fixed trapped number, recoil-only deposition and complete inter-frame rethermalisation",
         "trap_frequency_record": {
           "convention": "angular frequencies are 2*pi times the listed Hz values",
           "frequencies_hz": [
@@ -180,7 +179,7 @@
             233.3
           ],
           "record_id": "TrapI_edd=0.902_0deg",
-          "source_authority": "docs/multiframe_heating_model_optimisation.md section 3"
+          "source_record": "Oxford dataset TrapI_edd=0.902_0deg"
         }
       },
       "polarised_dipolar_tf_contract": {
@@ -193,18 +192,18 @@
         "imaging_axis": "x",
         "orientation_sign_status": "the source fixes the y axis but not its signed laboratory direction; the sign is immaterial to dipolar TF and rank-2 response",
         "scattering_length_policy": "derive dipolar_length_bohr / epsilon_dd; do not divide the two rounded paper display values",
-        "status": "approved conditional analytic target selected by the active optical-core runtime",
+        "status": "conditional analytic dipolar Thomas-Fermi core used by the forward model",
         "theta_d_reference_axis": "y"
       },
       "scattering_length_bohr": 72.0,
-      "scattering_length_status": "rounded value reported in the source paper; retained for display/provenance while the active polarised dipolar-TF runtime derives a_s from a_dd/epsilon_dd"
+      "scattering_length_status": "rounded source value recorded for comparison; the model derives a_s from a_dd/epsilon_dd"
     }
   ],
   "schema_version": 1,
   "source": {
     "dataset_doi": "10.5287/ora-m8gpvdr2y",
     "dataset_zip": {
-      "download_url": "https://ora.ox.ac.uk/objects/uuid:2cf11bf8-d45b-47c2-9f81-9e7dde1db3eb/files/sqz20sv821",
+      "record_url": "https://ora.ox.ac.uk/objects/uuid:2cf11bf8-d45b-47c2-9f81-9e7dde1db3eb",
       "filename": "DataForDipolarTc.zip",
       "sha256": "29866041913ddaba543b1c4fe3f7f26558757a1be6379b97d13fff70dd36ffa5"
     }

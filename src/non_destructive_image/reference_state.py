@@ -1,4 +1,4 @@
-"""Resolve one dissertation reference state from its existing source record."""
+"""Resolve the public reproduction reference state from its source record."""
 
 from __future__ import annotations
 
