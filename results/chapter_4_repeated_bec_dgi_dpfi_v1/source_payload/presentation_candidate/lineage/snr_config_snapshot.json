@@ -1,0 +1,177 @@
+{
+  "schema_version": 1,
+  "label": "target_dgi_dpfi_multiframe_snr_grid_v2",
+  "purpose": "Scratch-only deterministic whole-image template-SNR grid for every target DGI/DPFI duration and pre-exposure frame.",
+  "parent": {
+    "directory": ".scratch/target_dgi_dpfi_multiframe_noise_ensemble_v2",
+    "family": "target_dgi_dpfi_multiframe_noise_ensemble_v2",
+    "manifest_sha256": "647101fd10ee5a73ba91773b4c2062d55fc8e13a8ce8e24da37c5feb079a139b",
+    "config_snapshot_sha256": "894331232657626c52f825214df480fa64d9dc098256f6183e230099bc1c7d0b",
+    "summary_sha256": "cf89de4d8b7829a2510dc22309ace01a89175b7f645d59689f34923e86430043",
+    "parent_identity_sha256": "9917e24d77b0005ef650d30913b578eb0bdb19702ac08de8d8f9700803ab4389",
+    "input_snapshot_path": "data/input_snapshot.npz",
+    "input_snapshot_sha256": "d965e031725631e2baea787ecd5b5777071e02123ab3e1306ea98a34ce0300ad",
+    "duration_grid_manifest_path": "lineage/duration_grid_manifest.json",
+    "duration_grid_manifest_sha256": "2368451abcbe4ee15337c231cd037e6484af07e4de187d7fac7042f2a7cae409",
+    "duration_grid_config_path": "lineage/duration_grid_config.json",
+    "duration_grid_config_sha256": "36f90ed2b011cd21c0518678640673cc845076ac2a9aa1668bc1586c739b6de5",
+    "duration_grid_summary_path": "lineage/duration_grid_summary.json",
+    "duration_grid_summary_sha256": "7088d677c85a7d3eebd00a43961b3dcb4a19a4204af768b24be784b52247efed",
+    "selected_acquisition_contract_path": "lineage/selected_acquisition_contract.json",
+    "selected_acquisition_contract_sha256": "aa8f32b6b65c8bc027663f20cf61b9f8e4fbfca603ae7bb34654ffc7cd711fb6"
+  },
+  "implementation": [
+    {
+      "path": "src/isolated_non_destructive_image.py",
+      "sha256": "cb7d0511602be3175c2b00645d8c71da1d6d0b5803ff5e3bece0cd902db55997"
+    },
+    {
+      "path": "src/non_destructive_image/chapter4_noise_weighted_snr.py",
+      "sha256": "7ba181487ceb7286c357b85a81da5b8ecb5202104f0a9fd17d4711d69d2a536a"
+    },
+    {
+      "path": "src/non_destructive_image/four_method_camera_noise.py",
+      "sha256": "51433af212f2f578e78727585529a231fde1453f61b2a98e84af33d6e549288c"
+    },
+    {
+      "path": "src/non_destructive_image/target_multiframe_snr_grid.py",
+      "sha256": "6edeeb4a49554a742f668723e6215d09269deef36bc1075889572fed061b39c4"
+    },
+    {
+      "path": "scripts/run_target_multiframe_snr_grid.py",
+      "sha256": "f66fcdd0a4f86a44d5d28243a07e45c3d9e1f0b6e8a045bc0fe0d07d70bb9fdb"
+    },
+    {
+      "path": "tests/test_target_multiframe_snr_grid.py",
+      "sha256": "43b5bb0f0e76bf3f6534aa7c8418e59cb896f9c09b5c7aa641020f581cdabd62"
+    }
+  ],
+  "detector": {
+    "model": "independent_Poisson_plus_Gaussian_read_noise_per_raw_role",
+    "read_noise_electrons_rms": 0.7,
+    "dark_mean_electrons": 0.0,
+    "full_well_electrons": 15000.0,
+    "full_well_gate": "every_expected_pixel_plus_6sigma_below_full_well",
+    "clipping": false,
+    "adc_rounding": false
+  },
+  "count_scale": {
+    "photoelectrons_per_i0_pixel_per_us": 1.1466492625734523,
+    "formula": "duration_us_times_fixed_photoelectron_rate",
+    "duration_extension_boundary": "325_to_400us_are_same_model_formula_values_not_stored_incident_table_rows"
+  },
+  "acquisition": {
+    "methods": [
+      "dgi",
+      "dpfi"
+    ],
+    "dgi_roles": [
+      "atom_stop",
+      "leakage_stop",
+      "stop_dark",
+      "open_reference",
+      "open_dark"
+    ],
+    "dpfi_roles": [
+      "atom_h",
+      "atom_v",
+      "blank_h",
+      "blank_v",
+      "dark_h",
+      "dark_v"
+    ],
+    "dgi_processed_quantity": "(atom_stop-leakage_stop)/(open_reference-open_dark)",
+    "dgi_stop_dark_derivative": 0.0,
+    "dpfi_processed_quantity": "((atom_h-dark_h)-(atom_v-dark_v))/((blank_h-dark_h)+(blank_v-dark_v))",
+    "dpfi_atom_ports": "independent_before_signed_difference",
+    "calibration_topology": "one_shared_reference_set_per_method_duration_and_sequence"
+  },
+  "statistic": {
+    "name": "whole_image_template_snr",
+    "formula": "sqrt(sum_over_pixels(mu_squared/variance))",
+    "blank_processed_signal": 0.0,
+    "variance": "pixelwise_delta_method_sum_over_all_raw_roles_of_Jacobian_squared_times_expected_Poisson_plus_read_variance",
+    "support": "all_17_by_71_camera_pixels",
+    "observed_arrays_consumed": false,
+    "duration_monotonicity_required": false,
+    "role": "whole_image_template_strength_not_integrated_response_SNR_feature_precision_or_classification"
+  },
+  "grid": {
+    "pulse_durations_us": [
+      25,
+      50,
+      75,
+      100,
+      125,
+      150,
+      175,
+      200,
+      225,
+      250,
+      275,
+      300,
+      325,
+      350,
+      375,
+      400
+    ],
+    "image_q": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "methods": [
+      "dgi",
+      "dpfi"
+    ],
+    "camera_shape": [
+      17,
+      71
+    ],
+    "expected_cells": 480
+  },
+  "validation": {
+    "maintained_vs_explicit_atol": 2e-14,
+    "require_manifest_before_array_load": true,
+    "require_self_contained_explicit_Jacobian_recalculation": true,
+    "require_all_raw_means_finite_nonnegative": true,
+    "require_all_denominators_and_variances_positive": true,
+    "require_expected_plus_6sigma_below_full_well": true,
+    "require_LF_CSV": true,
+    "require_no_RNG_fit_optical_or_thermodynamic_work": true,
+    "require_duration_monotonicity": false
+  },
+  "claim_boundary": {
+    "supports": [
+      "same-model deterministic whole-image template SNR for DGI and DPFI over the declared duration-frame grid",
+      "explicit raw-role Poisson and read-noise delta-variance accounting"
+    ],
+    "does_not_support": [
+      "integrated-response SNR or feature-specific precision",
+      "observed-draw probability, coverage, or classification",
+      "installed-apparatus performance or universal method ranking",
+      "cross-frame change SNR without the shared-calibration covariance"
+    ]
+  },
+  "lifecycle": {
+    "status": "diagnostic_not_retained",
+    "admitted": false,
+    "output_directory": ".scratch/target_dgi_dpfi_multiframe_snr_grid_v2",
+    "overwrite": false,
+    "resume": false,
+    "retry": false,
+    "results_writes": 0
+  }
+}

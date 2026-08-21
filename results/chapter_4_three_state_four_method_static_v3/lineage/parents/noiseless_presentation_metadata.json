@@ -1,0 +1,27 @@
+{
+  "admitted": false,
+  "common_I0_zero_centred_display_limit": 2.011999399447263,
+  "displayed_colourbar_ticks": [
+    -2.0,
+    -1.0,
+    0.0,
+    1.0,
+    2.0
+  ],
+  "displayed_dpfi_quantity": "(I_H-I_V)/I0",
+  "label": "target_three_state_four_method_noiseless_presentation_v9",
+  "maximum_absolute_circular_branch_phase_rad": 3.7073737479043483,
+  "new_fits": 0,
+  "new_optical_propagations": 0,
+  "phase_wrapping_present": true,
+  "random_draws": 0,
+  "renderer_path": "scripts/render_target_four_method_noiseless.py",
+  "renderer_sha256": "0ff4797a95232e9463a5ba5978148511fe4bdee423401f6537b577e680090b54",
+  "schema_version": 1,
+  "source_directory": ".scratch/target_three_state_four_method_noiseless_v4",
+  "source_manifest_artifact_count": 5,
+  "source_manifest_sha256": "4f5b8f7fcbea44435470ede1229c9322fd1c1d0c8d86655905c76700ae2446d9",
+  "source_payload_sha256": "dc3bae3101ffda28ee5a8f8a5c32c3b12950c577fabac2df72177206c5e7707e",
+  "status": "presentation_candidate_not_retained",
+  "wrapped_circular_branch_pixel_count": 137
+}

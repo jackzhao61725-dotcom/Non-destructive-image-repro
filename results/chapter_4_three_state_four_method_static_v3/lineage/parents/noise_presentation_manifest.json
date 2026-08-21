@@ -1,0 +1,45 @@
+{
+  "admitted": false,
+  "artifact_count": 7,
+  "artifacts": [
+    {
+      "bytes": 695,
+      "path": "caption_noisy.txt",
+      "sha256": "f53e80ac166ee2d9bce0af501cb996b8015f658e608c5dfd805fb20edbe425ae"
+    },
+    {
+      "bytes": 549,
+      "path": "caption_snr.txt",
+      "sha256": "ca2f6b13a2973456608664c2b9021abb9856f0797b1d3142782a88be3d0e6d8a"
+    },
+    {
+      "bytes": 43189,
+      "path": "figure_4_target_four_method_noisy_200us.pdf",
+      "sha256": "68ce8621b3d4bc77fde1a932d21b76f84082fb571e9b169cbc3a7a6212c6eccc"
+    },
+    {
+      "bytes": 138810,
+      "path": "figure_4_target_four_method_noisy_200us.png",
+      "sha256": "b6813e309b3448d8931f11dbdd9a95aedbff5048a739d3a4b5f39696ef49f0ed"
+    },
+    {
+      "bytes": 27972,
+      "path": "figure_4_target_four_method_snr.pdf",
+      "sha256": "e28ae973517b0b9b2c213a4cf1cbc32c06f4b8ebc25d128f618c522472454743"
+    },
+    {
+      "bytes": 237331,
+      "path": "figure_4_target_four_method_snr.png",
+      "sha256": "8fff38fc5d67d5398cce766ae2c0f6a8a0be250b7fae827a5a25346cdd960cfb"
+    },
+    {
+      "bytes": 1180,
+      "path": "metadata.json",
+      "sha256": "770a39975fa4bafd9dc089a6c584eeee27fc97b3e56ca175b05ef774405b8452"
+    }
+  ],
+  "family": "target_three_state_four_method_noise_presentation_v5",
+  "schema_version": 1,
+  "status": "presentation_candidate_not_retained",
+  "total_bytes": 449726
+}

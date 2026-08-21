@@ -1,0 +1,79 @@
+{
+  "admitted": true,
+  "artifact_count": 11,
+  "artifacts": [
+    {
+      "bytes": 1522,
+      "path": "admission_contract_snapshot.json",
+      "sha256": "d5ed9a78b9d9a5b66e3542ec325d38daeaecc962b8a1c271c12cb0a3b9854e45"
+    },
+    {
+      "bytes": 1295,
+      "path": "config_snapshot.json",
+      "sha256": "763de2e453c1ab25db24b08f3b3317a2e8b6f9489a542e022b1a6b85f693b5ef"
+    },
+    {
+      "bytes": 1230,
+      "path": "lineage/snr_400_candidate_artifact_manifest.json",
+      "sha256": "148a4e3fef138d1872af176334a5335e933352e4dcd24288a0dc5fd7c84e9c6b"
+    },
+    {
+      "bytes": 1104,
+      "path": "provenance.json",
+      "sha256": "a82f6a226ef59765d86bb2c8decbf8a65fe8a7bdffa1ca18c82db0a65f73adae"
+    },
+    {
+      "bytes": 1500,
+      "path": "source_payload/snr_400_candidate/config_snapshot.json",
+      "sha256": "96cae8c6e9b204e35e807f9c1fe31c4b1fcaec22b4335458e125320cf87bb0e5"
+    },
+    {
+      "bytes": 12113,
+      "path": "source_payload/snr_400_candidate/data/four_method_snr_25_400us.csv",
+      "sha256": "d780a49c4282718c297c79b3194b2fd44dad3dd4265b312fe0cf9a4dab7f92ae"
+    },
+    {
+      "bytes": 25311,
+      "path": "source_payload/snr_400_candidate/figures/figure_4_target_four_method_snr.pdf",
+      "sha256": "d0364ad55b3b8884a683781a49b0ad7c2f8b266923e9819c8f3798cc9ae0add5"
+    },
+    {
+      "bytes": 242195,
+      "path": "source_payload/snr_400_candidate/figures/figure_4_target_four_method_snr.png",
+      "sha256": "02b8ca7cc0a6a37c7d60a50f14748f1cdfd9e461590f3bf9d0b410da6640a190"
+    },
+    {
+      "bytes": 692,
+      "path": "source_payload/snr_400_candidate/provenance.json",
+      "sha256": "d56aa70989de27263509593f726177206f09597e562ee0a5a95a4d6b985fb350"
+    },
+    {
+      "bytes": 499,
+      "path": "source_payload/snr_400_candidate/summary.json",
+      "sha256": "6f3a7dca9f75da3102626aa4b1ec845b8218227a2d58cfa8455a057093ab0969"
+    },
+    {
+      "bytes": 976,
+      "path": "summary.json",
+      "sha256": "b7d5fd99bdb56125bf2bc55d214411b039372b4956d549f49dfaa8427e050622"
+    }
+  ],
+  "claim_boundary": {
+    "does_not_support": [
+      "feature precision, state-classification performance or a universal method ranking",
+      "experimental camera performance or an installed-apparatus operating point",
+      "an optimum pulse duration or globally single-valued density inversion"
+    ],
+    "supports": [
+      "whole-image template SNR for PCI, DGI, DFFI and DPFI over 25-400 us for the declared static BEC, SSP and ID targets",
+      "exact replay of the 25-300 us predecessor rows and deterministic extension to 400 us without new random draws",
+      "the declared full-well margin over this simulated duration grid"
+    ]
+  },
+  "consumable": true,
+  "family": "chapter_4_three_state_four_method_snr_400_v2",
+  "schema_version": 1,
+  "self_hash_policy": "manifest_excluded",
+  "status": "admitted_immutable",
+  "total_bytes": 288437
+}

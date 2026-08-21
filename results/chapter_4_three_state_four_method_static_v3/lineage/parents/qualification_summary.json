@@ -1,0 +1,48 @@
+{
+  "admitted": false,
+  "calibration_boundary": {
+    "does_not_support": [
+      "universal_DPFI_or_DGI_superiority",
+      "feature_precision_or_state_classification",
+      "globally_single_valued_ID_density_inversion",
+      "installed_port_gain_extinction_registration_or_differential_transfer_performance",
+      "real_apparatus_prediction_without_calibration"
+    ],
+    "supports": [
+      "configuration_specific_DPFI_DGI_selection",
+      "DPFI_as_the_strongest_signed_port_difference_readout_with_leading_order_linear_response_in_the_declared_whole_image_SNR_comparison",
+      "DGI_as_the_second_ranked_dark_background_quadratic_comparator",
+      "complete_selected_raw_role_and_processing_contracts",
+      "explicit_ideal_calibration_assumptions_and_full_well_margin"
+    ]
+  },
+  "candidate_methods": [
+    "pci",
+    "dgi",
+    "dffi",
+    "dpfi"
+  ],
+  "label": "target_dgi_dpfi_qualification_v5",
+  "maximum_expected_processing_error": 0.0,
+  "maximum_observed_processing_error": 0.0,
+  "maximum_selected_expected_electrons": 325.89056421020916,
+  "maximum_selected_expected_plus_6sigma_electrons": 434.2865987851304,
+  "new_fits": 0,
+  "new_optical_propagations": 0,
+  "new_random_identities": 0,
+  "phase_wrapping_present": true,
+  "phase_wrapping_scope": "ID_stronger_circular_branch_only",
+  "random_draws": 0,
+  "results_writes": 0,
+  "schema_version": 1,
+  "selected_full_well_margin_electrons": 14565.713401214869,
+  "selected_methods": [
+    "dpfi",
+    "dgi"
+  ],
+  "selected_raw_role_arrays_replayed": 66,
+  "selected_raw_seed_identities": 33,
+  "selection_basis": "DPFI_first_and_DGI_second_by_whole_image_SNR_for_each_state_at_200_us",
+  "status": "diagnostic_not_retained",
+  "whole_image_snr_role": "aggregate_image_strength_not_feature_precision"
+}

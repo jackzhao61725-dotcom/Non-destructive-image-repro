@@ -1,0 +1,35 @@
+{
+  "aggregation": "all finite selected fits; no support filtering",
+  "interval": "16th to 84th percentiles across 64 camera-noise acquisitions",
+  "new_nonlinear_fits": 0,
+  "new_optical_propagations": 0,
+  "new_random_draws": 0,
+  "parents": {
+    "dgi": {
+      "directory": ".scratch/chapter_5_three_state_morphology_dgi_v1",
+      "manifest_sha256": "10393927fc71ae4add8a572f50acb99b1f1c4880d3a3b76f6b2f9ee74a742481",
+      "seed_ledger_sha256": "5900cde9d91eed2544501f27a8a53d62dfc6d924c7943378c0c6b1abcee49565",
+      "selected_fits_sha256": "4a83862225e774e0997ffdea50f3cee13ba01326ccea4be459620e8654bdbe93",
+      "start_outcomes_sha256": "87bf81c8c6893d848ee079ac918394595991a33769aafb2f65ab6c46d4390912"
+    },
+    "dpfi": {
+      "directory": ".scratch/chapter_5_three_state_morphology_dpfi_parallel_v3",
+      "manifest_sha256": "a383bac9758231ae9a14b0a79264c8af43f781c2cbac94fd7b913dcb8a6091b1",
+      "seed_ledger_sha256": "5f2403763d53b99e8a9aca56764f900f1096c2730078edbece4289e8e03caf23",
+      "selected_fits_sha256": "45b932e611d93ab9845e19a912b9342e1a4634d647baa96c93381d6e5a8ad224",
+      "start_outcomes_sha256": "bd46578b77d79512933cbdcceb6847402f7c274589cd5b8b2430bbed3632b127"
+    },
+    "support": {
+      "directory": ".scratch/chapter_5_three_state_morphology_likelihood_support_v1",
+      "manifest_sha256": "57dddd0cd8e03345b0539dec6e76cdcf6bfb8aefb70ecebe3ee7ee1ac278cf03",
+      "reclassified_fits_sha256": "ac2b0ad5c93c1a4ae786b4bc28ba713c75e09f52ecca67013dbb9151f4b0c2d4",
+      "support_summary_sha256": "d11cc95eec0ac6c1e085ed194eed2bfcad553177f3d2ccb19d2f396fc53fbcdd"
+    }
+  },
+  "schema_version": 1,
+  "source_git_state": {
+    "branch": "codex/binary-supersolid-static",
+    "dirty_tree": true,
+    "head": "6a1af433db0da227b750a3c48df261a92c8275d9"
+  }
+}

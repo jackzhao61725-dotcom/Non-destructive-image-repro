@@ -1,0 +1,36 @@
+{
+  "admitted": false,
+  "artifact_count": 5,
+  "artifacts": [
+    {
+      "bytes": 6815,
+      "path": "config_snapshot.json",
+      "sha256": "64c4b6dbd5dfa5f37896d351c32f62e2e21f565e979e59d5b7120b4ef85dc1c2"
+    },
+    {
+      "bytes": 1364,
+      "path": "data/state_method_extrema.csv",
+      "sha256": "b202daa4b0b4b4817f5e713118d6dd6a7df71b7fc5842eb02600fa07fce58ea1"
+    },
+    {
+      "bytes": 22543291,
+      "path": "data/target_four_method_camera_and_fields.npz",
+      "sha256": "dc3bae3101ffda28ee5a8f8a5c32c3b12950c577fabac2df72177206c5e7707e"
+    },
+    {
+      "bytes": 2895,
+      "path": "provenance.json",
+      "sha256": "ed305ea49f45b2b2b3826799ce77706159d606a7009756bd3132ef1fe9570d49"
+    },
+    {
+      "bytes": 2366,
+      "path": "summary.json",
+      "sha256": "64ab11dcbbf7b2e4e12acd33742f200d10b9c4f1e5e010ef7337e8e8de05a843"
+    }
+  ],
+  "family": "target_three_state_four_method_noiseless_v4",
+  "schema_version": 1,
+  "self_hash_policy": "root_manifest_excluded",
+  "status": "diagnostic_not_retained",
+  "total_bytes": 22556731
+}

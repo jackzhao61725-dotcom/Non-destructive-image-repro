@@ -1,0 +1,8 @@
+{
+  "executable_name": "python.exe",
+  "implementation": "CPython",
+  "matplotlib": "3.11.1",
+  "numpy": "2.3.5",
+  "platform": "Windows-11-10.0.26100-SP0",
+  "python": "3.12.13"
+}

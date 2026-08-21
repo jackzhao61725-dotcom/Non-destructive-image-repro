@@ -1,0 +1,145 @@
+{
+  "schema_version": 1,
+  "label": "three_state_target_trap_profiles_v4",
+  "purpose": "Define controlled BEC, SSP and ID imaging objects on the finite-temperature core scale obtained from the original Oxford Trap III frequencies in the dissertation B-parallel-k geometry.",
+  "lifecycle": {
+    "status": "model_development_not_retained",
+    "admitted": false,
+    "results_writes_allowed": false
+  },
+  "source_morphology": {
+    "citation_key": "chomaz2019",
+    "doi": "10.1103/PhysRevX.9.021012",
+    "source_example_atom_number": 50000.0,
+    "representative_scattering_lengths_bohr": {
+      "smooth_bec": 52.0,
+      "connected_modulated": 51.0,
+      "separated_droplets": 49.0
+    },
+    "representative_neighbour_spacing_um": 2.8,
+    "axial_peak_centres_um": [-2.8, 0.0, 2.8],
+    "axial_peak_weights": [0.82, 1.0, 0.82],
+    "peak_count_boundary": "Three dominant peaks describe the selected source morphologies; the source phase diagram contains other peak counts as atom number and scattering length change.",
+    "spacing_boundary": "The Chomaz et al. supplementary analysis explicitly uses d = 2.8 um as the mean droplet separation representative of its 166Er experiment and corresponding supersolid calculations. The imaging model adopts that reported Er scale; it is not a roton wavelength recalculated for Trap III.",
+    "evidence_boundary": "The source supplies the morphology classes, representative scattering lengths and the 2.8 um Er droplet-separation scale. It does not fix the target finite-temperature population, analytic peak weights and widths, or two-dimensional density arrays."
+  },
+  "target_scale_anchor": {
+    "source_config": "configs/target_geometry_finite_temperature_closure_v4.json",
+    "comparison_candidate": "source_total_atom_number",
+    "trap_frequencies_hz_xyz": [257.0, 32.0, 218.0],
+    "frequency_source": "Oxford_Trap_III",
+    "dipole_axis": "x",
+    "probe_axis": "x",
+    "orientation_boundary": "Trap III frequencies are reused, while the dissertation retains B parallel k parallel x rather than reproducing the source field orientation.",
+    "temperature_nk": 245.10243205732764,
+    "scattering_length_bohr": 72.0,
+    "dipolar_length_bohr": 65.4,
+    "selection": "retain the measured Oxford total atom number and temperature; recalculate the finite-temperature core in Trap III under the dissertation orientation",
+    "total_atoms": 217426.12972931602,
+    "condensate_atoms": 50701.094679638154,
+    "thermal_atoms": 166725.0350434518,
+    "dipolar_tf_radii_um_xyz": [2.369378775816091, 14.652216669933539, 1.470434840433167],
+    "projected_tf_rms_um_yz": [5.538017352068444, 0.5557721295587291],
+    "projected_peak_column_density_um2": 1872.6575061247395
+  },
+  "profiles": [
+    {
+      "state_id": "smooth_bec",
+      "label": "BEC",
+      "morphology": "smooth_bec",
+      "atom_number": 50701.094679638154,
+      "scattering_length_bohr": 52.0,
+      "radius_y_um": 14.652216669933539,
+      "radius_z_um": 1.470434840433167
+    },
+    {
+      "state_id": "connected_modulated",
+      "label": "SSP",
+      "morphology": "connected_modulated",
+      "atom_number": 50701.094679638154,
+      "scattering_length_bohr": 51.0,
+      "component_centres_y_um": [-2.8, 0.0, 2.8],
+      "component_weights": [0.82, 1.0, 0.82],
+      "component_sigma_y_um": 0.945,
+      "component_sigma_z_um": 0.5557721295587291
+    },
+    {
+      "state_id": "separated_droplets",
+      "label": "ID",
+      "morphology": "separated_droplets",
+      "atom_number": 50701.094679638154,
+      "scattering_length_bohr": 49.0,
+      "component_centres_y_um": [-2.8, 0.0, 2.8],
+      "component_weights": [0.82, 1.0, 0.82],
+      "component_sigma_y_um": 0.56,
+      "component_sigma_z_um": 0.5557721295587291
+    }
+  ],
+  "sampling_and_validation": {
+    "y_min_um": -16.0,
+    "y_max_um": 16.0,
+    "z_min_um": -4.0,
+    "z_max_um": 4.0,
+    "grid_spacing_um": 0.05,
+    "grid_convergence_spacings_um": [0.1, 0.05, 0.025],
+    "minimum_peak_distance_um": 1.5,
+    "peak_prominence_fraction": 0.05,
+    "atom_number_relative_tolerance": 1e-12,
+    "maximum_boundary_to_peak_ratio": 1e-8,
+    "peak_spacing_absolute_tolerance_um": 0.1,
+    "ssp_contrast_interval": [0.1, 0.5],
+    "id_minimum_contrast": 0.7,
+    "minimum_id_minus_ssp_contrast": 0.4,
+    "grid_convergence_rms_absolute_tolerance_um": 0.001,
+    "grid_convergence_contrast_absolute_tolerance": 0.001
+  },
+  "generated_truth_on_contract_grid": [
+    {
+      "state_id": "smooth_bec",
+      "integrated_atoms": 50701.094679638154,
+      "rms_y_um": 5.538022985655072,
+      "rms_z_um": 0.5557688690281338,
+      "peak_count": 1,
+      "peak_positions_y_um": [0.0],
+      "mean_peak_spacing_um": null,
+      "modulation_contrast": 0.0,
+      "peak_column_density_um2": 1872.6614185725514,
+      "boundary_to_peak_ratio": 0.0
+    },
+    {
+      "state_id": "connected_modulated",
+      "integrated_atoms": 50701.09467963817,
+      "rms_y_um": 2.4006932395254146,
+      "rms_z_um": 0.5557721295522834,
+      "peak_count": 3,
+      "peak_positions_y_um": [-2.75, 0.0, 2.75],
+      "mean_peak_spacing_um": 2.75,
+      "modulation_contrast": 0.212417688676687,
+      "peak_column_density_um2": 5938.166476563742,
+      "boundary_to_peak_ratio": 5.647529869200231e-12
+    },
+    {
+      "state_id": "separated_droplets",
+      "integrated_atoms": 50701.09467963815,
+      "rms_y_um": 2.2768186204225906,
+      "rms_z_um": 0.5557721295522834,
+      "peak_count": 3,
+      "peak_positions_y_um": [-2.7999999999999985, 0.0, 2.8000000000000007],
+      "mean_peak_spacing_um": 2.7999999999999994,
+      "modulation_contrast": 0.8386323501888583,
+      "peak_column_density_um2": 9820.902601135156,
+      "boundary_to_peak_ratio": 5.6475298692002314e-12
+    }
+  ],
+  "construction_boundary": {
+    "is_egpe_solution": false,
+    "is_digitised_source_density": false,
+    "common_atom_number": true,
+    "common_transverse_rms_scale": true,
+    "axial_peak_spacing_um": 2.8,
+    "historical_axial_scale_factor": 0.7,
+    "generated_truth_role": "deterministic sampled controls derived from this contract, not literature measurements",
+    "historical_profile_roles": "all v1-v3 profile contracts remain immutable diagnostics from superseded trap or density choices",
+    "interpretation": "The Trap III finite-temperature calculation fixes the shared condensate number and transverse scale. The analytic axial factors retain source-informed smooth, connected and separated morphologies on the representative 2.8 um spacing; they are not recalculated ground states at the listed scattering lengths."
+  }
+}

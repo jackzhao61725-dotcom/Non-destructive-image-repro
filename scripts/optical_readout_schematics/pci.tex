@@ -1,0 +1,46 @@
+\documentclass[12pt,pstricks,border=4pt]{standalone}
+\input{common_style.tex}
+
+\begin{document}
+\psset{unit=1cm}
+\begin{pspicture}(0.15,0.68)(7.42,3.38)
+  \rput[l](0.40,3.10){\textbf{\small PCI}}
+
+  \pnode(1.10,2.15){Obj}
+  \pnode(7.10,2.15){Cam}
+
+  \begin{optexp}
+    \optdipole[compname=Atoms,optdipolesize=0.04 1.20,position=start]
+      (Obj)(Cam){\AtomsGlyph}{}
+    \lens[compname=Lone,abspos=1.50,lensheight=1.75,lensradius=2.00]
+      (Obj)(Cam){}
+    \optdipole[compname=Mask,optdipolesize=0.02 1.82,abspos=3.00]
+      (Obj)(Cam){\PhaseDotGlyph}{}
+    \lens[compname=Ltwo,abspos=4.50,lensheight=1.75,lensradius=2.00]
+      (Obj)(Cam){}
+
+    \backlayer{%
+      % Yellow is reserved for the incident probe before the atoms.
+      \pspolygon[fillstyle=solid,fillcolor=ProbePale,linestyle=none]
+        (0.40,1.65)(1.10,1.65)(1.10,2.65)(0.40,2.65)%
+      % The unaffected probe keeps the same yellow fill up to the phase dot.
+      \pspolygon[fillstyle=solid,fillcolor=ProbePale,linestyle=none]
+        (1.10,1.65)(2.60,1.65)(4.10,2.15)(2.60,2.65)(1.10,2.65)%
+      % Purple identifies the same reference amplitude after the phase shift;
+      % the fill lightness is not used as an intensity scale.
+      \pspolygon[fillstyle=solid,fillcolor=DotPale,linestyle=none]
+        (4.10,2.15)(5.60,1.65)(7.10,1.65)(7.10,2.65)(5.60,2.65)%
+      % PCI does not resolve the two output polarisations.  One soft cyan layer
+      % therefore represents the complete atom-modified transmitted field.
+      \pspolygon[fillstyle=solid,fillcolor=AffectedPale,opacity=0.60,linestyle=none]
+        (1.10,1.93)(1.10,2.37)(2.60,3.03)(5.60,3.03)%
+        (7.10,2.37)(7.10,1.93)(5.60,1.27)(2.60,1.27)%
+    }
+  \end{optexp}
+
+  \psline[linecolor=Ink,linewidth=1.2pt](7.10,1.35)(7.10,2.95)
+
+  \rput[t](4.10,0.95){\small phase dot}
+
+\end{pspicture}
+\end{document}

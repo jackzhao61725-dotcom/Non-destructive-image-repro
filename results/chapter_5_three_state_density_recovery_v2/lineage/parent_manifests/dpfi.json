@@ -1,0 +1,75 @@
+{
+  "admitted": false,
+  "artifact_count": 13,
+  "artifacts": [
+    {
+      "bytes": 8076,
+      "path": "config_snapshot.json",
+      "sha256": "036f9afe88a9a447e21e7c521fe21b72a4bb7f196ad3b47a1184421a8170d8ef"
+    },
+    {
+      "bytes": 6929,
+      "path": "contracts/science_config.json",
+      "sha256": "069647cc9515dc0c0eeb756270b1165b94a523e8917c2e1c7e6fa496e75c3f71"
+    },
+    {
+      "bytes": 1052,
+      "path": "data/deterministic_snr_and_cost.csv",
+      "sha256": "b129b8480241cc6d6308f9849395af333249721a51c5917c7a25ddf73f15f1f4"
+    },
+    {
+      "bytes": 1736657,
+      "path": "data/display_draw.npz",
+      "sha256": "1a61847e31a4b39a3fc5d11fa74a46794ada1b7feb582fcaa5b57deb470286e4"
+    },
+    {
+      "bytes": 271634,
+      "path": "data/seed_ledger.csv",
+      "sha256": "5f2403763d53b99e8a9aca56764f900f1096c2730078edbece4289e8e03caf23"
+    },
+    {
+      "bytes": 280644,
+      "path": "data/selected_fits.csv",
+      "sha256": "45b932e611d93ab9845e19a912b9342e1a4634d647baa96c93381d6e5a8ad224"
+    },
+    {
+      "bytes": 1989522,
+      "path": "data/start_outcomes.csv",
+      "sha256": "bd46578b77d79512933cbdcceb6847402f7c274589cd5b8b2430bbed3632b127"
+    },
+    {
+      "bytes": 4622,
+      "path": "data/support_summary.csv",
+      "sha256": "7e55d1215b7a8ee5c80f0749dc5c90ab88a9e88ccc2b0fd7c1fa0d55b2273aaa"
+    },
+    {
+      "bytes": 9267,
+      "path": "deterministic_qualification.json",
+      "sha256": "ea68c6e6221d297364a7797834f88c83ef2cdd2bf8a7d94e0accaa3c3865a129"
+    },
+    {
+      "bytes": 8543,
+      "path": "provenance.json",
+      "sha256": "aea4443abb6929d140bea4ad76cb5084a5b2332d634fd86959e40c29b913fa6c"
+    },
+    {
+      "bytes": 4332,
+      "path": "shard_inventory.json",
+      "sha256": "d282c01d04984a1e79522c4b625441eefe4665278f38d5aa493f4497f6f06bcc"
+    },
+    {
+      "bytes": 2127,
+      "path": "stochastic_smoke.json",
+      "sha256": "cbadd734dc4a87283cf580ccc02115dc303de2a314b376fe7dd9fd48092e1287"
+    },
+    {
+      "bytes": 15952,
+      "path": "summary.json",
+      "sha256": "d8a5bba7ab99c35bffe02fdbf739d4592fa07d17b556f49c3e1e5f729f470191"
+    }
+  ],
+  "family": "chapter_5_three_state_morphology_dpfi_parallel_v3",
+  "schema_version": 1,
+  "status": "diagnostic_not_retained",
+  "total_bytes": 4339357
+}

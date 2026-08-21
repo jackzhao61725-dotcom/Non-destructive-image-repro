@@ -1,0 +1,143 @@
+{
+  "label": "erk_dual_wavelength_objective_apparatus_evidence_v1",
+  "purpose": "Apparatus-relevant successor optics contract for future 401-nm erbium in-situ and dispersive-imaging studies. It does not retrospectively alter admitted dissertation result families generated with the legacy NA=0.130, M=10 study design.",
+  "source": {
+    "title": "A&L12: Optimised Imaging of Ultracold Quantum Gases",
+    "candidate_number": "1073949",
+    "institution": "Department of Physics, University of Oxford",
+    "date": "2026-04-24",
+    "user_supplied_filename": "A&L12 MPhys Report Submission Alex McInerny.pdf",
+    "sha256": "ace2f774fab8aa27643d63616f7b2d47a24f4552ebfd3f4f986598f120e7cd6e",
+    "redistribution_status": "local group-supplied evidence; the PDF is not checked into this repository",
+    "evidence_pages": {
+      "system_scope_and_feature_scales": [1],
+      "lens_prescription_and_coherent_imaging_model": [2],
+      "design_performance_and_sampling": [3],
+      "upgraded_magnification": [7],
+      "measured_resolution_depth_of_focus_and_aperture": [8],
+      "translation_repeatability_and_field_of_view": [9],
+      "conclusions_and_deployment_boundary": [10]
+    }
+  },
+  "system_identity": {
+    "experiment": "Oxford ErK experiment",
+    "objective_role": "dual-wavelength objective for erbium and potassium imaging through the ErK science cell",
+    "erbium_wavelength_m": 4.01e-7,
+    "potassium_wavelength_m": 7.67e-7,
+    "science_cell_window_material": "Borofloat-33",
+    "science_cell_window_thickness_m": 0.0025,
+    "nominal_cloud_extent_m": 5.0e-5,
+    "reported_feature_scales_m": {
+      "roton_density_modulation": 3.0e-6,
+      "healing_length": 1.0e-6
+    },
+    "geometry_boundary": "The report establishes the objective and science-cell constraints but is not used here to set the probe-wavevector direction relative to the magnetic quantisation axis. That atomic-polarisation geometry remains a separate study input."
+  },
+  "optical_design": {
+    "objective_effective_focal_length_m": 0.042,
+    "design_numerical_aperture": 0.31,
+    "design_rayleigh_resolution_m": {
+      "401_nm": 7.8e-7,
+      "767_nm": 1.5e-6
+    },
+    "design_field_of_view_minimum_m": 1.0e-4,
+    "prototype": {
+      "magnification": 9.75,
+      "final_achromat": "Thorlabs AC508-400-AB",
+      "sampling_status_401_nm": "undersampled at the 401-nm diffraction limit and for 1-um features"
+    },
+    "upgraded": {
+      "magnification": 14.62,
+      "final_achromat": "Thorlabs AC508-600-AB",
+      "sampling_status_401_nm": "satisfies the report's Nyquist condition for 1-um features, but not the 0.78-um design diffraction limit"
+    },
+    "chromatic_focal_shift_m": {
+      "design": 0.00158,
+      "measured_approximate": 0.0015
+    }
+  },
+  "detector_sampling": {
+    "camera_model": "Hamamatsu ORCA-Fusion C14440-20UP",
+    "sensor_pixel_pitch_m": 6.5e-6,
+    "magnification": 14.62,
+    "object_plane_pixel_pitch_m": 4.44596443228454e-7,
+    "derivation": "sensor_pixel_pitch_m / magnification",
+    "nyquist_magnification_for_1um_features": 13.0,
+    "sampling_boundary": "The report supports the magnification and physical pixel scale. It does not define the camera ROI, exposure timing, quantum efficiency, read noise or relay throughput for a non-destructive-imaging sequence."
+  },
+  "measured_performance": {
+    "testbed_status": "upgraded objective tested in a setup described as nearly identical to intended experimental use; not an installed-arm calibration",
+    "best_resolution_m": {
+      "401_nm": {
+        "value": 9.2e-7,
+        "standard_uncertainty": 7.0e-8,
+        "fit_model": "Gaussian amplitude PSF with the report's 2D-to-1D correction"
+      },
+      "767_nm": {
+        "value": 1.70e-6,
+        "standard_uncertainty": 3.0e-8,
+        "fit_model": "Gaussian amplitude PSF with the report's 2D-to-1D correction"
+      }
+    },
+    "depth_of_focus_m": {
+      "401_nm": {
+        "value": 8.0e-6,
+        "standard_uncertainty": 2.0e-6
+      },
+      "767_nm": {
+        "value": 1.5e-5,
+        "standard_uncertainty": 4.0e-6
+      }
+    },
+    "aperture_study_401_nm": {
+      "selected_operating_aperture_diameter_m": 0.016,
+      "selected_operating_aperture_standard_uncertainty_m": 0.0004,
+      "aberration_limited_plateau_resolution_m": 1.16e-6,
+      "plateau_resolution_standard_uncertainty_m": 2.0e-8,
+      "interpretation": "The report attributes the difference from the separately measured 0.92-um optimum to alignment degradation during the aperture sequence. The plateau is an alignment-sensitivity scenario, not a second measurement of the same stable operating point."
+    },
+    "field_of_view_status": "confirmed significantly larger than 100 um; no tighter measured value is reported"
+  },
+  "mechanical_and_deployment_limits": {
+    "time_of_flight_translation_m": 0.012,
+    "small_displacement_repeatability_status": "repeatable with backlash compensation when always approached from below",
+    "large_translation_status": "not reproducible enough for reliable time-of-flight operation without further mechanical refinement",
+    "large_translation_transverse_rms_m": {
+      "at_2_mm_per_s": 1.19e-5,
+      "at_0p5_mm_per_s": 1.11e-5
+    },
+    "alignment_status": "small external perturbations can degrade near-optimal resolution",
+    "deployment_claim_boundary": "Optical performance meets the stated experimental requirements, but the report does not establish stable installed-arm performance after repeated large translations."
+  },
+  "forward_model_policy": {
+    "legacy_admitted_results": "Remain bound to their recorded NA=0.130, M=10 configs and manifests; no retrospective substitution is allowed.",
+    "future_sampling_default": "Use magnification 14.62 and the derived 0.444596443-um object-plane pixel pitch for ErK-objective scenarios.",
+    "ideal_design_case": {
+      "model": "hard circular coherent pupil",
+      "numerical_aperture": 0.31,
+      "evidence_role": "diffraction-limited design upper bound, not measured transfer"
+    },
+    "measured_best_case": {
+      "model": "Gaussian amplitude-PSF surrogate using the report's equation (5)",
+      "resolution_m": 9.2e-7,
+      "resolution_standard_uncertainty_m": 7.0e-8,
+      "evidence_role": "optimistic measured-best testbed performance"
+    },
+    "alignment_sensitivity_case": {
+      "model": "Gaussian amplitude-PSF surrogate using the report's equation (5)",
+      "resolution_m": 1.16e-6,
+      "resolution_standard_uncertainty_m": 2.0e-8,
+      "evidence_role": "aperture-sequence alignment-sensitivity case"
+    },
+    "selection_rule": "A future retained study must declare which optical-transfer case it uses. Design NA, best measured resolution and aperture-sequence plateau must not be collapsed into one effective parameter.",
+    "not_supplied_by_source": [
+      "PCI phase-dot phase and transmission",
+      "DGI stop size and leakage",
+      "probe power, detuning and beam profile",
+      "polarisation purity and magnetic-field alignment",
+      "relay throughput and detector quantum efficiency",
+      "camera exposure timing, read noise and full-well calibration",
+      "installed-arm two-dimensional PSF or complex pupil"
+    ]
+  }
+}

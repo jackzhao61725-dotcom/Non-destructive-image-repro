@@ -1,0 +1,72 @@
+\usepackage{amsmath}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{pst-optexp}
+
+\definecolor{Probe}{HTML}{D99A00}
+\definecolor{ProbePale}{HTML}{F7E8BB}
+\definecolor{Reference}{HTML}{666D73}
+\definecolor{ReferencePale}{HTML}{E7E9EA}
+\definecolor{Common}{HTML}{2878B5}
+\definecolor{CommonPale}{HTML}{B8D5EA}
+\definecolor{Faraday}{HTML}{009E73}
+\definecolor{FaradayPale}{HTML}{8FD3BE}
+\definecolor{Affected}{HTML}{497D91}
+\definecolor{AffectedPale}{HTML}{B8D7DD}
+\definecolor{Mixed}{HTML}{4C7F82}
+\definecolor{MixedPale}{HTML}{C5DEDC}
+\definecolor{PortH}{HTML}{C03C8B}
+\definecolor{PortHPale}{HTML}{B7DADB}
+\definecolor{PortV}{HTML}{5146A3}
+\definecolor{PortVPale}{HTML}{D3D3E0}
+\definecolor{Glass}{HTML}{D9EEF3}
+\definecolor{Dot}{HTML}{76538B}
+\definecolor{DotPale}{HTML}{D9CBE2}
+\definecolor{Ink}{HTML}{202428}
+\definecolor{SoftInk}{HTML}{60666B}
+
+\psset{linecolor=Ink,linewidth=0.8pt}
+\newpsstyle{OptComp}{linecolor=Ink,linewidth=0.9pt,fillstyle=solid,fillcolor=Glass}
+
+\def\AtomsGlyph{%
+  \psellipse[fillstyle=solid,fillcolor=black!18,linecolor=Ink,linewidth=0.8pt](0,0)(0.14,0.31)%
+}
+
+\def\PhaseDotGlyph{%
+  \psline[linecolor=SoftInk,linestyle=dotted,dotsep=1.2pt,linewidth=0.6pt](0,-1.05)(0,1.05)%
+  \pscircle[fillstyle=solid,fillcolor=Dot,linecolor=Ink,linewidth=0.7pt](0,0){0.125}%
+}
+
+\def\StopGlyph{%
+  \psline[linecolor=SoftInk,linestyle=dotted,dotsep=1.2pt,linewidth=0.6pt](0,-1.05)(0,1.05)%
+  \pscircle[fillstyle=solid,fillcolor=Ink,linecolor=Ink](0,0){0.12}%
+}
+
+\def\BrightCameraGlyph{%
+  \psframe[fillstyle=solid,fillcolor=black!20,linecolor=Ink,linewidth=0.9pt](0,0)(1.65,1.55)%
+  \psellipse[fillstyle=solid,fillcolor=white,linestyle=none](0.82,0.78)(0.22,0.51)%
+}
+
+\def\DarkCameraGlyph{%
+  \psframe[fillstyle=solid,fillcolor=Ink,linecolor=Ink,linewidth=0.9pt](0,0)(1.65,1.55)%
+  \psellipse[fillstyle=solid,fillcolor=black!22,linestyle=none](0.82,0.78)(0.22,0.51)%
+}
+
+\def\FaradayBeforeGlyph{%
+  \pscircle[fillstyle=solid,fillcolor=ProbePale,linecolor=Ink,linewidth=0.6pt](0,0){0.49}%
+  \psline[linecolor=Probe,linewidth=1.5pt]{<->}(-0.27,0)(0.27,0)%
+}
+
+\def\FaradayAfterGlyph{%
+  \pscircle[fillstyle=solid,fillcolor=ReferencePale,linecolor=Ink,linewidth=0.6pt](0,0){0.49}%
+  \psline[linecolor=Common,linewidth=0.9pt]{<->}(-0.27,0)(0.27,0)%
+  \rput{24}{\psline[linecolor=Faraday,linewidth=1.5pt]{<->}(-0.27,0)(0.27,0)}%
+}
+
+\def\PBSGlyph{%
+  \psframe[fillstyle=solid,fillcolor=Glass,linecolor=Ink,linewidth=0.9pt](-0.39,-0.39)(0.39,0.39)%
+  \psline[linecolor=Ink,linewidth=0.8pt](-0.39,0.39)(0.39,-0.39)%
+}
+
+\def\MirrorGlyph{%
+  \psline[linecolor=Ink,linewidth=2.3pt](-0.50,0.50)(0.50,-0.50)%
+}

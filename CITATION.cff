@@ -1,12 +1,10 @@
 cff-version: 1.2.0
-message: "If you use this software, please cite it using the metadata below."
-title: "Equilibrium-conditioned dispersive imaging reproduction code"
+message: "If you use this software or its bundled evidence, please cite this repository and the associated dissertation."
+title: "Simulating dispersive imaging of dipolar erbium condensates"
 type: software
 authors:
   - family-names: Zhao
     given-names: Yifeng
-version: 1.1.0
-date-released: 2026-08-10
 repository-code: "https://github.com/jackzhao61725-dotcom/Non-destructive-image-repro"
 url: "https://github.com/jackzhao61725-dotcom/Non-destructive-image-repro"
 license: BSD-3-Clause

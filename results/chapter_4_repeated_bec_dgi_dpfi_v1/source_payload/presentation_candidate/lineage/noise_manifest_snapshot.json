@@ -1,0 +1,134 @@
+{
+  "admitted": false,
+  "artifact_count": 21,
+  "artifacts": [
+    {
+      "bytes": 9529,
+      "path": "config_snapshot.json",
+      "sha256": "894331232657626c52f825214df480fa64d9dc098256f6183e230099bc1c7d0b"
+    },
+    {
+      "bytes": 6563919,
+      "path": "data/input_snapshot.npz",
+      "sha256": "d965e031725631e2baea787ecd5b5777071e02123ab3e1306ea98a34ce0300ad"
+    },
+    {
+      "bytes": 59534,
+      "path": "data/integrated_summary.csv",
+      "sha256": "1bf43c2e8b384a2b28b3eacd249a109467d58dc99cc3280b99e8bdeb336d6a66"
+    },
+    {
+      "bytes": 16926159,
+      "path": "data/processed_profiles.npz",
+      "sha256": "7526887979e531fb405409c3ac916d8229243493c6cc2c84bf521044ad7be382"
+    },
+    {
+      "bytes": 4799345,
+      "path": "data/representative_raw_draw00.npz",
+      "sha256": "fa92a5163e5d09e9ffeed9259d76099bffd8831897686e6dd2304ea8478b80a2"
+    },
+    {
+      "bytes": 2653805,
+      "path": "data/seed_ledger.csv",
+      "sha256": "d5e61b3be4b1afb89174ff10883085963ea23b1db018bae63f6f6707781a45d7"
+    },
+    {
+      "bytes": 9666,
+      "path": "lineage/duration_grid_config.json",
+      "sha256": "36f90ed2b011cd21c0518678640673cc845076ac2a9aa1668bc1586c739b6de5"
+    },
+    {
+      "bytes": 1064,
+      "path": "lineage/duration_grid_manifest.json",
+      "sha256": "2368451abcbe4ee15337c231cd037e6484af07e4de187d7fac7042f2a7cae409"
+    },
+    {
+      "bytes": 9119,
+      "path": "lineage/duration_grid_summary.json",
+      "sha256": "7088d677c85a7d3eebd00a43961b3dcb4a19a4204af768b24be784b52247efed"
+    },
+    {
+      "bytes": 81095,
+      "path": "lineage/duration_grid_table.csv",
+      "sha256": "dca481b21048bf54118bde8f6f8fc625ceade7a47d0582d31cb0f8521692e27f"
+    },
+    {
+      "bytes": 17401,
+      "path": "lineage/incident_config.json",
+      "sha256": "1a40678061d8058fd6cbe2935dbdfee884e7bea0414e5acaf66d60a8b81a82e1"
+    },
+    {
+      "bytes": 9021,
+      "path": "lineage/incident_manifest.json",
+      "sha256": "649685ef77f2d19fcf79ab68a05c83c011377b353af355f93c5fe516a0558180"
+    },
+    {
+      "bytes": 20604,
+      "path": "lineage/incident_table.csv",
+      "sha256": "e0d0a97c741fd2dc5752bca7f3b6004a64359205234901523beaead45735208f"
+    },
+    {
+      "bytes": 1186,
+      "path": "lineage/qualification_manifest.json",
+      "sha256": "8797f65f4f8f944106fc3c42a0a607c83962bfebdca6c941ded7feb3eba7ffe0"
+    },
+    {
+      "bytes": 1788,
+      "path": "lineage/qualification_summary.json",
+      "sha256": "cfbfe600ab35b4a22e5bba931519688739d0307c1b991cc626bf4a733be5626b"
+    },
+    {
+      "bytes": 2161,
+      "path": "lineage/selected_acquisition_contract.json",
+      "sha256": "aa8f32b6b65c8bc027663f20cf61b9f8e4fbfca603ae7bb34654ffc7cd711fb6"
+    },
+    {
+      "bytes": 1211,
+      "path": "lineage/smoke_manifest.json",
+      "sha256": "5d5a8acdd47f6c3977869ef17a0f248de626d31c932071b48f2d6c161f28b886"
+    },
+    {
+      "bytes": 3375,
+      "path": "lineage/smoke_summary.json",
+      "sha256": "f5482b22b9bf4dc7291620ca97191644234aeddd0eb3da20063756190ba60303"
+    },
+    {
+      "bytes": 4385,
+      "path": "parent_identity.json",
+      "sha256": "9917e24d77b0005ef650d30913b578eb0bdb19702ac08de8d8f9700803ab4389"
+    },
+    {
+      "bytes": 5058,
+      "path": "provenance.json",
+      "sha256": "f4717c0811294155d81fdfa62162fc7b00cc71bbb7e9cb18d4343ceedccf5d79"
+    },
+    {
+      "bytes": 7605,
+      "path": "summary.json",
+      "sha256": "cf89de4d8b7829a2510dc22309ace01a89175b7f645d59689f34923e86430043"
+    }
+  ],
+  "claim_boundary": {
+    "does_not_support": [
+      "detection_or_state_classification_probability",
+      "coverage_or_tail_probability",
+      "maximum_usable_frame_count",
+      "measured_temperature_atom_number_or_thermal_halo",
+      "installed_apparatus_precision_or_calibration",
+      "universal_DGI_or_DPFI_ranking",
+      "globally_single_valued_DPFI_density_inversion",
+      "time_resolved_intermediate_dynamics"
+    ],
+    "supports": [
+      "descriptive_mean_and_spread_of_the_predeclared_same_model_DGI_and_DPFI_sequences",
+      "shared_calibration_noise_covariance_and_independent_DPFI_atom_port_sampling",
+      "paired_within_sequence_frame_changes_under_complete_re_equilibration"
+    ]
+  },
+  "consumable": false,
+  "family": "target_dgi_dpfi_multiframe_noise_ensemble_v2",
+  "schema_version": 1,
+  "self_hash_policy": "manifest_excluded",
+  "status": "diagnostic_not_retained",
+  "total_bytes": 31187030
+}

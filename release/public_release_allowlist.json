@@ -1,0 +1,313 @@
+{
+  "schema_version": 1,
+  "purpose": "Copy boundary for the dissertation reproduction repository. Only listed files, listed manuscript figures and complete listed evidence families may enter the staged public package.",
+  "copy_files": [
+    "pyproject.toml",
+    "release/public_release_allowlist.json",
+    "src/isolated_non_destructive_image.py",
+    "src/non_destructive_image/acquisition.py",
+    "src/non_destructive_image/atomic_model.py",
+    "src/non_destructive_image/atomic_response.py",
+    "src/non_destructive_image/camera.py",
+    "src/non_destructive_image/dipolar_finite_temperature.py",
+    "src/non_destructive_image/dipolar_tf.py",
+    "src/non_destructive_image/equilibrium_imaging.py",
+    "src/non_destructive_image/equilibrium_profiles.py",
+    "src/non_destructive_image/four_method_camera_noise.py",
+    "src/non_destructive_image/four_method_jones_imaging.py",
+    "src/non_destructive_image/fourier.py",
+    "src/non_destructive_image/imaging.py",
+    "src/non_destructive_image/light_atom.py",
+    "src/non_destructive_image/parallel_jones_imaging.py",
+    "src/non_destructive_image/profiles.py",
+    "src/non_destructive_image/public_inference.py",
+    "src/non_destructive_image/target_multiframe_noise_acquisition.py",
+    "src/non_destructive_image/target_three_state_profiles.py",
+    "configs/dissertation_v3_orca_fusion.json",
+    "configs/erk_401nm_objective_v1.json",
+    "configs/imaging_orientation_contract_v2.json",
+    "configs/target_geometry_finite_temperature_closure_v4.json",
+    "configs/three_state_target_trap_profiles_v4.json",
+    "configs/target_three_state_four_method_noiseless_v4.json",
+    "configs/chapter_5_bec_multiframe_recovery_loss_presentation_v1.json",
+    "configs/chapter_5_three_state_density_recovery_presentation_v1.json",
+    "configs/public_chapter_5_snr_recovery_relation_v1.json",
+    "configs/public_example_v1.json",
+    "scripts/dissertation_figure_style.py",
+    "scripts/render_chapter_2_equilibrium_profiles.py",
+    "scripts/render_chapter_3_phase_wrap.py",
+    "scripts/chapter_3_interaction_overview/atom_light_interaction_overview.tex",
+    "scripts/optical_readout_schematics/README.md",
+    "scripts/optical_readout_schematics/build.ps1",
+    "scripts/optical_readout_schematics/common_style.tex",
+    "scripts/optical_readout_schematics/pci.tex",
+    "scripts/optical_readout_schematics/dgi.tex",
+    "scripts/optical_readout_schematics/dffi.tex",
+    "scripts/optical_readout_schematics/dpfi.tex",
+    "scripts/render_chapter_5_bec_multiframe_recovery_loss.py",
+    "scripts/render_chapter_5_three_state_density_recovery_presentation.py",
+    "scripts/render_chapter_5_snr_recovery_relation_preview.py",
+    "scripts/render_public_figures.py",
+    "scripts/render_public_readme_repeated_bec.py",
+    "scripts/run_public_example.py",
+    "scripts/verify_bundled_evidence.py",
+    "scripts/plot_chapter_6_rai_strategy.py",
+    "tests/test_acquisition.py",
+    "tests/test_dipolar_finite_temperature.py",
+    "tests/test_dipolar_tf.py",
+    "tests/test_equilibrium_imaging.py",
+    "tests/test_equilibrium_profiles.py",
+    "tests/test_parallel_jones_response.py",
+    "tests/test_parallel_jones_imaging.py",
+    "tests/test_four_method_jones_imaging.py",
+    "tests/test_four_method_camera_noise.py",
+    "tests/test_target_three_state_profiles.py",
+    "tests/test_target_multiframe_noise_acquisition.py",
+    "tests/test_render_public_figures.py",
+    "tests/test_render_public_readme_repeated_bec.py",
+    "tests/test_run_public_example.py",
+    "tests/test_verify_bundled_evidence.py"
+  ],
+  "evidence_trees": [
+    {
+      "path": "results/chapter_4_three_state_four_method_static_v3",
+      "artifact_manifest_sha256": "3a20696d61989038527b45d1eb6a27a0db6ef160e140c6c7003ac3eb8b12abeb"
+    },
+    {
+      "path": "results/chapter_4_three_state_four_method_snr_400_v2",
+      "artifact_manifest_sha256": "76d65f10ae9c53d2330cb8ec9fbf7dc928de58c9a8a3d8c036881cd43451da3e"
+    },
+    {
+      "path": "results/chapter_4_repeated_bec_dgi_dpfi_v1",
+      "artifact_manifest_sha256": "57f4e7ec6e6593c60f20b29586bf578fdc79a1df975709b147f2de172090152c"
+    },
+    {
+      "path": "results/chapter_5_bec_multiframe_eta_ry_dpfi_v1",
+      "artifact_manifest_sha256": "1946317254a08052d992260a45740f44de5f0d5359b1d4e706c55375f0017759"
+    },
+    {
+      "path": "results/chapter_5_three_state_density_recovery_v2",
+      "artifact_manifest_sha256": "3fa258461edc12bc432b12b1011cdaaeb68be408e6f4b3aaa7cabce023cd4426"
+    },
+    {
+      "path": "results/chapter_5_snr_recovery_relation_v1",
+      "artifact_manifest_sha256": "47083ec847d13c294446c1a8abe2e30b4aee54444e3ac56582fba0d04480c29c"
+    }
+  ],
+  "manuscript_figures": [
+    {
+      "path": "dissertation/figures/figure_2_2_equilibrium_density_profiles.pdf",
+      "sha256": "1dc32a7f8287b383079f7dc767774e3a1ca16397e4daa3b216cc5760035fe46b",
+      "kind": "analytic explanation",
+      "public_action": "rerender"
+    },
+    {
+      "path": "dissertation/figures/figure_3_1_atom_light_interaction.pdf",
+      "sha256": "69fe6d7479385b4a905887a67cb60036e6ec5a975e323a89f41f7d2275c3de01",
+      "kind": "conceptual explanation",
+      "public_action": "rerender"
+    },
+    {
+      "path": "dissertation/figures/figure_3_2a_pci_optical_readout.pdf",
+      "sha256": "4b405e2cfb43f7afb5d54e98db79e28caeaf1255526ed46c4c0f40f9d1232f9b",
+      "kind": "optical schematic",
+      "public_action": "rerender"
+    },
+    {
+      "path": "dissertation/figures/figure_3_2b_dgi_optical_readout.pdf",
+      "sha256": "2f1cc6550e2ece05b40ec5cb8764187f92a7721153b419abfb9301d3a0fdbaa2",
+      "kind": "optical schematic",
+      "public_action": "rerender"
+    },
+    {
+      "path": "dissertation/figures/figure_3_3a_dffi_optical_readout.pdf",
+      "sha256": "8e913693c03332c3120da8f6af2e861648aeae666854002f7ce6c6cf0a2bc824",
+      "kind": "optical schematic",
+      "public_action": "rerender"
+    },
+    {
+      "path": "dissertation/figures/figure_3_3b_dpfi_optical_readout.pdf",
+      "sha256": "262aca50e8f08643cb0b09e087a8a2d5d6d9fbc2124c4cab9f9641eac25353cb",
+      "kind": "optical schematic",
+      "public_action": "rerender"
+    },
+    {
+      "path": "dissertation/figures/figure_3_4_phase_wrap_response.pdf",
+      "sha256": "8551d95f3b118b79582e450e4f69675fa53ef1f5794695fa99c129deb42b06d7",
+      "kind": "analytic explanation",
+      "public_action": "rerender"
+    },
+    {
+      "path": "dissertation/figures/figure_4_2_four_method_noisy_200us.pdf",
+      "sha256": "f2ef0bd1b4ab81aebb13c0ebaadb35cb802cd25880d60152ec5aea43f32a9eee",
+      "kind": "admitted evidence presentation",
+      "public_action": "adapt renderer to admitted paths"
+    },
+    {
+      "path": "dissertation/figures/figure_4_3_four_method_snr.pdf",
+      "sha256": "749b9fa2fd12a47543e32aafcfde87d8f39993b342d02201ce0244079a4785e9",
+      "kind": "admitted evidence presentation",
+      "public_action": "adapt renderer to admitted paths"
+    },
+    {
+      "path": "dissertation/figures/figure_4_4_target_tfbec_repeated_images.pdf",
+      "sha256": "ce71fdc534e509d553465915d47ce25e42d077827f8010c9786b91e68da681ab",
+      "kind": "admitted evidence presentation",
+      "public_action": "adapt renderer to admitted paths"
+    },
+    {
+      "path": "dissertation/figures/figure_5_1_reference_forward_fit.pdf",
+      "sha256": "b46825c21828319ee55114882300369f8d49a2ec15466ae7e6276a144b0decb3",
+      "kind": "worked explanation",
+      "public_action": "preserve figure; replace scratch-dependent example"
+    },
+    {
+      "path": "dissertation/figures/figure_5_2_dpfi_eta_rho_repeated_exposures_presentation_v2.pdf",
+      "sha256": "b4afbdf84dc46f72266b1d8ebafe45f57f4fc596a9f87ac7189eb3d84adffc86",
+      "kind": "admitted evidence presentation",
+      "public_action": "rerender"
+    },
+    {
+      "path": "dissertation/figures/figure_5_3_dpfi_recovery_spread_vs_first_image_loss.pdf",
+      "sha256": "c528208a70921665aca679bf12b6e5573ec6e5e89765056950b167285fe08370",
+      "kind": "admitted evidence presentation",
+      "public_action": "rerender"
+    },
+    {
+      "path": "dissertation/figures/figure_5_4_three_state_fit_examples_v1.pdf",
+      "sha256": "fe85fac513cf123dc535397f7d6afd68812cda794c9731f16ff100a6621e187b",
+      "kind": "worked explanation",
+      "public_action": "preserve figure; replace scratch-dependent example"
+    },
+    {
+      "path": "dissertation/figures/figure_5_5_three_state_density_recovery.pdf",
+      "sha256": "1d3378302e83ea1dee65d85523f9188c267d7a7dd70779af80b8689483b7547e",
+      "kind": "admitted evidence presentation",
+      "public_action": "rerender"
+    },
+    {
+      "path": "dissertation/figures/figure_5_6_snr_vs_recovery_width.pdf",
+      "sha256": "f67db6320f98e4665cc2dec9c2ba9b1350f0ba249751ec13c1bf9b1179bcc056",
+      "kind": "admitted evidence presentation",
+      "public_action": "adapt config to bundled evidence paths"
+    },
+    {
+      "path": "dissertation/figures/figure_6_1_rai_anchored_strategy.pdf",
+      "sha256": "b68df79cbbd89b0a53d33746edff8ddf477593ed2004d7897e4e8eb813a6e11f",
+      "kind": "conceptual explanation",
+      "public_action": "rerender"
+    }
+  ],
+  "required_release_files": [
+    {
+      "path": ".gitignore",
+      "template_path": "release/public/.gitignore",
+      "purpose": "exclude local environments, caches and generated outputs"
+    },
+    {
+      "path": ".gitattributes",
+      "template_path": "release/public/.gitattributes",
+      "purpose": "stable line endings and binary treatment for evidence and figures"
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "template_path": "release/public/.github/workflows/ci.yml",
+      "purpose": "cross-platform installation, test, example and evidence checks"
+    },
+    {
+      "path": "pyproject.toml",
+      "template_path": "release/public/pyproject.toml",
+      "purpose": "public package metadata, dependencies and test configuration"
+    },
+    {
+      "path": "README.md",
+      "template_path": "release/public/README.md",
+      "purpose": "public landing page with the ten-second, one-minute and five-minute reader paths"
+    },
+    {
+      "path": "assets/figure_5_2_dpfi_eta_rho_repeated_exposures.png",
+      "template_path": "release/public/assets/figure_5_2_dpfi_eta_rho_repeated_exposures.png",
+      "purpose": "GitHub-renderable preview of the admitted repeated-BEC recovery figure"
+    },
+    {
+      "path": "CITATION.cff",
+      "template_path": "release/public/CITATION.cff",
+      "purpose": "release and dissertation citation metadata"
+    },
+    {
+      "path": "LICENSE",
+      "template_path": "release/public/LICENSE",
+      "purpose": "software and repository reuse terms"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "template_path": "release/public/THIRD_PARTY_NOTICES.md",
+      "purpose": "source-data and external-method attribution"
+    },
+    {
+      "path": "src/non_destructive_image/__init__.py",
+      "template_path": "release/public/src/non_destructive_image/__init__.py",
+      "purpose": "small public initializer that excludes unrelated binary-mixture modules"
+    },
+    {
+      "path": "scripts/run_public_example.py",
+      "purpose": "one bounded end-to-end simulation and fit"
+    },
+    {
+      "path": "scripts/render_public_figures.py",
+      "purpose": "single figure-rendering interface that reads only bundled evidence"
+    },
+    {
+      "path": "scripts/verify_bundled_evidence.py",
+      "purpose": "manifest, inventory and hash verification for long-run outputs"
+    },
+    {
+      "path": "docs/model.md",
+      "template_path": "release/public/docs/MODEL.md",
+      "purpose": "short model and limitation description"
+    },
+    {
+      "path": "docs/FIGURES.md",
+      "template_path": "release/public/docs/FIGURES.md",
+      "purpose": "reader-facing figure crosswalk"
+    },
+    {
+      "path": "docs/EVIDENCE.md",
+      "template_path": "release/public/docs/EVIDENCE.md",
+      "purpose": "difference between rerun examples and authenticated long-run evidence"
+    }
+  ],
+  "migration_required": [],
+  "excluded_internal_routes": [
+    {
+      "path": "scripts/render_chapter_4_layout_successors.py",
+      "reason": "reads internal scratch families; the public gallery instead hash-checks the exact manuscript PDF and the underlying admitted evidence remains separately verifiable"
+    },
+    {
+      "path": "scripts/render_chapter_5_reference_fit_preview.py",
+      "reason": "reads a non-admitted scratch worked example; the exact explanatory PDF is bundled and is not presented as retained recovery evidence"
+    },
+    {
+      "path": "scripts/render_chapter_5_three_state_fit_examples.py",
+      "reason": "reads two non-admitted scratch fit families; the exact explanatory PDF is bundled and the admitted recovery summaries remain separately reproducible"
+    }
+  ],
+  "deny_prefixes": [
+    ".git/",
+    ".pytest_cache/",
+    ".scratch/",
+    ".venv/",
+    "ai/",
+    "output/",
+    "tmp/"
+  ],
+  "deny_path_fragments": [
+    "$build",
+    "$out",
+    "binary_dipolar",
+    "binary_domain",
+    "binary_optical",
+    "monitor",
+    "worker_progress"
+  ]
+}

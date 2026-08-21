@@ -1,0 +1,29 @@
+{
+  "admitted": false,
+  "common_noisy_zero_centred_display_limit": 2.1105806605656316,
+  "display_pulse_duration_us": 200,
+  "displayed_colourbar_ticks": [
+    -2.0,
+    -1.0,
+    0.0,
+    1.0,
+    2.0
+  ],
+  "label": "target_three_state_four_method_noise_presentation_v5",
+  "new_fits": 0,
+  "new_optical_propagations": 0,
+  "new_snr_calculations": 0,
+  "random_draws": 0,
+  "renderer_path": "scripts/render_target_four_method_noise_presentation.py",
+  "renderer_sha256": "8ba56c1bc41af72f7dc70105f884e478bb557b13f8d3d8a770aae99d29974a87",
+  "schema_version": 1,
+  "source_directory": ".scratch/target_three_state_four_method_noise_v5",
+  "source_hashes": {
+    "artifact_manifest.json": "c6190cc31af3c46bca1270fc4999924db9fc6290f4c1617432258c549832f98e",
+    "data/four_method_noise_arrays.npz": "04f969962be2ade2fd43b80b2a0534169eef4ce1739a2b8fdc3e28472628df20",
+    "data/four_method_snr.csv": "8ae12590e954d14577a853f809eb6ad9555d6c15a9b82289b4a52a9ef774b460",
+    "summary.json": "b0daa88a5e53c15a8c677860d17b2d2046fb19dd3164970449d891b117f94e4f"
+  },
+  "source_manifest_artifact_count": 12,
+  "status": "presentation_candidate_not_retained"
+}

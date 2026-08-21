@@ -1,0 +1,238 @@
+{
+  "schema_version": 4,
+  "label": "target_geometry_finite_temperature_closure_v4",
+  "purpose": "Define a finite-temperature TFBEC closure using the original Oxford Trap III harmonic frequencies, the measured Oxford total atom number and temperature, and the dissertation B-parallel-k imaging orientation.",
+  "lifecycle": {
+    "status": "model_development_not_retained",
+    "admitted": false,
+    "results_writes_allowed": false
+  },
+  "target_geometry": {
+    "coordinate_system": "dissertation_xyz",
+    "trap_frequencies_hz": [257.0, 32.0, 218.0],
+    "long_axis": "y",
+    "dipole_axis": "x",
+    "dipole_axis_index": 0,
+    "probe_axis": "x",
+    "input_polarisation_axis": "z",
+    "frequency_source": "Oxford_Trap_III",
+    "orientation_boundary": "Trap_III_frequencies_are_reused_but_the_dissertation_keeps_B_and_k_along_x_rather_than_reproducing_the_source_field_orientation",
+    "trap_model": "triaxial_harmonic",
+    "include_unknown_target_anharmonicity_or_finite_depth": false
+  },
+  "atomic_parameters": {
+    "source_config": "configs/dissertation_v3_orca_fusion.json",
+    "mass_number": 166,
+    "scattering_length_bohr": 72.0,
+    "dipolar_length_bohr": 65.4,
+    "epsilon_dd": 0.9083333333333333
+  },
+  "initial_condition_policy": {
+    "source_config": "configs/dpfi_initial_condition_suite_v1_orca_fusion_m10.json",
+    "condition_id": "oxford_bimodal_300ms",
+    "repetition_id": "oxford_300ms_rep_1_central",
+    "source_measurement_used_as_reference": [
+      "total_trapped_atoms",
+      "temperature"
+    ],
+    "preserve_from_measurement": [
+      "total_trapped_atoms",
+      "temperature"
+    ],
+    "primary_target_constraint": {
+      "quantity": "total_trapped_atoms",
+      "value": 217426.12972931602,
+      "temperature_nk": 245.10243205732764,
+      "interpretation": "Retain the measured Oxford total atom number and temperature, then recalculate condensate population, radii and density in the target trap and orientation."
+    },
+    "solve_for_primary_target": [
+      "condensate_atoms",
+      "thermal_atoms",
+      "dipolar_tf_radii",
+      "projected_peak_column_density"
+    ],
+    "forbid_old_triplet_anchor": true,
+    "forbid_linear_rescaling_of_source_condensate_fraction": true,
+    "forbid_direct_transfer_of_source_condensate_number": true,
+    "forbid_optical_response_tuned_atom_number": true
+  },
+  "population_model": {
+    "critical_point": "Oxford_supplement_S7_and_S10_full_triaxial_harmonic_equations",
+    "non_saturation": "Oxford_supplement_S27_to_S31_formalism_recalculated_for_the_target_harmonic_trap",
+    "temperature_dependence_recalculated": true,
+    "calibrated_to_oxford_non_saturation_curve": false,
+    "oxford_role": "external_benchmark_not_empirical_target_coefficient"
+  },
+  "initial_target_equilibrium": {
+    "status": "conditional_harmonic_target_reference_at_fixed_source_total_number",
+    "source_total_atoms": 217426.12972931602,
+    "source_temperature_nk": 245.10243205732764,
+    "ideal_critical_atoms": 148298.3401480481,
+    "harmonic_corrected_critical_atoms": 178956.08181795388,
+    "condensate_atoms": 50701.094679638154,
+    "thermal_atoms": 166725.0350434518,
+    "dipolar_tf_radii_um_xyz": [2.369378775816091, 14.652216669933539, 1.470434840433167],
+    "projected_rms_um_yz": [5.538017352068444, 0.5557721295587291],
+    "projected_peak_column_density_um2": 1872.6575061247395,
+    "number_residual_atoms": -0.000006226066034287214,
+    "minimum_tf_chemical_potential_ratios_xyz": [7.385077059975298, 59.31140013792661, 8.706260570704824],
+    "thermal_halo_rendered_in_reference_figure": false
+  },
+  "comparison_scaling_candidates": {
+    "selected_for_manuscript": "source_total_atom_number",
+    "source_total_atom_number": {
+      "criterion": "retain_measured_total_atoms_and_temperature",
+      "total_atoms": 217426.12972931602,
+      "temperature_nk": 245.10243205732764,
+      "condensate_atoms": 50701.094679638154,
+      "thermal_atoms": 166725.0350434518,
+      "radii_um_xyz": [2.369378775816091, 14.652216669933539, 1.470434840433167],
+      "radii_um_yz": [14.652216669933539, 1.470434840433167],
+      "projected_rms_um_yz": [5.538017352068444, 0.5557721295587291],
+      "peak_column_density_um2": 1872.6575061247395,
+      "active_role": "primary_manuscript_and_multiframe_reference"
+    },
+    "match_fixed_bec_condensate_atoms": {
+      "criterion": "historical_50000_condensate_atom_stress_test",
+      "total_atoms": 289228.8760760734,
+      "condensate_atoms": 50000.0,
+      "thermal_atoms": 239228.8760760734,
+      "radii_um_xyz": [3.4998995852536683, 12.212332245124221, 1.0384460214329236],
+      "projected_rms_um_yz": [4.615827721241969, 0.3924957032394236],
+      "peak_column_density_um2": 3137.45570038,
+      "source_trap_hz_xyz": [151.0, 31.5, 227.0],
+      "active_role": "superseded_different_trap_high_density_stress_test"
+    },
+    "match_fixed_bec_peak_column_density": {
+      "criterion": "historical_intermediate_match_1381p5533_inverse_square_micrometres",
+      "total_atoms": 225278.34017378394,
+      "condensate_atoms": 12743.44265518051,
+      "thermal_atoms": 212534.89751860342,
+      "radii_um_xyz": [2.66267982, 9.29098949, 0.79003675],
+      "projected_rms_um_yz": [3.5116639463221184, 0.29860582387167256],
+      "peak_column_density_um2": 1381.55329763,
+      "source_trap_hz_xyz": [151.0, 31.5, 227.0],
+      "active_role": "superseded_different_trap_intermediate_density_diagnostic"
+    },
+    "match_oxford_reference_peak_column_density": {
+      "criterion": "historical_optical_scale_match_1009p5264_inverse_square_micrometres",
+      "total_atoms": 213418.42935490079,
+      "condensate_atoms": 7554.461045415485,
+      "thermal_atoms": 205863.97444421024,
+      "radii_um_xyz": [2.3982932117329145, 8.368455559586645, 0.7115912934155963],
+      "projected_rms_um_yz": [3.1629788954803035, 0.26895622821378024],
+      "peak_column_density_um2": 1009.5264037514116,
+      "source_trap_hz_xyz": [151.0, 31.5, 227.0],
+      "active_role": "superseded_different_trap_optical_response_tuned_diagnostic"
+    }
+  },
+  "energy_model": {
+    "primary": "corrected_harmonic_baseline_plus_semiclassical_Hartree_Fock_excess_plus_dipolar_TF_core",
+    "thermal_population_and_energy_use_same_effective_potential": true,
+    "critical_baseline": {
+      "population_atoms": "harmonic_critical_atoms",
+      "energy_per_atom": "3_zeta4_over_zeta3_times_kBT",
+      "reason": "No independent interaction-corrected critical-energy measurement is available; the condensate-dependent correction is evaluated by the paired semiclassical phase-space integral."
+    },
+    "mean_field_excess_energy": "phase_space_energy_in_Veff_minus_ideal_harmonic_phase_space_energy",
+    "condensate_energy": "dipolar_TF_trap_plus_contact_plus_dipolar_energy",
+    "condensate_thermal_cross_interaction_counting": "included_once_in_the_thermal_Veff_energy_integral",
+    "thermal_self_interaction_energy": false,
+    "sensitivity": "dipolar_TF_core_plus_3_zeta4_over_zeta3_Nth_kBT",
+    "recoil_only_deposited_energy": true,
+    "fixed_trapped_atom_number": true,
+    "scattering_population": "all_trapped_atoms_in_the_broad_probe",
+    "recoil_increment": "2_Ntotal_nsc_Erecoil",
+    "thermal_halo_optical_policy": "equilibrium_reservoir_only_in_primary_multiframe_images",
+    "thermal_halo_claim_boundary": "The primary image predicts the condensate core, not the broad thermal signal.",
+    "endpoint_domain": {
+      "declared_operating_temperature_range_nk": [235.0, 404.0],
+      "range_role": "bounded_model_domain_not_a_claim_of_full_oxford_curve_validation",
+      "require_partially_condensed_state": true,
+      "minimum_TF_chemical_potential_over_each_trap_quantum": 1.0,
+      "clip_or_extrapolate": false
+    },
+    "unsupported_primary_corrections": [
+      "three_body_loss",
+      "evaporation",
+      "finite_trap_depth",
+      "technical_heating",
+      "lifetime_penalty",
+      "orientation_dependent_preparation_efficiency"
+    ]
+  },
+  "validation": {
+    "paper": "Krstajic_et_al_PRA_111_L051303_2025",
+    "paper_doi": "10.1103/PhysRevA.111.L051303",
+    "dataset_doi": "10.5287/ora-m8gpvdr2y",
+    "dataset_zip_sha256": "29866041913DDABA543B1C4FE3F7F26558757A1BE6379B97D13FFF70DD36FFA5",
+    "oxford_traps_hz": {
+      "I": [294.0, 14.0, 233.3],
+      "II": [312.3, 26.9, 268.7],
+      "III": [257.0, 32.0, 218.0],
+      "IV": [310.8, 20.5, 269.8]
+    },
+    "orientations_degrees": [0, 90],
+    "required_internal_limits": [
+      "contact_only_non_saturation",
+      "isotropic_zero_orientation_difference",
+      "axis_permutation_invariance",
+      "positive_finite_populations",
+      "atom_number_and_energy_conservation",
+      "explicit_endpoint_domain_failure"
+    ],
+    "external_oxford_benchmark": {
+      "diagnostic": "target_geometry_finite_temperature_oxford_validation_v3",
+      "critical_shift_ratio_pass": true,
+      "experiment_vs_published_simulation_pass": true,
+      "harmonic_curve_transfer_pass": false,
+      "published_simulation_edd_column_accepted": false,
+      "interpretation": "unresolved external benchmark; not an internal mechanics failure and not an Oxford-validated claim"
+    }
+  },
+  "bounded_preflight": {
+    "label": "target_geometry_finite_temperature_preflight_v7",
+    "pulse_duration_us": 200.0,
+    "pulse_count": 3,
+    "probe_power_w": 0.001,
+    "beam_diameter_m": 0.024,
+    "detuning_hz": 1500000000.0,
+    "atomic_response_config": "configs/dissertation_v3_orca_fusion.json",
+    "orientation_config": "configs/imaging_orientation_contract_v2.json",
+    "energy_models": [
+      "semiclassical_primary",
+      "ideal_harmonic_sensitivity"
+    ],
+    "maximum_temperature_nk": 404.0,
+    "quadrature": {
+      "angular_order": 12,
+      "azimuthal_order": 24,
+      "radial_order": 14,
+      "potential_order": 48,
+      "radial_limit": 6.0
+    },
+    "required_checks": [
+      "selected_equilibrium_identity",
+      "fixed_source_total_atom_number",
+      "zero_recoil_identity",
+      "strict_temperature_increase",
+      "nonincreasing_condensate_population",
+      "strict_thermal_population_increase",
+      "number_residual_at_most_0.05_atoms",
+      "relative_energy_residual_at_most_2e-8",
+      "minimum_TF_ratio_at_least_1",
+      "no_clipping_or_extrapolation"
+    ],
+    "output_directory": ".scratch/target_geometry_finite_temperature_preflight_v7",
+    "overwrite": false,
+    "random_draws": 0
+  },
+  "claim_boundary": {
+    "approved_model_name": "Oxford-informed harmonic finite-temperature Er TFBEC model in the target geometry",
+    "selection_statement": "The target state uses the original Oxford Trap III frequencies and retains the measured Oxford total atom number and temperature; its condensate population, radii and density are recalculated for the dissertation B-parallel-k orientation.",
+    "may_support_conditional_target_multiframe_after_internal_validation": true,
+    "may_claim_oxford_curve_reproduction": false,
+    "may_call_target_state_measured_oxford_state": false,
+    "may_add_unsupported_empirical_correction": false
+  }
+}

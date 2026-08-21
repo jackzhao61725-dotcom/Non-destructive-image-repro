@@ -1,0 +1,74 @@
+\documentclass[12pt,pstricks,border=4pt]{standalone}
+\input{common_style.tex}
+
+\begin{document}
+\psset{unit=1cm}
+\begin{pspicture}(0.15,-2.35)(11.82,4.25)
+  \rput[l](0.55,3.45){\textbf{\small DPFI}}
+
+  \pnode(0.55,2.60){Start}
+  \pnode(1.50,2.60){AtomNode}
+  \pnode(3.80,2.60){LoneNode}
+  \pnode(6.80,2.60){PbsNode}
+  \pnode(6.80,1.45){FoldNode}
+  \pnode(9.20,2.60){LtwoTopNode}
+  \pnode(6.80,0.20){LtwoBottomNode}
+  \pnode(11.50,2.60){CamTopNode}
+  \pnode(6.80,-2.10){CamBottomNode}
+
+  \begin{optexp}
+    \optdipole[compname=Atoms,optdipolesize=0.04 1.34,position=end]
+      (Start)(AtomNode){\AtomsGlyph}{}
+    \lens[compname=Lone,lensheight=2.05,lensradius=2.25,position=end]
+      (AtomNode)(LoneNode){}
+    \beamsplitter[compname=PBS,bssize=2.90,bsstyle=cube]
+      (LoneNode)(PbsNode)(FoldNode){}
+    \lens[compname=LtwoTop,lensheight=2.05,lensradius=2.15,position=end]
+      (PbsNode)(LtwoTopNode){}
+    \lens[compname=LtwoBottom,lensheight=2.05,lensradius=2.15,position=end]
+      (FoldNode)(LtwoBottomNode){}
+
+    \backlayer{%
+      % Yellow is the linearly polarised probe before the atoms.
+      \pspolygon[fillstyle=solid,fillcolor=ProbePale,linestyle=none]
+        (0.40,2.00)(1.50,2.00)(1.50,3.20)(0.40,3.20)%
+      % Before the PBS, this is the same complete atom-modified transmitted
+      % field shown in the PCI and DGI schematics.
+      \pspolygon[fillstyle=solid,fillcolor=ProbePale,linestyle=none]
+        (1.50,2.00)(3.80,2.00)(5.78,2.37)(5.78,2.83)(3.80,3.20)(1.50,3.20)%
+      \pspolygon[fillstyle=solid,fillcolor=AffectedPale,opacity=0.60,linestyle=none]
+        (1.50,2.34)(1.50,2.86)(3.80,3.62)(5.78,3.62)%
+        (5.78,1.58)(3.80,1.58)%
+      % The unaffected probe supplies the same bright background in both
+      % +/-45-degree ports.
+      \pspolygon[fillstyle=solid,fillcolor=ProbePale,linestyle=none]
+        (7.83,2.37)(9.20,2.00)(11.50,2.00)(11.50,3.20)(9.20,3.20)(7.83,2.83)%
+      \pspolygon[fillstyle=solid,fillcolor=ProbePale,linestyle=none]
+        (6.57,1.58)(6.20,0.20)(6.20,-2.10)(7.40,-2.10)(7.40,0.20)(7.03,1.58)%
+      % Transparent overlays show the opposite atom-dependent changes carried
+      % on top of those equal backgrounds; they are not separate beams.
+      \pspolygon[fillstyle=solid,fillcolor=PortH,opacity=0.20,linestyle=none]
+        (7.83,1.58)(9.20,1.58)(11.50,2.34)(11.50,2.86)(9.20,3.62)(7.83,3.62)%
+      \pspolygon[fillstyle=solid,fillcolor=PortV,opacity=0.20,linestyle=none]
+        (5.78,1.58)(5.78,0.20)(6.54,-2.10)(7.06,-2.10)(7.82,0.20)(7.82,1.58)%
+    }
+  \end{optexp}
+
+  \psline[linecolor=Ink,linewidth=0.8pt](5.78,3.63)(7.83,1.58)
+
+  % A half-wave plate at 22.5 degrees rotates the analysis basis by 45
+  % degrees before the fixed-axis PBS.  The dashed line marks the thin plate
+  % without assigning it an artificial longitudinal extent.
+  \psline[linecolor=Ink,linestyle=dashed,dash=2.5pt 1.8pt,linewidth=1.05pt]
+    (4.85,0.76)(4.85,3.94)
+  \rput[r](4.68,0.87){\small half-wave plate, $22.5^{\circ}$}
+
+  % Matched detector planes terminate equal-length, equal-magnification relays.
+  \psline[linecolor=Ink,linewidth=1.2pt](11.50,1.75)(11.50,3.45)
+  \psline[linecolor=Ink,linewidth=1.2pt](5.95,-2.10)(7.65,-2.10)
+
+  \rput(7.25,3.30){PBS}
+  \rput[b](9.20,3.86){$L_{2,H}$}
+  \rput[l](7.95,0.20){$L_{2,V}$}
+\end{pspicture}
+\end{document}

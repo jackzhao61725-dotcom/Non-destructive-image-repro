@@ -1,0 +1,154 @@
+{
+  "admitted": true,
+  "artifact_count": 26,
+  "artifacts": [
+    {
+      "bytes": 1226,
+      "path": "admission_contract_snapshot.json",
+      "sha256": "ae2e78ba8fa23f8dc32178e78b1e0d9aebb652a4bd95dda6e8d29544f13186cd"
+    },
+    {
+      "bytes": 2070,
+      "path": "lineage/admission_config_snapshot.json",
+      "sha256": "ff5ada42e8be3bbd7e33094898859f631d63a4e99275d631c09290f53218461e"
+    },
+    {
+      "bytes": 22171,
+      "path": "lineage/admit_chapter_5_bec_multiframe_eta_ry_dpfi.py",
+      "sha256": "4ed14db28dbecf00643584c5ccea85d4af4c9146ca0eb5df8aa1912debbb7d21"
+    },
+    {
+      "bytes": 3024,
+      "path": "lineage/source_diagnostic_artifact_manifest.json",
+      "sha256": "855ae17aabbc418a14827536cc5fc14ef64e61a36a2254918143bb2a721c4ca5"
+    },
+    {
+      "bytes": 12575,
+      "path": "presentation/figure_5_2_dpfi_eta_rho_repeated_exposures.pdf",
+      "sha256": "522be42c4d46c4ffc2f588c8c7a4e29c46ed231c4a37a483c99fa0f98f155c26"
+    },
+    {
+      "bytes": 8427,
+      "path": "presentation/figure_5_2_plotted_values.csv",
+      "sha256": "0ba938849c1071e08a8604f82c4cad98875d55522510f734574423aa8a8c7ae8"
+    },
+    {
+      "bytes": 688,
+      "path": "provenance.json",
+      "sha256": "13dd475c28a55d37720c5feb1e80c3eee2ad70bbdd0d0d981f83873d0441344c"
+    },
+    {
+      "bytes": 4117,
+      "path": "source_payload/config_snapshot.json",
+      "sha256": "6bcb0053f5a7c0e71dc180117e137df58220f5c9649588f20dde45a2e876cb1c"
+    },
+    {
+      "bytes": 12357,
+      "path": "source_payload/contracts/v3_science_config.json",
+      "sha256": "a34e8d8d50eb234d8b8f18353d005dd43a20decbd470442e926c4977d6e0f537"
+    },
+    {
+      "bytes": 5916,
+      "path": "source_payload/dark_floor_sensitivity.json",
+      "sha256": "3c965ef7f0f05aaeeeef4d276196bc6d982321d99de197a889beaa68156d9cdb"
+    },
+    {
+      "bytes": 11628,
+      "path": "source_payload/data/conditional_endpoint_covariance_summary.csv",
+      "sha256": "9680adff9411b72122b2c6e7977eed4381236c099495343227f623b9dc85806b"
+    },
+    {
+      "bytes": 11370,
+      "path": "source_payload/data/conditional_paired_covariance_summary.csv",
+      "sha256": "c9953184838fa1966d25ce50bad695ec56c127ce5c84d56113804fd783946351"
+    },
+    {
+      "bytes": 34735,
+      "path": "source_payload/data/endpoint_support_summary.csv",
+      "sha256": "79f4bddd428713ec8831aae49ca8703f6d4b79f211802155908614d15bf3ba9d"
+    },
+    {
+      "bytes": 970868,
+      "path": "source_payload/data/nuisance_boundary_diagnostics.csv",
+      "sha256": "466fc96243bc1a70cd83064421a7ab8cc64cf9bdf5b32704cc5e7b7707c163f7"
+    },
+    {
+      "bytes": 912721,
+      "path": "source_payload/data/paired_changes.csv",
+      "sha256": "0729bf30f129070a895af2534c16462605f299d6b0c7750c8b98d3cf8cbaaee2"
+    },
+    {
+      "bytes": 35092,
+      "path": "source_payload/data/paired_support_summary.csv",
+      "sha256": "461a5856876c4024719bff30890a01265d4e193a5941a2035ff594f34ce8783f"
+    },
+    {
+      "bytes": 839149,
+      "path": "source_payload/data/seed_ledger.csv",
+      "sha256": "893e8464b845f9011f7e26dc708dda57689b54bf1381320258517e92888f2b69"
+    },
+    {
+      "bytes": 3168272,
+      "path": "source_payload/data/selected_endpoints.csv",
+      "sha256": "3ea9c496e0e58eb18404578b2486f5178e8281a66f07c225d5bbd784c740425a"
+    },
+    {
+      "bytes": 24634712,
+      "path": "source_payload/data/start_outcomes.csv",
+      "sha256": "f6e2a110a4786191bcd82498a1c3fb66259e7ec1adb42da5c87972dc935ffd4d"
+    },
+    {
+      "bytes": 109382,
+      "path": "source_payload/deterministic_qualification.json",
+      "sha256": "48e297a99e4cdf7f5c861a9a4262deacedae8c6d872be25a98ba2801fda4b52b"
+    },
+    {
+      "bytes": 1463,
+      "path": "source_payload/provenance.json",
+      "sha256": "6596a82b3322b8852d802bf0d7bdc969aee7f5162a29ad66ef36de4e9bbfa95c"
+    },
+    {
+      "bytes": 2747,
+      "path": "source_payload/shard_inventory.json",
+      "sha256": "971096aa798536ecfbeec105726f0b2acc10473c2432824842eb8e80912073ff"
+    },
+    {
+      "bytes": 24931,
+      "path": "source_payload/stochastic_smoke.json",
+      "sha256": "200e1c0fe1c9b9c57b7984e4c4407e7f8d65e9a8d3d702a3af3d0dc20155ba8c"
+    },
+    {
+      "bytes": 1816,
+      "path": "source_payload/summary.json",
+      "sha256": "5383f81f74a3a9508bfe323598a4c369232a0d29266bdb330e4e0f45f3bbfd77"
+    },
+    {
+      "bytes": 1280,
+      "path": "summary.json",
+      "sha256": "9d8f9e6a5c7d185fe935ff7f3a9d4832487bf3bb17c8577fcd4a8f635c18bceb"
+    },
+    {
+      "bytes": 412,
+      "path": "visual_qa.json",
+      "sha256": "a185d26a1b08e4fc44a471f18ca69309d1c43b0479720012b90aef2a3579381a"
+    }
+  ],
+  "claim_boundary": {
+    "does_not_support": [
+      "coverage or an experimental detection probability",
+      "a maximum usable frame or measured condensate depletion",
+      "installed-apparatus precision or validation",
+      "an optimum pulse duration",
+      "a DGI multi-frame recovery result"
+    ],
+    "supports": [
+      "conditional same-model DPFI recovery of eta and rho_y for the eight admitted pulse durations and q=1,...,15",
+      "paired within-sequence q-given-1 changes with complete supported-pair counts",
+      "a presentation of the known equilibrium inputs with recovered medians and conditional 16--84 percentile ranges at 25, 200 and 400 us"
+    ]
+  },
+  "family": "chapter_5_bec_multiframe_eta_ry_dpfi_v1",
+  "schema_version": 1,
+  "status": "admitted_immutable",
+  "total_bytes": 30833149
+}

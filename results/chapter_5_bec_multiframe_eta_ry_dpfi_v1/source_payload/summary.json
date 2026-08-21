@@ -1,0 +1,55 @@
+{
+  "admitted": false,
+  "claim_boundary": {
+    "does_not_support": [
+      "coverage or detection probability",
+      "maximum usable frame",
+      "measured depletion",
+      "installed-apparatus precision",
+      "optimum duration",
+      "DGI multiframe manuscript result"
+    ],
+    "supports": [
+      "conditional same-model DPFI endpoint recovery of eta and rho_y for the eight selected durations",
+      "paired within-sequence q-given-1 changes with complete supported-pair counts",
+      "separate reporting of expected dark-floor nuisance boundaries"
+    ]
+  },
+  "dark_floor_endpoint_count": 5663,
+  "durations_us": [
+    25,
+    100,
+    150,
+    200,
+    250,
+    300,
+    350,
+    400
+  ],
+  "endpoint_rows": 7680,
+  "eta_supported_count": 7680,
+  "full_production": true,
+  "gain_boundary_endpoint_count": 0,
+  "images_per_sequence": 15,
+  "label": "chapter_5_bec_multiframe_eta_ry_dpfi_v4",
+  "method": "dpfi",
+  "new_camera_random_identities": 0,
+  "optimizer_failure_count": 0,
+  "paired_rows": 7680,
+  "physical_bound_endpoint_count": 0,
+  "production_endpoint_refits": 0,
+  "random_identities": 17408,
+  "residual_failure_count": 0,
+  "rho_y_supported_count": 7680,
+  "schema_version": 1,
+  "sensitivity_endpoint_refits": 9,
+  "sequences_per_duration": 64,
+  "start_rows": 38400,
+  "status": "diagnostic_not_retained",
+  "support_policy": {
+    "dark_floor": "a fitted non-negative dark mean at its physically allowed zero floor is reported separately and does not by itself censor eta or rho_y",
+    "gain_boundary": "a gain boundary remains a calibration warning requiring separate review",
+    "physical_observable_support": "inherit the v3 eta and rho_y nuisance-projected direction, conditional-interval and physical-bound flags without alteration",
+    "same_model_boundary": true
+  }
+}

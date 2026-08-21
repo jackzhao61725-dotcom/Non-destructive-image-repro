@@ -1,0 +1,13 @@
+{
+  "checks": {
+    "axes_and_labels_legible": true,
+    "bands_and_medians_visible": true,
+    "common_q_axis_preserved": true,
+    "legend_unambiguous": true,
+    "no_clipped_or_overlapping_content": true,
+    "only_authenticated_saved_summaries_plotted": true
+  },
+  "inspected_artifact": "presentation/figure_5_2_dpfi_eta_rho_repeated_exposures.pdf",
+  "schema_version": 1,
+  "status": "PASS"
+}

@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "label": "public_example_v1",
+  "purpose": "Bounded public example of the dissertation's static three-state imaging route, one DPFI BEC fit and the authenticated repeated-BEC endpoint summary.",
+  "sources": {
+    "profile_contract": {
+      "path": "configs/three_state_target_trap_profiles_v4.json",
+      "sha256": "54f278b4b3cd8900f2ac4390d175932938502f63c450da4920f492088115c4b5"
+    },
+    "atomic_config": {
+      "path": "configs/dissertation_v3_orca_fusion.json",
+      "sha256": "3cba57ba4124dea390e7c412735fbd4d38654bf69da528a5672510353079d7b0"
+    },
+    "orientation_contract": {
+      "path": "configs/imaging_orientation_contract_v2.json",
+      "sha256": "ff7142dade762fc2aa2afab5c5a949ccc8847a4ec117aadd3cdf2abfec486c8e"
+    },
+    "objective_config": {
+      "path": "configs/erk_401nm_objective_v1.json",
+      "sha256": "78b2c17a3a47a293ead837ab54ecb72960c2bee3746d1808663722bb2ce3801f"
+    },
+    "repeated_bec_summary": {
+      "path": "results/chapter_5_bec_multiframe_eta_ry_dpfi_v1/presentation/figure_5_2_plotted_values.csv",
+      "sha256": "0ba938849c1071e08a8604f82c4cad98875d55522510f734574423aa8a8c7ae8"
+    }
+  },
+  "optical_model": {
+    "object_pixel_m": 5e-8,
+    "camera_pixel_m": 4.44596443228454e-7,
+    "objective_case": "measured_best",
+    "detuning_hz": 1500000000.0,
+    "phase_plate_amplitude": 0.95,
+    "phase_plate_phase_rad": 1.5707963267948966,
+    "dgi_stop_optical_depth": 4.0
+  },
+  "one_fit": {
+    "method": "dpfi",
+    "pulse_duration_us": 200,
+    "photoelectrons_per_i0_pixel_per_us": 1.1466492625734523,
+    "read_noise_electrons_rms": 0.7,
+    "dgi_blank_leakage_intensity_over_i0": 0.0001,
+    "seed": [20260821, 1],
+    "truth_eta_rho_y_y0_um": [1.0, 1.0, 0.0],
+    "start_eta_rho_y_y0_um": [0.7, 1.1, 0.5],
+    "physical_model": {
+      "eta_bounds": [0.3, 1.15],
+      "rho_y_bounds": [0.75, 1.15],
+      "y0_um_bounds": [-2.0, 2.0]
+    },
+    "solver": {
+      "method": "trf",
+      "loss": "linear",
+      "x_scale": "jac",
+      "irls_frozen_variance_passes": 2,
+      "maximum_function_evaluations_per_pass": 60,
+      "xtol": 1e-7,
+      "ftol": 1e-7,
+      "gtol": 1e-7,
+      "trust_region_solver": "exact"
+    }
+  },
+  "repeated_bec_view": {
+    "pulse_duration_us": 200,
+    "image_q": [1, 15],
+    "observables": ["eta", "rho_y"]
+  },
+  "claim_boundary": {
+    "static_route": "recomputed from the declared density, atom-light, optical-transfer and camera models",
+    "one_fit": "one fixed-seed workflow check, not an uncertainty or success-rate estimate",
+    "repeated_bec_route": "read from the hash-verified admitted ensemble summary; not recomputed by the quick start"
+  }
+}

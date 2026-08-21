@@ -1,0 +1,48 @@
+{
+  "calculation": "deterministic_replay_of_the_existing_raw_frame_noise_model_with_duration_scaled_mean_counts",
+  "display_marker_us": 200,
+  "expected_row_count": 192,
+  "label": "target_three_state_four_method_snr_400_v1",
+  "lifecycle": {
+    "admitted": false,
+    "output_directory": ".scratch/target_three_state_four_method_snr_400_v1",
+    "overwrite": false,
+    "results_writes": 0,
+    "status": "diagnostic_not_retained"
+  },
+  "parent": {
+    "base_config": {
+      "path": "configs/target_three_state_four_method_noise_v5.json",
+      "sha256": "93b1d2f2f8fe45d752d320e0183590df9f0415dec0c292fb08fa5a287729a4f4"
+    },
+    "manifest": {
+      "path": ".scratch/target_three_state_four_method_noise_v5/artifact_manifest.json",
+      "sha256": "c6190cc31af3c46bca1270fc4999924db9fc6290f4c1617432258c549832f98e"
+    },
+    "snr_table": {
+      "path": ".scratch/target_three_state_four_method_noise_v5/data/four_method_snr.csv",
+      "sha256": "8ae12590e954d14577a853f809eb6ad9555d6c15a9b82289b4a52a9ef774b460"
+    }
+  },
+  "pulse_durations_us": [
+    25,
+    50,
+    75,
+    100,
+    125,
+    150,
+    175,
+    200,
+    225,
+    250,
+    275,
+    300,
+    325,
+    350,
+    375,
+    400
+  ],
+  "purpose": "Extend the authenticated static three-state four-readout whole-image SNR comparison from 300 to 400 microseconds without changing the optical fields or the 200-microsecond camera draw.",
+  "random_draws": 0,
+  "schema_version": 1
+}

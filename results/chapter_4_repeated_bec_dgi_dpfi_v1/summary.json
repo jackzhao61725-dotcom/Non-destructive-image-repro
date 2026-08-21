@@ -1,0 +1,27 @@
+{
+  "admitted": true,
+  "claim_boundary": {
+    "does_not_support": [
+      "experimental probability, classification rate, coverage or apparatus performance",
+      "a typical, selected, averaged or denoised noisy realisation",
+      "intermediate dynamics, feature precision or a universal DGI-DPFI ranking",
+      "globally single-valued DPFI density inversion"
+    ],
+    "supports": [
+      "deterministic whole-image template SNR over the declared DGI and DPFI duration-frame grid",
+      "one fixed predeclared draw-0 DPFI raw-frame replay at the 24 displayed conditions",
+      "complete re-equilibration between pulses in each independently prepared duration sequence"
+    ]
+  },
+  "consumable": true,
+  "family": "chapter_4_repeated_bec_dgi_dpfi_v1",
+  "recomputation": {
+    "new_fits": 0,
+    "new_optical_propagations": 0,
+    "new_random_draws": 0,
+    "new_thermodynamic_solves": 0
+  },
+  "schema_version": 1,
+  "source_count": 1,
+  "status": "admitted_immutable"
+}

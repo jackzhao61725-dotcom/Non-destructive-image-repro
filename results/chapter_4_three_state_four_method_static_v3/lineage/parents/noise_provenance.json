@@ -1,0 +1,17 @@
+{
+  "admitted": false,
+  "config_sha256": "93b1d2f2f8fe45d752d320e0183590df9f0415dec0c292fb08fa5a287729a4f4",
+  "parent_hashes": {
+    "incident_count_manifest": "649685ef77f2d19fcf79ab68a05c83c011377b353af355f93c5fe516a0558180",
+    "incident_count_scale": "e0d0a97c741fd2dc5752bca7f3b6004a64359205234901523beaead45735208f",
+    "noiseless_manifest": "4f5b8f7fcbea44435470ede1229c9322fd1c1d0c8d86655905c76700ae2446d9",
+    "noiseless_payload": "dc3bae3101ffda28ee5a8f8a5c32c3b12950c577fabac2df72177206c5e7707e",
+    "noiseless_summary": "64ab11dcbbf7b2e4e12acd33742f200d10b9c4f1e5e010ef7337e8e8de05a843"
+  },
+  "random_identities": 57,
+  "redraws": 0,
+  "results_writes": 0,
+  "runner_sha256": "2db6b8463093ed2b2bf73b70afbf37862fd4d0f19710afa53c225d0b50a873db",
+  "schema_version": 1,
+  "status": "diagnostic_not_retained"
+}

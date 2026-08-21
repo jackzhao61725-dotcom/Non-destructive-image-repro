@@ -1,0 +1,30 @@
+{
+  "admitted": false,
+  "artifact_count": 4,
+  "artifacts": [
+    {
+      "bytes": 934,
+      "path": "caption.txt",
+      "sha256": "11b04b32a66e9c5aa8224114c70d8fc6c43533a08785b0c86bba27f764dd804c"
+    },
+    {
+      "bytes": 31779,
+      "path": "figure_4_target_four_method_noiseless_common_scale.pdf",
+      "sha256": "c9f5e36a93f2f0cc27cd3421e9c03117b98271a6da21fb6e517b21c04a3e5fa3"
+    },
+    {
+      "bytes": 105657,
+      "path": "figure_4_target_four_method_noiseless_common_scale.png",
+      "sha256": "9b753ca7513c5ad5e36f153feb2a8c12dfe7f9d5da49c4923e9f9de09701e8a9"
+    },
+    {
+      "bytes": 1071,
+      "path": "metadata.json",
+      "sha256": "f0f30c434e14c230b7b2ddda57a870ebca3aa450119f785e227be51a43862267"
+    }
+  ],
+  "family": "target_three_state_four_method_noiseless_presentation_v9",
+  "schema_version": 1,
+  "status": "presentation_candidate_not_retained",
+  "total_bytes": 139441
+}

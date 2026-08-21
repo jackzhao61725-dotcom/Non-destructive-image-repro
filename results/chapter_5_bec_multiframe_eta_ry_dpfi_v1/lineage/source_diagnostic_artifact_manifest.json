@@ -1,0 +1,96 @@
+{
+  "admitted": false,
+  "artifact_count": 17,
+  "artifacts": [
+    {
+      "bytes": 4117,
+      "path": "config_snapshot.json",
+      "sha256": "6bcb0053f5a7c0e71dc180117e137df58220f5c9649588f20dde45a2e876cb1c"
+    },
+    {
+      "bytes": 12357,
+      "path": "contracts/v3_science_config.json",
+      "sha256": "a34e8d8d50eb234d8b8f18353d005dd43a20decbd470442e926c4977d6e0f537"
+    },
+    {
+      "bytes": 5916,
+      "path": "dark_floor_sensitivity.json",
+      "sha256": "3c965ef7f0f05aaeeeef4d276196bc6d982321d99de197a889beaa68156d9cdb"
+    },
+    {
+      "bytes": 11628,
+      "path": "data/conditional_endpoint_covariance_summary.csv",
+      "sha256": "9680adff9411b72122b2c6e7977eed4381236c099495343227f623b9dc85806b"
+    },
+    {
+      "bytes": 11370,
+      "path": "data/conditional_paired_covariance_summary.csv",
+      "sha256": "c9953184838fa1966d25ce50bad695ec56c127ce5c84d56113804fd783946351"
+    },
+    {
+      "bytes": 34735,
+      "path": "data/endpoint_support_summary.csv",
+      "sha256": "79f4bddd428713ec8831aae49ca8703f6d4b79f211802155908614d15bf3ba9d"
+    },
+    {
+      "bytes": 970868,
+      "path": "data/nuisance_boundary_diagnostics.csv",
+      "sha256": "466fc96243bc1a70cd83064421a7ab8cc64cf9bdf5b32704cc5e7b7707c163f7"
+    },
+    {
+      "bytes": 912721,
+      "path": "data/paired_changes.csv",
+      "sha256": "0729bf30f129070a895af2534c16462605f299d6b0c7750c8b98d3cf8cbaaee2"
+    },
+    {
+      "bytes": 35092,
+      "path": "data/paired_support_summary.csv",
+      "sha256": "461a5856876c4024719bff30890a01265d4e193a5941a2035ff594f34ce8783f"
+    },
+    {
+      "bytes": 839149,
+      "path": "data/seed_ledger.csv",
+      "sha256": "893e8464b845f9011f7e26dc708dda57689b54bf1381320258517e92888f2b69"
+    },
+    {
+      "bytes": 3168272,
+      "path": "data/selected_endpoints.csv",
+      "sha256": "3ea9c496e0e58eb18404578b2486f5178e8281a66f07c225d5bbd784c740425a"
+    },
+    {
+      "bytes": 24634712,
+      "path": "data/start_outcomes.csv",
+      "sha256": "f6e2a110a4786191bcd82498a1c3fb66259e7ec1adb42da5c87972dc935ffd4d"
+    },
+    {
+      "bytes": 109382,
+      "path": "deterministic_qualification.json",
+      "sha256": "48e297a99e4cdf7f5c861a9a4262deacedae8c6d872be25a98ba2801fda4b52b"
+    },
+    {
+      "bytes": 1463,
+      "path": "provenance.json",
+      "sha256": "6596a82b3322b8852d802bf0d7bdc969aee7f5162a29ad66ef36de4e9bbfa95c"
+    },
+    {
+      "bytes": 2747,
+      "path": "shard_inventory.json",
+      "sha256": "971096aa798536ecfbeec105726f0b2acc10473c2432824842eb8e80912073ff"
+    },
+    {
+      "bytes": 24931,
+      "path": "stochastic_smoke.json",
+      "sha256": "200e1c0fe1c9b9c57b7984e4c4407e7f8d65e9a8d3d702a3af3d0dc20155ba8c"
+    },
+    {
+      "bytes": 1816,
+      "path": "summary.json",
+      "sha256": "5383f81f74a3a9508bfe323598a4c369232a0d29266bdb330e4e0f45f3bbfd77"
+    }
+  ],
+  "family": "chapter_5_bec_multiframe_eta_ry_dpfi_v4",
+  "full_production": true,
+  "schema_version": 1,
+  "status": "diagnostic_not_retained",
+  "total_bytes": 30781276
+}

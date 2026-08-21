@@ -1,0 +1,15 @@
+{
+  "admitted": false,
+  "full_well_margin_electrons": 13443.8257093138,
+  "label": "target_three_state_four_method_snr_400_v1",
+  "maximum_expected_electrons": 1336.7634348587899,
+  "maximum_expected_plus_6sigma_electrons": 1556.1742906861998,
+  "pulse_duration_max_us": 400,
+  "pulse_duration_min_us": 25,
+  "pulse_duration_step_us": 25,
+  "random_draws": 0,
+  "replayed_parent_row_count": 144,
+  "schema_version": 1,
+  "snr_row_count": 192,
+  "status": "diagnostic_not_retained"
+}

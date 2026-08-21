@@ -1,0 +1,70 @@
+{
+  "admitted": false,
+  "artifact_count": 12,
+  "artifacts": [
+    {
+      "bytes": 735,
+      "path": "caption_noisy.txt",
+      "sha256": "bc19113c97ca5d9fae055ef7f096278596913f7e3269e66311a3e3c17f36a836"
+    },
+    {
+      "bytes": 322,
+      "path": "caption_snr.txt",
+      "sha256": "f9bb872d2df07c13e75c9be41f25e3fc31c758e5e20c92f3d23bc52dc4950519"
+    },
+    {
+      "bytes": 5678,
+      "path": "config_snapshot.json",
+      "sha256": "b89928d8cc978adf14e61606e680ffadaf884a0a21f2828809250311da1080d8"
+    },
+    {
+      "bytes": 832255,
+      "path": "data/four_method_noise_arrays.npz",
+      "sha256": "04f969962be2ade2fd43b80b2a0534169eef4ce1739a2b8fdc3e28472628df20"
+    },
+    {
+      "bytes": 9090,
+      "path": "data/four_method_snr.csv",
+      "sha256": "8ae12590e954d14577a853f809eb6ad9555d6c15a9b82289b4a52a9ef774b460"
+    },
+    {
+      "bytes": 3128,
+      "path": "data/seed_ledger.csv",
+      "sha256": "7209071bb016d0e9c86238ea5d40b02cd7b283056e03d48bc814376dc0ff2763"
+    },
+    {
+      "bytes": 43361,
+      "path": "figures/figure_4_target_four_method_noisy_200us.pdf",
+      "sha256": "e24c7588b90af6ff725132ce6a4e5e1c0e1a8aed51ff3a0a0e20b3b25732faa5"
+    },
+    {
+      "bytes": 144262,
+      "path": "figures/figure_4_target_four_method_noisy_200us.png",
+      "sha256": "e1d8c16e448f524e2c6f484eb01ea4b4f22226fe7c00584248f643f147715ff7"
+    },
+    {
+      "bytes": 27425,
+      "path": "figures/figure_4_target_four_method_snr.pdf",
+      "sha256": "ec2d54122bac93350e8e12a60d9a656060520661a17778682e63128d37a5f62a"
+    },
+    {
+      "bytes": 238030,
+      "path": "figures/figure_4_target_four_method_snr.png",
+      "sha256": "e7571203fdf188edc0289260ed80cef2363ddc691c04b01bd5796369f3dc78bc"
+    },
+    {
+      "bytes": 843,
+      "path": "provenance.json",
+      "sha256": "9e55ea7690d0df169df736707cd3a4af55b56b440a19475cbe70c2b479621af6"
+    },
+    {
+      "bytes": 1609,
+      "path": "summary.json",
+      "sha256": "b0daa88a5e53c15a8c677860d17b2d2046fb19dd3164970449d891b117f94e4f"
+    }
+  ],
+  "family": "target_three_state_four_method_noise_v5",
+  "schema_version": 1,
+  "status": "diagnostic_not_retained",
+  "total_bytes": 1306738
+}

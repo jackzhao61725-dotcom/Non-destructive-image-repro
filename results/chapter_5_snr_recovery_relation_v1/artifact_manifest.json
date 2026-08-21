@@ -1,0 +1,125 @@
+{
+  "admitted": true,
+  "artifact_count": 20,
+  "artifacts": [
+    {
+      "bytes": 3097,
+      "path": "admission_contract_snapshot.json",
+      "sha256": "eab5ed7fb21ca8d28c6f4f966bbe631d64618cc468176bdbf20ad7e1f9ab89ca"
+    },
+    {
+      "bytes": 3979,
+      "path": "config_snapshot.json",
+      "sha256": "ddc6721bebb42a56d3bb69fffeb3487fac635f201284a9b343c5397ae6d0104e"
+    },
+    {
+      "bytes": 5610,
+      "path": "lineage/bec_recovery_artifact_manifest.json",
+      "sha256": "1946317254a08052d992260a45740f44de5f0d5359b1d4e706c55375f0017759"
+    },
+    {
+      "bytes": 3110,
+      "path": "lineage/bec_snr_artifact_manifest.json",
+      "sha256": "444c12087b7c21b3b42c97e6dbaddfb66411d5f2be2ee3c84872afe774cdf6a9"
+    },
+    {
+      "bytes": 3221,
+      "path": "lineage/dgi_three_state_snr_artifact_manifest.json",
+      "sha256": "10393927fc71ae4add8a572f50acb99b1f1c4880d3a3b76f6b2f9ee74a742481"
+    },
+    {
+      "bytes": 2282,
+      "path": "lineage/dpfi_three_state_snr_artifact_manifest.json",
+      "sha256": "a383bac9758231ae9a14b0a79264c8af43f781c2cbac94fd7b913dcb8a6091b1"
+    },
+    {
+      "bytes": 5881,
+      "path": "lineage/three_state_recovery_artifact_manifest.json",
+      "sha256": "3fa258461edc12bc432b12b1011cdaaeb68be408e6f4b3aaa7cabce023cd4426"
+    },
+    {
+      "bytes": 1524,
+      "path": "provenance.json",
+      "sha256": "1a6836a99ea3f3c8bed549f65eee62c0cd79dc1fe5643404f0a2cf5a6153d178"
+    },
+    {
+      "bytes": 34735,
+      "path": "source_payload/bec_recovery/source_payload/data/endpoint_support_summary.csv",
+      "sha256": "79f4bddd428713ec8831aae49ca8703f6d4b79f211802155908614d15bf3ba9d"
+    },
+    {
+      "bytes": 79527,
+      "path": "source_payload/bec_snr/data/snr_grid.csv",
+      "sha256": "23e3c3989bdfa522369c30b3d9bce0be0239c253758f3ddc34197fee3263727e"
+    },
+    {
+      "bytes": 1046,
+      "path": "source_payload/dgi_three_state_snr/data/deterministic_snr_and_cost.csv",
+      "sha256": "e60b736be953d923eed04846ad7d94f83ee87b42bef27f9b2b2a9d65d5cd51c1"
+    },
+    {
+      "bytes": 1052,
+      "path": "source_payload/dpfi_three_state_snr/data/deterministic_snr_and_cost.csv",
+      "sha256": "b129b8480241cc6d6308f9849395af333249721a51c5917c7a25ddf73f15f1f4"
+    },
+    {
+      "bytes": 25207,
+      "path": "source_payload/presentation/figure_5_6_snr_vs_recovery_width.pdf",
+      "sha256": "d4ceb9d632c6fb356bd6bf16214854395f17dbfd851728504bcdc5b50d9e2c74"
+    },
+    {
+      "bytes": 249183,
+      "path": "source_payload/presentation/figure_5_6_snr_vs_recovery_width.png",
+      "sha256": "485a59cff093b7e1374badb3ae34a6bc42416ee29e968c82a1d6354f3eea8ff8"
+    },
+    {
+      "bytes": 8680,
+      "path": "source_payload/presentation/joined_snr_recovery_widths.csv",
+      "sha256": "575bcf169edb2dd1b8e251cac62c98067552160f21251012b0f48d678c9613b3"
+    },
+    {
+      "bytes": 2016,
+      "path": "source_payload/presentation/summary.json",
+      "sha256": "d155889f85cd6d3a1d2ea4c1534fcc5b4a8607b9232d23f63e47ab8207aee063"
+    },
+    {
+      "bytes": 2121,
+      "path": "source_payload/renderer/configs/chapter_5_snr_recovery_relation_preview_v2.json",
+      "sha256": "3489b1df813a2946c4b457e6855754f07b84ede9c0acd7c67f59f0a348e97b38"
+    },
+    {
+      "bytes": 12745,
+      "path": "source_payload/renderer/scripts/render_chapter_5_snr_recovery_relation_preview.py",
+      "sha256": "7462fec38632c201b6db51ee14dca589535fab0c90897a679582588f9ccc4403"
+    },
+    {
+      "bytes": 10678,
+      "path": "source_payload/three_state_recovery/data/recovery_summary.csv",
+      "sha256": "33f968482187961884957f82204153f2b63a037403bda0e62463bab19c5880d7"
+    },
+    {
+      "bytes": 983,
+      "path": "summary.json",
+      "sha256": "d7ae2289dd9a2f0f85fc3bbdb4c8b652f9d0730a1cd32a0279b498253afbeeeb"
+    }
+  ],
+  "claim_boundary": {
+    "does_not_support": [
+      "a universal SNR-to-resolution calibration",
+      "experimental precision, validation or blind density reconstruction",
+      "an optimum pulse duration or apparatus operating point",
+      "new random draws, optical propagations, equilibrium solves or nonlinear fits"
+    ],
+    "supports": [
+      "comparison of whole-image SNR with the central 68 percent recovery span for the same state, readout and observable",
+      "identification of model-internal diminishing returns within one curve",
+      "the absence of one observable-independent DGI-DPFI precision ordering in the declared simulations"
+    ]
+  },
+  "consumable": true,
+  "family": "chapter_5_snr_recovery_relation_v1",
+  "schema_version": 1,
+  "self_hash_policy": "manifest_excluded",
+  "status": "admitted_immutable",
+  "total_bytes": 456677
+}

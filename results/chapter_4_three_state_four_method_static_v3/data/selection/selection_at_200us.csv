@@ -1,0 +1,13 @@
+state,rank,method,whole_image_snr,pulse_duration_us
+smooth_bec,1,dpfi,79.55975981916528,200
+smooth_bec,2,dgi,59.24418599769786,200
+smooth_bec,3,pci,54.89494874308003,200
+smooth_bec,4,dffi,41.72439876500029,200
+connected_modulated,1,dpfi,84.15314321465617,200
+connected_modulated,2,dgi,74.64819918105337,200
+connected_modulated,3,pci,61.73261051830112,200
+connected_modulated,4,dffi,57.09482973927021,200
+separated_droplets,1,dpfi,71.44775813142076,200
+separated_droplets,2,dgi,70.19309152671886,200
+separated_droplets,3,pci,54.99533552427349,200
+separated_droplets,4,dffi,54.29283481925846,200

@@ -1,0 +1,229 @@
+{
+  "admitted": false,
+  "claim_boundary": {
+    "does_not_support": [
+      "experimental probability, classification rate, coverage, or apparatus performance",
+      "a typical, selected, averaged, or denoised noisy realisation",
+      "intermediate dynamics or a continuous trajectory across pulse durations",
+      "integrated-response SNR, feature precision, or universal DGI-DPFI ranking",
+      "globally single-valued DPFI density inversion"
+    ],
+    "supports": [
+      "deterministic whole-image template SNR over the declared DGI and DPFI duration-frame grid",
+      "one fixed predeclared draw-0 DPFI raw-role replay at the 24 guided conditions",
+      "complete re-equilibration between pulses in each independently prepared duration sequence"
+    ]
+  },
+  "clipped_display_pixels": 0,
+  "figure": {
+    "dpfi_montage": {
+      "clipping": false,
+      "columns": 8,
+      "display_sign": -1,
+      "draw_id": 0,
+      "image_q": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ],
+      "palette": "custom_blue_white_orange",
+      "processed_quantity": "((atom_h-dark_h)-(atom_v-dark_v))/((blank_h-dark_h)+(blank_v-dark_v))",
+      "pulse_durations_us": [
+        25,
+        200,
+        400
+      ],
+      "rows": 3,
+      "scale_policy": "one_global_zero_centred_symmetric_max_abs_over_all_24_images"
+    },
+    "dpi": 300,
+    "figure_height_inches": 3.8,
+    "figure_width_inches": 6.61,
+    "font_sizes_pt": {
+      "axes_label": 9.2,
+      "base": 9,
+      "colourbar": 9,
+      "montage_label": 9,
+      "tick": 9,
+      "title": 9.2
+    },
+    "minimum_effective_font_pt": 9,
+    "pdf": "figure_4_4_target_multiframe_snr_dpfi.pdf",
+    "png": "figure_4_4_target_multiframe_snr_dpfi.png",
+    "snr_heatmaps": {
+      "dgi_palette": "Blues",
+      "dpfi_palette": "Oranges",
+      "guide_policy": "three_horizontal_dashed_lines_no_vertical_lines",
+      "horizontal_guide_duration_us": [
+        25,
+        200,
+        400
+      ],
+      "image_q": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "pulse_durations_us": [
+        25,
+        50,
+        75,
+        100,
+        125,
+        150,
+        175,
+        200,
+        225,
+        250,
+        275,
+        300,
+        325,
+        350,
+        375,
+        400
+      ],
+      "scale_policy": "independent_zero_to_method_maximum"
+    }
+  },
+  "figure_revision": {
+    "policy": "colourbar_label_only",
+    "predecessor_sha256": {
+      "pdf": "414272947f5070471ddbbd3f34c9e74e62b9b099210acc7dc47edb76e57073b5",
+      "png": "04e4a924c06aca62a39d3beae341a86fe8800d7060c86eefbdea2b8aa0185bd3"
+    },
+    "source_family": "target_dgi_dpfi_multiframe_presentation_v6"
+  },
+  "horizontal_guides_per_heatmap": 3,
+  "label": "target_dgi_dpfi_multiframe_presentation_v7",
+  "maximum_display_response": 1.3454031533621702,
+  "maximum_processing_replay_error": 0.0,
+  "minimum_display_response": -1.0657658972063768,
+  "minimum_sampled_DPFI_denominator_electrons": 12.476547337352198,
+  "montage_cells": 24,
+  "montage_symmetric_scale_abs": 1.3454031533621702,
+  "negative_display_pixels": 10942,
+  "new_fits": 0,
+  "new_optical_propagations": 0,
+  "new_random_draws": 0,
+  "new_thermodynamic_solves": 0,
+  "noise_parent": {
+    "config_snapshot_sha256": "894331232657626c52f825214df480fa64d9dc098256f6183e230099bc1c7d0b",
+    "directory": ".scratch/target_dgi_dpfi_multiframe_noise_ensemble_v2",
+    "family": "target_dgi_dpfi_multiframe_noise_ensemble_v2",
+    "manifest_sha256": "647101fd10ee5a73ba91773b4c2062d55fc8e13a8ce8e24da37c5feb079a139b",
+    "representative_raw_path": "data/representative_raw_draw00.npz",
+    "representative_raw_sha256": "fa92a5163e5d09e9ffeed9259d76099bffd8831897686e6dd2304ea8478b80a2",
+    "summary_sha256": "cf89de4d8b7829a2510dc22309ace01a89175b7f645d59689f34923e86430043"
+  },
+  "positive_display_pixels": 18026,
+  "results_writes": 0,
+  "schema_version": 1,
+  "snr_cells_per_method": 240,
+  "snr_heatmap_scales": {
+    "dgi": [
+      0.0,
+      84.9882667437899
+    ],
+    "dpfi": [
+      0.0,
+      112.75593408175776
+    ]
+  },
+  "snr_parent": {
+    "config_snapshot_sha256": "2815054937fe75fa0ed9d0a95153d4813ef2eba8a98fb11cab1406db3c743669",
+    "directory": ".scratch/target_dgi_dpfi_multiframe_snr_grid_v2",
+    "family": "target_dgi_dpfi_multiframe_snr_grid_v2",
+    "manifest_sha256": "444c12087b7c21b3b42c97e6dbaddfb66411d5f2be2ee3c84872afe774cdf6a9",
+    "matrices_path": "data/snr_matrices.npz",
+    "matrices_sha256": "a4c5d4ec3c6080a1dfe7817ed5b3adc90ae3fd25530c0d0242b312007d3e1794",
+    "summary_sha256": "1c173f8a80a602115cc5ae192d5bffeeaeb485b295b9b881c1459377e4964d99"
+  },
+  "status": "presentation_candidate_not_retained",
+  "superseded_predecessors": [
+    {
+      "config_path": "configs/target_dgi_dpfi_multiframe_presentation_v1.json",
+      "config_sha256": "2eaace75d9b146559dcbfd1ed2f19987479ab4bc82e69509c6199eda86a3abca",
+      "consumable": false,
+      "directory": ".scratch/target_dgi_dpfi_multiframe_presentation_v1",
+      "family": "target_dgi_dpfi_multiframe_presentation_v1",
+      "manifest_sha256": "66d08aa02edefa1a7c293f0598fdbbaef6ac29dd9c982e0139aab71667c60feb",
+      "reason": "right_colourbar_tick_labels_clipped_and_panel_c_label_collided_with_shared_axis_label",
+      "status": "superseded_visual_clipping_presentation_candidate"
+    },
+    {
+      "config_path": "configs/target_dgi_dpfi_multiframe_presentation_v2.json",
+      "config_sha256": "f51f580be1c9fa69139887071021cb30c3f9891bf981611d9ad27c7b6d0a70ad",
+      "consumable": false,
+      "directory": ".scratch/target_dgi_dpfi_multiframe_presentation_v2",
+      "family": "target_dgi_dpfi_multiframe_presentation_v2",
+      "manifest_sha256": "f119451339899eedbf7c88a48ac61864594e1aafb17db18305fb2569ea0c41ee",
+      "reason": "montage_colourbar_label_extended_beyond_the_final_PDF_page",
+      "status": "superseded_visual_clipping_presentation_candidate"
+    },
+    {
+      "config_path": "configs/target_dgi_dpfi_multiframe_presentation_v3.json",
+      "config_sha256": "e60840d5a672512ede51cf7863d00dc431fc31f58801f1735c1aa7924fa51c28",
+      "consumable": false,
+      "directory": ".scratch/target_dgi_dpfi_multiframe_presentation_v3",
+      "family": "target_dgi_dpfi_multiframe_presentation_v3",
+      "manifest_sha256": "fce29e793bb5e3c87939b602f6c76b6b6a9db4ddd31f18dd644d5681e3ccc10c",
+      "reason": "user_replaced_32_marked_cells_and_four_montage_rows_with_three_horizontal_duration_guides_and_three_rows",
+      "status": "superseded_by_v4_user_layout_revision"
+    },
+    {
+      "config_path": "configs/target_dgi_dpfi_multiframe_presentation_v4.json",
+      "config_sha256": "d06cf33600c49bbd86b18f3de5af4d237987ae6a700801eae8c967893c9d6348",
+      "consumable": false,
+      "directory": ".scratch/target_dgi_dpfi_multiframe_presentation_v4",
+      "family": "target_dgi_dpfi_multiframe_presentation_v4",
+      "manifest_sha256": "1b3d7067b9907785fbba42a33ec921bec9fd51b05bfd22b0853abaf03136ce04",
+      "reason": "shared_montage_duration_axis_label_touched_the_final_PDF_bottom_boundary",
+      "status": "superseded_visual_clipping_presentation_candidate"
+    },
+    {
+      "carried_forward_figure_sha256": {
+        "pdf": "414272947f5070471ddbbd3f34c9e74e62b9b099210acc7dc47edb76e57073b5",
+        "png": "04e4a924c06aca62a39d3beae341a86fe8800d7060c86eefbdea2b8aa0185bd3"
+      },
+      "config_path": "configs/target_dgi_dpfi_multiframe_presentation_v5.json",
+      "config_sha256": "6f299c512e445ba6d871ac9e85c204a4d18b547214a54b5a6fe95e2c4bf6bbaf",
+      "consumable": false,
+      "directory": ".scratch/target_dgi_dpfi_multiframe_presentation_v5",
+      "family": "target_dgi_dpfi_multiframe_presentation_v5",
+      "manifest_sha256": "e4e3e90d263b071e712a8a54b7b7978b8c6025e82ab9485738c0012fcc1dd393",
+      "reason": "engineering_facing_caption_replaced_while_figure_bytes_remain_unchanged",
+      "status": "superseded_by_v6_reader_facing_caption_revision"
+    },
+    {
+      "config_path": "configs/target_dgi_dpfi_multiframe_presentation_v6.json",
+      "config_sha256": "183e3d3d555f2bb09580e7adec9955bc42bef3540e72b28c22e472fca3f8a31b",
+      "consumable": false,
+      "directory": ".scratch/target_dgi_dpfi_multiframe_presentation_v6",
+      "family": "target_dgi_dpfi_multiframe_presentation_v6",
+      "figure_sha256": {
+        "pdf": "414272947f5070471ddbbd3f34c9e74e62b9b099210acc7dc47edb76e57073b5",
+        "png": "04e4a924c06aca62a39d3beae341a86fe8800d7060c86eefbdea2b8aa0185bd3"
+      },
+      "manifest_sha256": "26e21740a9fb8b3554be326cf352ab873b63ed2bedbe7d91fb09eda6645706f7",
+      "reason": "montage_colourbar_label_extended_beyond_the_final_PDF_page",
+      "status": "superseded_visual_clipping_presentation_candidate"
+    }
+  ]
+}

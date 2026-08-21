@@ -1,0 +1,100 @@
+{
+  "admitted": false,
+  "artifact_count": 18,
+  "artifacts": [
+    {
+      "bytes": 6870,
+      "path": "config_snapshot.json",
+      "sha256": "333bf7522c1105b66ba37d378f0bcc6ec227c5506f14ccc3da1b12eb2e15889f"
+    },
+    {
+      "bytes": 15095,
+      "path": "contracts/atomic_config.json",
+      "sha256": "3cba57ba4124dea390e7c412735fbd4d38654bf69da528a5672510353079d7b0"
+    },
+    {
+      "bytes": 7923,
+      "path": "contracts/bec_reference_config.json",
+      "sha256": "1831949efc4d90f246d89ccd71c635cb31f5d22604686c3154530248b110a42a"
+    },
+    {
+      "bytes": 3399,
+      "path": "contracts/bec_reference_manifest.json",
+      "sha256": "043d996b1a4ce17a12ec879a6c4611dbf5aab576db3c51486640114e88161ad1"
+    },
+    {
+      "bytes": 7224,
+      "path": "contracts/objective_config.json",
+      "sha256": "78b2c17a3a47a293ead837ab54ecb72960c2bee3746d1808663722bb2ce3801f"
+    },
+    {
+      "bytes": 6152,
+      "path": "contracts/optical_config.json",
+      "sha256": "bde1c7263ee89fbc298aa86b781fa9451086c5856d4b275e830ac85f29ff0b02"
+    },
+    {
+      "bytes": 9920,
+      "path": "contracts/orientation_config.json",
+      "sha256": "ff7142dade762fc2aa2afab5c5a949ccc8847a4ec117aadd3cdf2abfec486c8e"
+    },
+    {
+      "bytes": 6603,
+      "path": "contracts/profile_config.json",
+      "sha256": "54f278b4b3cd8900f2ac4390d175932938502f63c450da4920f492088115c4b5"
+    },
+    {
+      "bytes": 1046,
+      "path": "data/deterministic_snr_and_cost.csv",
+      "sha256": "e60b736be953d923eed04846ad7d94f83ee87b42bef27f9b2b2a9d65d5cd51c1"
+    },
+    {
+      "bytes": 1713728,
+      "path": "data/display_draw.npz",
+      "sha256": "7f49af0b9a5c72791a57a79171d71e14068de5ccc865eef7dcf2f31a7e0fecbb"
+    },
+    {
+      "bytes": 236826,
+      "path": "data/seed_ledger.csv",
+      "sha256": "5900cde9d91eed2544501f27a8a53d62dfc6d924c7943378c0c6b1abcee49565"
+    },
+    {
+      "bytes": 265568,
+      "path": "data/selected_fits.csv",
+      "sha256": "4a83862225e774e0997ffdea50f3cee13ba01326ccea4be459620e8654bdbe93"
+    },
+    {
+      "bytes": 1996187,
+      "path": "data/start_outcomes.csv",
+      "sha256": "87bf81c8c6893d848ee079ac918394595991a33769aafb2f65ab6c46d4390912"
+    },
+    {
+      "bytes": 4620,
+      "path": "data/support_summary.csv",
+      "sha256": "7f56e591fe9f08e803ed5d928a8fe07fd1b1ba67b6c3d8431acc50c99817df34"
+    },
+    {
+      "bytes": 9381,
+      "path": "deterministic_qualification.json",
+      "sha256": "411efddc5289c3787c407d4444a9bc51cf2587688bb6d5c7283bd6f252397543"
+    },
+    {
+      "bytes": 3739,
+      "path": "provenance.json",
+      "sha256": "d398780bc3a7f3c2f6376f9d6857b2877b6b184fa674c43bc5240c005d83282c"
+    },
+    {
+      "bytes": 1487,
+      "path": "stochastic_smoke.json",
+      "sha256": "78693d14e5ebed03a4ea7a845620a3c2eff5c6f15ac59489edddb2f017e4eb8c"
+    },
+    {
+      "bytes": 16458,
+      "path": "summary.json",
+      "sha256": "1e4406595c8c98878537e5a022288fa5e71bd64a6f7dab65673705e65a9f49db"
+    }
+  ],
+  "family": "chapter_5_three_state_morphology_dgi_v1",
+  "schema_version": 1,
+  "status": "diagnostic_not_retained",
+  "total_bytes": 4312226
+}

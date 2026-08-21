@@ -1,0 +1,11 @@
+{
+  "label": "chapter_5_three_state_density_recovery_presentation_v1",
+  "purpose": "Presentation-only two-observable view of the admitted SSP and ID recovery summaries.",
+  "input": {
+    "path": "results/chapter_5_three_state_density_recovery_v2/data/recovery_summary.csv",
+    "sha256": "33f968482187961884957f82204153f2b63a037403bda0e62463bab19c5880d7"
+  },
+  "output_directory": ".scratch/chapter_5_three_state_density_recovery_presentation_v1",
+  "observables": ["d_peak", "nu_vp"],
+  "claim_boundary": "Layout-only derivative of the admitted summaries; no draws, propagation, fitting or re-aggregation."
+}

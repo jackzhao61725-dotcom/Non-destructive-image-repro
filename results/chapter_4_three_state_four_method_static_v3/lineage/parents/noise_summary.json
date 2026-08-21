@@ -1,0 +1,33 @@
+{
+  "admitted": false,
+  "claim_boundary": {
+    "forbidden": [
+      "installed_apparatus_performance",
+      "general_method_ranking",
+      "claim_that_real_DFFI_has_zero_background",
+      "claim_that_real_DPFI_has_perfect_gain_registration_or_PSF_matching",
+      "feature_recovery_precision_or_state_classification_probability",
+      "single_valued_ID_density_recovery_from_phase_or_intensity"
+    ],
+    "permitted": [
+      "compare_the_four_ideal_readouts_under_the_same_final_Trap_III_profiles_atom_side_pulse_camera_sampling_and_declared_detector_noise",
+      "show_that_DPFI_mean_background_cancellation_does_not_cancel_port_shot_or_read_noise",
+      "use_noisy_images_and_whole_image_SNR_as_evidence_before_narrowing_later_readouts",
+      "retain_the_ID_phase_wrapped_forward_response_without_claiming_a_single_valued_density_inverse"
+    ]
+  },
+  "common_noisy_zero_centred_display_limit": 2.1105806605656316,
+  "display_pulse_duration_us": 200,
+  "full_well_margin_electrons": 13807.400444873481,
+  "label": "target_three_state_four_method_noise_v5",
+  "maximum_expected_electrons": 1002.5725761440922,
+  "maximum_expected_plus_6sigma_electrons": 1192.599555126518,
+  "parent_maximum_absolute_circular_branch_phase_rad": 3.7073737479043483,
+  "parent_phase_wrapping_present": true,
+  "parent_wrapped_circular_branch_pixel_count": 137,
+  "random_identities": 57,
+  "redraws": 0,
+  "schema_version": 1,
+  "status": "diagnostic_not_retained",
+  "whole_image_snr_role": "whole_image_template_strength_not_resolution_feature_precision_or_state_classification"
+}

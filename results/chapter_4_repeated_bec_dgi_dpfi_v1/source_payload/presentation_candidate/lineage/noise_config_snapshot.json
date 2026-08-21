@@ -1,0 +1,210 @@
+{
+  "schema_version": 1,
+  "label": "target_dgi_dpfi_multiframe_noise_ensemble_v2",
+  "purpose": "Protected 64-sequence shared-calibration DGI/DPFI noise ensemble for the validated fifteen-frame Trap-III duration grid.",
+  "sources": {
+    "parents": [
+      {
+        "name": "duration_grid_manifest",
+        "path": ".scratch/target_dgi_dpfi_multiframe_duration_grid_v2/artifact_manifest.json",
+        "sha256": "2368451abcbe4ee15337c231cd037e6484af07e4de187d7fac7042f2a7cae409"
+      },
+      {
+        "name": "duration_grid_config",
+        "path": ".scratch/target_dgi_dpfi_multiframe_duration_grid_v2/config_snapshot.json",
+        "sha256": "36f90ed2b011cd21c0518678640673cc845076ac2a9aa1668bc1586c739b6de5"
+      },
+      {
+        "name": "duration_grid_payload",
+        "path": ".scratch/target_dgi_dpfi_multiframe_duration_grid_v2/data/target_multiframe_duration_grid.npz",
+        "sha256": "3fc8b9b5c8f58682344e92fd9f1b64e105c9fc38d2e8b91da2d99c34e028faa9"
+      },
+      {
+        "name": "duration_grid_table",
+        "path": ".scratch/target_dgi_dpfi_multiframe_duration_grid_v2/data/equilibrium_and_optical_duration_grid.csv",
+        "sha256": "dca481b21048bf54118bde8f6f8fc625ceade7a47d0582d31cb0f8521692e27f"
+      },
+      {
+        "name": "duration_grid_summary",
+        "path": ".scratch/target_dgi_dpfi_multiframe_duration_grid_v2/summary.json",
+        "sha256": "7088d677c85a7d3eebd00a43961b3dcb4a19a4204af768b24be784b52247efed"
+      },
+      {
+        "name": "qualification_manifest",
+        "path": ".scratch/target_dgi_dpfi_qualification_v4/artifact_manifest.json",
+        "sha256": "8797f65f4f8f944106fc3c42a0a607c83962bfebdca6c941ded7feb3eba7ffe0"
+      },
+      {
+        "name": "qualification_summary",
+        "path": ".scratch/target_dgi_dpfi_qualification_v4/summary.json",
+        "sha256": "cfbfe600ab35b4a22e5bba931519688739d0307c1b991cc626bf4a733be5626b"
+      },
+      {
+        "name": "selected_acquisition_contract",
+        "path": ".scratch/target_dgi_dpfi_qualification_v4/data/selected_acquisition_contract.json",
+        "sha256": "aa8f32b6b65c8bc027663f20cf61b9f8e4fbfca603ae7bb34654ffc7cd711fb6"
+      },
+      {
+        "name": "incident_manifest",
+        "path": "results/chapter_4_5_three_state_corrected_pci_dgi_acquisition_v1/artifact_manifest.json",
+        "sha256": "649685ef77f2d19fcf79ab68a05c83c011377b353af355f93c5fe516a0558180"
+      },
+      {
+        "name": "incident_table",
+        "path": "results/chapter_4_5_three_state_corrected_pci_dgi_acquisition_v1/data/deterministic_validation.csv",
+        "sha256": "e0d0a97c741fd2dc5752bca7f3b6004a64359205234901523beaead45735208f"
+      },
+      {
+        "name": "incident_config",
+        "path": "configs/chapter_4_5_three_state_pci_dgi_acquisition_v1.json",
+        "sha256": "1a40678061d8058fd6cbe2935dbdfee884e7bea0414e5acaf66d60a8b81a82e1"
+      },
+      {
+        "name": "smoke_manifest",
+        "path": ".scratch/target_dgi_dpfi_multiframe_noise_smoke_v1/artifact_manifest.json",
+        "sha256": "5d5a8acdd47f6c3977869ef17a0f248de626d31c932071b48f2d6c161f28b886"
+      },
+      {
+        "name": "smoke_summary",
+        "path": ".scratch/target_dgi_dpfi_multiframe_noise_smoke_v1/summary.json",
+        "sha256": "f5482b22b9bf4dc7291620ca97191644234aeddd0eb3da20063756190ba60303"
+      }
+    ]
+  },
+  "implementation": [
+    {
+      "path": "src/isolated_non_destructive_image.py",
+      "sha256": "cb7d0511602be3175c2b00645d8c71da1d6d0b5803ff5e3bece0cd902db55997"
+    },
+    {
+      "path": "src/non_destructive_image/target_multiframe_noise_acquisition.py",
+      "sha256": "cddab6c788d44192b7126a47be5f2c18dc2acd605313afe60f7e3a1746d016a8"
+    },
+    {
+      "path": "src/non_destructive_image/target_multiframe_noise_ensemble.py",
+      "sha256": "2e79e1d632aada53bce19e6bb3bf2fcb98ed1773276f9b93043e6357ca4901ab"
+    },
+    {
+      "path": "src/non_destructive_image/target_multiframe_noise_full_ensemble.py",
+      "sha256": "50b48531d9d98b1486d038c74d2a70845cdaaa2e22a0284efa85a58fdfc11e3f"
+    },
+    {
+      "path": "scripts/run_target_multiframe_noise_full_ensemble.py",
+      "sha256": "0f3ca6f461c5fd011305a163bc65e8106609b06d865f1f3227e873d1994845ec"
+    },
+    {
+      "path": "tests/test_target_multiframe_noise_full_ensemble.py",
+      "sha256": "170a2c3eaae62835b0dd326cee2a9806af8042006253a4555f93f08110f8591b"
+    }
+  ],
+  "sequence_contract": {
+    "pulse_durations_us": [25, 50, 75, 100, 125, 150, 175, 200, 225, 250, 275, 300, 325, 350, 375, 400],
+    "image_q": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15],
+    "display_image_q": [1, 3, 5, 7, 9, 11, 13, 15],
+    "draw_ids": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63],
+    "fresh_initial_state_for_each_duration": true,
+    "frame_convention": "pre_exposure_equilibrium",
+    "inter_frame_model": "complete_re_equilibration",
+    "intermediate_time_dynamics": "not_simulated"
+  },
+  "acquisition_contract": {
+    "methods": ["dgi", "dpfi"],
+    "calibration_topology": "one_shared_reference_set_per_method_duration_and_sequence",
+    "dgi_roles": ["atom_stop", "leakage_stop", "stop_dark", "open_reference", "open_dark"],
+    "dpfi_roles": ["atom_h", "atom_v", "blank_h", "blank_v", "dark_h", "dark_v"],
+    "dgi_processed_quantity": "(atom_stop-leakage_stop)/(open_reference-open_dark)",
+    "dgi_stop_dark_policy": "recorded_independent_role_that_cancels_in_symmetric_subtraction",
+    "dpfi_processed_quantity": "((atom_h-dark_h)-(atom_v-dark_v))/((blank_h-dark_h)+(blank_v-dark_v))",
+    "dpfi_atom_ports": "independent_sampling_before_signed_difference",
+    "axial_reduction": "sum_camera_z_axis_zero_and_retain_camera_y",
+    "dpfi_display_sign": "minus_after_port_processing_and_axial_reduction",
+    "redraws_allowed": false
+  },
+  "detector": {
+    "model": "independent_Poisson_plus_Gaussian_read_noise_per_raw_role",
+    "read_noise_electrons_rms": 0.7,
+    "dark_mean_electrons": 0.0,
+    "full_well_electrons": 15000.0,
+    "full_well_gate": "every_expected_pixel_plus_6sigma_before_sampling_and_every_observed_pixel_below_full_well",
+    "clipping": false,
+    "adc_rounding": false,
+    "negative_observed_raw_pixels": "retained"
+  },
+  "count_scale": {
+    "photoelectrons_per_i0_pixel_per_us": 1.1466492625734523,
+    "formula": "duration_us_times_fixed_photoelectron_rate",
+    "incident_table_selector": {
+      "method": "pci",
+      "scene": "blank",
+      "source_durations_us": [25, 50, 75, 100, 125, 150, 175, 200, 225, 250, 275, 300]
+    },
+    "duration_extension_boundary": "325_to_400us_are_same_model_formula_values_not_stored_incident_table_rows"
+  },
+  "randomness": {
+    "bit_generator": "PCG64",
+    "seed_sequence": "numpy.random.SeedSequence",
+    "seed_prefix": [20260818, 4515],
+    "tuple_fields": ["prefix_0", "prefix_1", "duration_us", "method_id", "draw_id", "role_id", "image_q"],
+    "expected_random_identities": 54272,
+    "redraws_allowed": false,
+    "filters_allowed": false
+  },
+  "payload_contract": {
+    "camera_shape": [17, 71],
+    "processed_profile_shape": [16, 64, 15, 71],
+    "integrated_shape": [16, 64, 15],
+    "representative_draw_id": 0,
+    "representative_image_q": [1, 3, 5, 7, 9, 11, 13, 15],
+    "representative_raw_arrays": 512,
+    "full_raw_retention": "representative_only;_all_other_raw_arrays_exactly_replayable",
+    "signed_values": "retained_without_clipping"
+  },
+  "validation": {
+    "deterministic_processing_atol": 2e-12,
+    "require_exact_seed_and_RNG_replay": true,
+    "require_all_sampled_denominators_positive": true,
+    "require_all_arrays_finite": true,
+    "require_no_clipping_redraw_or_filter": true,
+    "require_LF_CSV": true,
+    "require_manifest_before_array_load": true,
+    "require_self_contained_full_replay": true,
+    "do_not_require_each_noisy_sequence_monotonic": true
+  },
+  "claim_boundary": {
+    "supports": [
+      "descriptive_mean_and_spread_of_the_predeclared_same_model_DGI_and_DPFI_sequences",
+      "shared_calibration_noise_covariance_and_independent_DPFI_atom_port_sampling",
+      "paired_within_sequence_frame_changes_under_complete_re_equilibration"
+    ],
+    "does_not_support": [
+      "detection_or_state_classification_probability",
+      "coverage_or_tail_probability",
+      "maximum_usable_frame_count",
+      "measured_temperature_atom_number_or_thermal_halo",
+      "installed_apparatus_precision_or_calibration",
+      "universal_DGI_or_DPFI_ranking",
+      "globally_single_valued_DPFI_density_inversion",
+      "time_resolved_intermediate_dynamics"
+    ]
+  },
+  "predecessor_failure": {
+    "label": "target_dgi_dpfi_multiframe_noise_ensemble_v1",
+    "config_path": "configs/target_dgi_dpfi_multiframe_noise_ensemble_v1.json",
+    "config_sha256": "53a64274861c27c739496d86a71e0f59d69ab5974740118e3a4072098517f9c4",
+    "failure_stage": "pre_sampling_deterministic_processing_closure",
+    "failure_reason": "DPFI_blank_normalised_difference_was_compared_with_native_port_ratio",
+    "random_identities_sampled": 0,
+    "output_created": false,
+    "building_created": false,
+    "consumable": false
+  },
+  "lifecycle": {
+    "status": "diagnostic_not_retained",
+    "admitted": false,
+    "output_directory": ".scratch/target_dgi_dpfi_multiframe_noise_ensemble_v2",
+    "overwrite": false,
+    "resume": false,
+    "retry": false,
+    "results_writes": 0
+  }
+}

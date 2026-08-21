@@ -1,0 +1,261 @@
+{
+  "admitted": true,
+  "calculation": "byte-preserving consolidation of frozen numerical parents plus presentation-only fixed-width successors",
+  "claim_boundary": {
+    "does_not_support": [
+      "universal method superiority or installed-apparatus performance",
+      "feature precision, spacing recovery, state classification or experimental probability",
+      "a globally single-valued ID density inversion",
+      "calibrated extinction, port-gain balance, registration or differential-transfer performance",
+      "an optimum pulse duration, detector threshold or experimental validation",
+      "Oxford, multiframe, Chapter-5, binary-mixture or dynamical claims"
+    ],
+    "supports": [
+      "common-I0 noiseless fractional camera response for PCI, DGI, DFFI and DPFI under the declared final Trap-III geometry",
+      "one fixed draw-0 200-us noisy camera acquisition for each of the four methods and three target states under the declared ideal detector model",
+      "whole-image template SNR over the 25-300-us duration grid",
+      "configuration-specific continuation with DPFI first and DGI second by whole-image SNR for each state at 200 us",
+      "forward ID response with explicit stronger-branch phase wrapping"
+    ]
+  },
+  "closure_sources": [
+    {
+      "path": "pyproject.toml",
+      "sha256": "759579abb03ac01dc2541ffe4e9b60c1105f86d41a11f7be1c1b229f3e55e983"
+    },
+    {
+      "path": "configs/dissertation_v3_orca_fusion.json",
+      "sha256": "3cba57ba4124dea390e7c412735fbd4d38654bf69da528a5672510353079d7b0"
+    },
+    {
+      "path": "configs/erk_401nm_objective_v1.json",
+      "sha256": "78b2c17a3a47a293ead837ab54ecb72960c2bee3746d1808663722bb2ce3801f"
+    },
+    {
+      "path": "configs/imaging_orientation_contract_v2.json",
+      "sha256": "ff7142dade762fc2aa2afab5c5a949ccc8847a4ec117aadd3cdf2abfec486c8e"
+    },
+    {
+      "path": "configs/target_geometry_finite_temperature_closure_v4.json",
+      "sha256": "f0ca56ee3ee7e41b1ffb2b4f4d06b4fb1b45ebde08a2ca06b369adcbc7252be9"
+    },
+    {
+      "path": "configs/three_state_target_trap_profiles_v4.json",
+      "sha256": "6ed3c4cf7e3401eb11fd24bd8c2f3c2dcbdecc935570ed73a20f946a682c1043"
+    },
+    {
+      "path": "configs/target_three_state_four_method_noiseless_v4.json",
+      "sha256": "bde1c7263ee89fbc298aa86b781fa9451086c5856d4b275e830ac85f29ff0b02"
+    },
+    {
+      "path": "configs/target_three_state_four_method_noise_v5.json",
+      "sha256": "93b1d2f2f8fe45d752d320e0183590df9f0415dec0c292fb08fa5a287729a4f4"
+    },
+    {
+      "path": "configs/target_dgi_dpfi_qualification_v5.json",
+      "sha256": "77c80ec2dda026f2224eef973694b0a33f907c7344a241ff8774554b0ac92bd1"
+    },
+    {
+      "path": "src/isolated_non_destructive_image.py",
+      "sha256": "cb7d0511602be3175c2b00645d8c71da1d6d0b5803ff5e3bece0cd902db55997"
+    },
+    {
+      "path": "src/non_destructive_image/__init__.py",
+      "sha256": "c955324ea73edfd1a6cde0c4b19c5254afc887fe62a3806e2e7c1e8aa70de7f7"
+    },
+    {
+      "path": "src/non_destructive_image/target_three_state_profiles.py",
+      "sha256": "05f2939983997d1feb5b1f74ed68897b9d34bac733b12fe62f6427382c2b577e"
+    },
+    {
+      "path": "src/non_destructive_image/equilibrium_profiles.py",
+      "sha256": "1e458b22f8c4874426ab3f08e7646987e8a7baaeff58d17c8ef54efb7c01a631"
+    },
+    {
+      "path": "src/non_destructive_image/profiles.py",
+      "sha256": "e543d9036bf7bba6d7292ad69f59f882a3ebc259ca0c268d3f14d0562851fbb0"
+    },
+    {
+      "path": "src/non_destructive_image/atomic_response.py",
+      "sha256": "d0a5d6603f6ff865b11407c781958ae5767314280433b6ec9c5d71fb5c559ab2"
+    },
+    {
+      "path": "src/non_destructive_image/light_atom.py",
+      "sha256": "5ffce738f6a8bfc11a47a8187ed2b53e357a1de74b01678782352cd60a94d034"
+    },
+    {
+      "path": "src/non_destructive_image/imaging.py",
+      "sha256": "99ab2eac0beaf466c7889d2c7c1ccaf339fbff2e3bcf45874a802360a0c5dde6"
+    },
+    {
+      "path": "src/non_destructive_image/fourier.py",
+      "sha256": "5ee3312adc45b6ff994642abe4722c959630c82506c60c9d1e06dff825f41536"
+    },
+    {
+      "path": "src/non_destructive_image/camera.py",
+      "sha256": "90bc2f74763d802c6aa729762452d1fa98428cc87f3db420f97703d7c15abfe2"
+    },
+    {
+      "path": "src/non_destructive_image/equilibrium_imaging.py",
+      "sha256": "241c5a564bebc4bca2d608abdb01f99ae821c05b346144c0432d02eeebcae7d8"
+    },
+    {
+      "path": "src/non_destructive_image/parallel_jones_imaging.py",
+      "sha256": "160cc98284852929160a4374d5ed18b4618b6cd5d7fa6209c2d983f0f1e9beac"
+    },
+    {
+      "path": "src/non_destructive_image/four_method_jones_imaging.py",
+      "sha256": "f8c4279fead70bc2d16c9580ba7ce3dc70bec86bf6cdc7d8416b80d2e1b0d3fe"
+    },
+    {
+      "path": "src/non_destructive_image/target_four_method_noiseless.py",
+      "sha256": "a9edbfd668a23d77fed615ec4c0086ee11ea87e048c14fe8cc4bf6a12200d64f"
+    },
+    {
+      "path": "src/non_destructive_image/four_method_camera_noise.py",
+      "sha256": "51433af212f2f578e78727585529a231fde1453f61b2a98e84af33d6e549288c"
+    },
+    {
+      "path": "src/non_destructive_image/chapter4_noise_weighted_snr.py",
+      "sha256": "7ba181487ceb7286c357b85a81da5b8ecb5202104f0a9fd17d4711d69d2a536a"
+    },
+    {
+      "path": "src/non_destructive_image/target_dgi_dpfi_qualification.py",
+      "sha256": "35d6784b036b037283f4e071fe3342d73b6b85fb5a4970380231d082d8e98de8"
+    },
+    {
+      "path": "src/non_destructive_image/chapter4_static_retained_staging.py",
+      "sha256": "b70b123115428d7ac89de4e67c2998a527d506fe24eac141731b6231a848c86f"
+    },
+    {
+      "path": "scripts/run_target_four_method_noiseless.py",
+      "sha256": "f93f19dcc87bb3410bd0cdf187eeef2a422f45f038041fcaa7244f19e5b7e2f4"
+    },
+    {
+      "path": "scripts/run_target_four_method_noise.py",
+      "sha256": "2db6b8463093ed2b2bf73b70afbf37862fd4d0f19710afa53c225d0b50a873db"
+    },
+    {
+      "path": "scripts/run_target_dgi_dpfi_qualification.py",
+      "sha256": "b9890328fed76bd5e0143f91f2c4198d8bc76ea130b8fda5641a1d4adf5a53fa"
+    },
+    {
+      "path": "scripts/prepare_chapter4_static_retained_staging.py",
+      "sha256": "0d71aee0a1b5656f686c09de7988f00a6b0fddfb71ab2939dc4a21c2684b0bcf"
+    },
+    {
+      "path": "tests/test_target_three_state_profiles.py",
+      "sha256": "c3c0c1c2808030064c8e3ca1cd6bdc4e68329a1d16a1e7f1a61bec89e7903e44"
+    },
+    {
+      "path": "tests/test_parallel_jones_response.py",
+      "sha256": "de6c25fee4f4a3921588abfd76c234e67c178c48195c229cd14feec06600e7ba"
+    },
+    {
+      "path": "tests/test_parallel_jones_imaging.py",
+      "sha256": "2f45a148bdbdcca8ad7e0ac9e12266d1ee71ad0cfbe070eafe7d5e49101c3aac"
+    },
+    {
+      "path": "tests/test_four_method_jones_imaging.py",
+      "sha256": "fd01791304f42660bca57ce88a4249f9e826f3e74d255b505936cd481225bcc9"
+    },
+    {
+      "path": "tests/test_four_method_camera_noise.py",
+      "sha256": "f1cec1452a1f5927a258f013d63a4e755a3f342119151d041d84bd6e4fa03773"
+    },
+    {
+      "path": "tests/test_chapter4_noise_weighted_snr.py",
+      "sha256": "94dc9ed0d373ad060a19e1f7ff0ebd33b734fb4a288af089365f9a006e8f2596"
+    },
+    {
+      "path": "tests/test_target_four_method_noiseless.py",
+      "sha256": "9816be2b14fc2c33f19016e24b5fc258512c73781a322944844d081c16bdd8c5"
+    },
+    {
+      "path": "tests/test_target_four_method_noise.py",
+      "sha256": "ca5f71d8b04c5a3df5dcd353cfab1ceab82389be6218165ac49c4519f5d0a421"
+    },
+    {
+      "path": "tests/test_target_dgi_dpfi_qualification.py",
+      "sha256": "87a29e795108b4c25b677b01432ef770d444fa1a964faf921acfe550a1337ba5"
+    },
+    {
+      "path": "tests/test_chapter4_static_retained_staging.py",
+      "sha256": "c10efb3d27930ab5af46734d4f702d5b89d8313cb12780efe8a2db77a831856f"
+    }
+  ],
+  "consumable": true,
+  "family": "chapter_4_three_state_four_method_static_v3",
+  "parents": {
+    "count_scale": {
+      "directory": "results/chapter_4_5_three_state_corrected_pci_dgi_acquisition_v1",
+      "manifest_sha256": "649685ef77f2d19fcf79ab68a05c83c011377b353af355f93c5fe516a0558180",
+      "required_files": {
+        "data/deterministic_validation.csv": "e0d0a97c741fd2dc5752bca7f3b6004a64359205234901523beaead45735208f"
+      }
+    },
+    "noise": {
+      "directory": ".scratch/target_three_state_four_method_noise_v5",
+      "manifest_sha256": "c6190cc31af3c46bca1270fc4999924db9fc6290f4c1617432258c549832f98e",
+      "required_files": {
+        "config_snapshot.json": "b89928d8cc978adf14e61606e680ffadaf884a0a21f2828809250311da1080d8",
+        "data/four_method_noise_arrays.npz": "04f969962be2ade2fd43b80b2a0534169eef4ce1739a2b8fdc3e28472628df20",
+        "data/four_method_snr.csv": "8ae12590e954d14577a853f809eb6ad9555d6c15a9b82289b4a52a9ef774b460",
+        "data/seed_ledger.csv": "7209071bb016d0e9c86238ea5d40b02cd7b283056e03d48bc814376dc0ff2763",
+        "provenance.json": "9e55ea7690d0df169df736707cd3a4af55b56b440a19475cbe70c2b479621af6",
+        "summary.json": "b0daa88a5e53c15a8c677860d17b2d2046fb19dd3164970449d891b117f94e4f"
+      }
+    },
+    "noise_presentation": {
+      "directory": ".scratch/target_three_state_four_method_noise_presentation_v5",
+      "manifest_sha256": "6904540fbd824ed29ca7d84b83f160e0508b846618c1205c4c7d34cc71fb6ae8",
+      "required_files": {
+        "caption_noisy.txt": "f53e80ac166ee2d9bce0af501cb996b8015f658e608c5dfd805fb20edbe425ae",
+        "caption_snr.txt": "ca2f6b13a2973456608664c2b9021abb9856f0797b1d3142782a88be3d0e6d8a",
+        "metadata.json": "770a39975fa4bafd9dc089a6c584eeee27fc97b3e56ca175b05ef774405b8452"
+      }
+    },
+    "noiseless": {
+      "directory": ".scratch/target_three_state_four_method_noiseless_v4",
+      "manifest_sha256": "4f5b8f7fcbea44435470ede1229c9322fd1c1d0c8d86655905c76700ae2446d9",
+      "required_files": {
+        "config_snapshot.json": "64c4b6dbd5dfa5f37896d351c32f62e2e21f565e979e59d5b7120b4ef85dc1c2",
+        "data/state_method_extrema.csv": "b202daa4b0b4b4817f5e713118d6dd6a7df71b7fc5842eb02600fa07fce58ea1",
+        "data/target_four_method_camera_and_fields.npz": "dc3bae3101ffda28ee5a8f8a5c32c3b12950c577fabac2df72177206c5e7707e",
+        "provenance.json": "ed305ea49f45b2b2b3826799ce77706159d606a7009756bd3132ef1fe9570d49",
+        "summary.json": "64ab11dcbbf7b2e4e12acd33742f200d10b9c4f1e5e010ef7337e8e8de05a843"
+      }
+    },
+    "noiseless_presentation": {
+      "directory": ".scratch/target_three_state_four_method_noiseless_presentation_v9",
+      "manifest_sha256": "9f86bd0e1f92dd729c8772760ba32ee93b28894ee843141661e14bc1950c3c37",
+      "required_files": {
+        "caption.txt": "11b04b32a66e9c5aa8224114c70d8fc6c43533a08785b0c86bba27f764dd804c",
+        "metadata.json": "f0f30c434e14c230b7b2ddda57a870ebca3aa450119f785e227be51a43862267"
+      }
+    },
+    "qualification": {
+      "directory": ".scratch/target_dgi_dpfi_qualification_v5",
+      "manifest_sha256": "fd515079a73302fb7826fc35a7b9eba6d601aff2c328f46ab7b36ffaf0209a82",
+      "required_files": {
+        "config_snapshot.json": "8052b90a5721a249f776aa25ed4ad09070726581a4e72abe3c162806fd5ecdf8",
+        "data/selected_acquisition_contract.json": "2c5b563cac01aeaa66096d158aa935e12775f1757ebc0472e6ade0cf413cb1f3",
+        "data/selection_at_200us.csv": "c9cf3034300e45ca9c4ae2faab1f460eb04acb3e806eabedf4ef94a2468b2e05",
+        "provenance.json": "fa949abd260636281913195ff45ba0d37eae888c8cd3141847988757c4526349",
+        "selection_statement.txt": "a6f9411b565be950ed6e115ed0736b21a4d1b29cec3358c826441c11670eeb03",
+        "summary.json": "1744929104360685978567d2cdecfe910a98870eb794e562a3ced970aeeeea69"
+      }
+    }
+  },
+  "recomputation": {
+    "new_fits": 0,
+    "new_optical_propagations": 0,
+    "new_presentations": 3,
+    "new_random_draws": 0,
+    "new_thermodynamic_solves": 0
+  },
+  "results_writes": 0,
+  "schema_version": 1,
+  "scratch_independent_validation": true,
+  "status": "admitted_immutable"
+}

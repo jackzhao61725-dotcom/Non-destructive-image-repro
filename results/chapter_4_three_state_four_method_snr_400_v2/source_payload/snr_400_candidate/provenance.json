@@ -1,0 +1,15 @@
+{
+  "admitted": false,
+  "base_runner_sha256": "2db6b8463093ed2b2bf73b70afbf37862fd4d0f19710afa53c225d0b50a873db",
+  "config_sha256": "4598e52a0852aa183b91cb7953117799aa58c63c86c52dfc1fb1471eeab4ba7d",
+  "parent_hashes": {
+    "base_config": "93b1d2f2f8fe45d752d320e0183590df9f0415dec0c292fb08fa5a287729a4f4",
+    "manifest": "c6190cc31af3c46bca1270fc4999924db9fc6290f4c1617432258c549832f98e",
+    "snr_table": "8ae12590e954d14577a853f809eb6ad9555d6c15a9b82289b4a52a9ef774b460"
+  },
+  "random_draws": 0,
+  "results_writes": 0,
+  "runner_sha256": "7191fc7e9287ea7068da69a998e873de0dfa88b0f2c2d0e59d3fda497f43d420",
+  "schema_version": 1,
+  "status": "diagnostic_not_retained"
+}

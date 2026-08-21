@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "family": "chapter_4_three_state_four_method_snr_400_v2",
+  "target": "results/chapter_4_three_state_four_method_snr_400_v2",
+  "sources": [
+    {
+      "name": "snr_400_candidate",
+      "directory": ".scratch/target_three_state_four_method_snr_400_v1",
+      "manifest_sha256": "148a4e3fef138d1872af176334a5335e933352e4dcd24288a0dc5fd7c84e9c6b",
+      "expected_status": "diagnostic_not_retained",
+      "expected_admitted": false,
+      "copy_all": true,
+      "required_files": {
+        "data/four_method_snr_25_400us.csv": "d780a49c4282718c297c79b3194b2fd44dad3dd4265b312fe0cf9a4dab7f92ae"
+      }
+    }
+  ],
+  "claim_boundary": {
+    "supports": [
+      "whole-image template SNR for PCI, DGI, DFFI and DPFI over 25-400 us for the declared static BEC, SSP and ID targets",
+      "exact replay of the 25-300 us predecessor rows and deterministic extension to 400 us without new random draws",
+      "the declared full-well margin over this simulated duration grid"
+    ],
+    "does_not_support": [
+      "feature precision, state-classification performance or a universal method ranking",
+      "experimental camera performance or an installed-apparatus operating point",
+      "an optimum pulse duration or globally single-valued density inversion"
+    ]
+  }
+}

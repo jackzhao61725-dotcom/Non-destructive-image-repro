@@ -1,0 +1,40 @@
+{
+  "admitted": false,
+  "artifact_count": 6,
+  "artifacts": [
+    {
+      "bytes": 1500,
+      "path": "config_snapshot.json",
+      "sha256": "96cae8c6e9b204e35e807f9c1fe31c4b1fcaec22b4335458e125320cf87bb0e5"
+    },
+    {
+      "bytes": 12113,
+      "path": "data/four_method_snr_25_400us.csv",
+      "sha256": "d780a49c4282718c297c79b3194b2fd44dad3dd4265b312fe0cf9a4dab7f92ae"
+    },
+    {
+      "bytes": 25311,
+      "path": "figures/figure_4_target_four_method_snr.pdf",
+      "sha256": "d0364ad55b3b8884a683781a49b0ad7c2f8b266923e9819c8f3798cc9ae0add5"
+    },
+    {
+      "bytes": 242195,
+      "path": "figures/figure_4_target_four_method_snr.png",
+      "sha256": "02b8ca7cc0a6a37c7d60a50f14748f1cdfd9e461590f3bf9d0b410da6640a190"
+    },
+    {
+      "bytes": 692,
+      "path": "provenance.json",
+      "sha256": "d56aa70989de27263509593f726177206f09597e562ee0a5a95a4d6b985fb350"
+    },
+    {
+      "bytes": 499,
+      "path": "summary.json",
+      "sha256": "6f3a7dca9f75da3102626aa4b1ec845b8218227a2d58cfa8455a057093ab0969"
+    }
+  ],
+  "family": "target_three_state_four_method_snr_400_v1",
+  "schema_version": 1,
+  "status": "diagnostic_not_retained",
+  "total_bytes": 282310
+}

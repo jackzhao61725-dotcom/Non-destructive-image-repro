@@ -1,0 +1,40 @@
+{
+  "admitted": false,
+  "config_path": "configs/target_three_state_four_method_noiseless_v4.json",
+  "config_sha256": "bde1c7263ee89fbc298aa86b781fa9451086c5856d4b275e830ac85f29ff0b02",
+  "execution": {
+    "new_fits": 0,
+    "object_evaluations": 3,
+    "random_draws": 0,
+    "results_writes": 0
+  },
+  "git": {
+    "branch": "codex/binary-supersolid-static",
+    "dirty": true,
+    "head": "6a1af433db0da227b750a3c48df261a92c8275d9",
+    "status_sha256": "45272aa9a22cc4584af318bec08fdb94412e6ffc58631407e9318500bb65b526"
+  },
+  "label": "target_three_state_four_method_noiseless_v4",
+  "schema_version": 1,
+  "source_hashes": {
+    "configs/dissertation_v3_orca_fusion.json": "3cba57ba4124dea390e7c412735fbd4d38654bf69da528a5672510353079d7b0",
+    "configs/erk_401nm_objective_v1.json": "78b2c17a3a47a293ead837ab54ecb72960c2bee3746d1808663722bb2ce3801f",
+    "configs/imaging_orientation_contract_v2.json": "ff7142dade762fc2aa2afab5c5a949ccc8847a4ec117aadd3cdf2abfec486c8e",
+    "configs/target_geometry_finite_temperature_closure_v4.json": "f0ca56ee3ee7e41b1ffb2b4f4d06b4fb1b45ebde08a2ca06b369adcbc7252be9",
+    "configs/three_state_target_trap_profiles_v4.json": "6ed3c4cf7e3401eb11fd24bd8c2f3c2dcbdecc935570ed73a20f946a682c1043",
+    "scripts/run_target_four_method_noiseless.py": "f93f19dcc87bb3410bd0cdf187eeef2a422f45f038041fcaa7244f19e5b7e2f4",
+    "src/non_destructive_image/atomic_response.py": "d0a5d6603f6ff865b11407c781958ae5767314280433b6ec9c5d71fb5c559ab2",
+    "src/non_destructive_image/camera.py": "90bc2f74763d802c6aa729762452d1fa98428cc87f3db420f97703d7c15abfe2",
+    "src/non_destructive_image/equilibrium_imaging.py": "241c5a564bebc4bca2d608abdb01f99ae821c05b346144c0432d02eeebcae7d8",
+    "src/non_destructive_image/equilibrium_profiles.py": "1e458b22f8c4874426ab3f08e7646987e8a7baaeff58d17c8ef54efb7c01a631",
+    "src/non_destructive_image/four_method_jones_imaging.py": "f8c4279fead70bc2d16c9580ba7ce3dc70bec86bf6cdc7d8416b80d2e1b0d3fe",
+    "src/non_destructive_image/fourier.py": "5ee3312adc45b6ff994642abe4722c959630c82506c60c9d1e06dff825f41536",
+    "src/non_destructive_image/imaging.py": "99ab2eac0beaf466c7889d2c7c1ccaf339fbff2e3bcf45874a802360a0c5dde6",
+    "src/non_destructive_image/light_atom.py": "5ffce738f6a8bfc11a47a8187ed2b53e357a1de74b01678782352cd60a94d034",
+    "src/non_destructive_image/parallel_jones_imaging.py": "160cc98284852929160a4374d5ed18b4618b6cd5d7fa6209c2d983f0f1e9beac",
+    "src/non_destructive_image/profiles.py": "e543d9036bf7bba6d7292ad69f59f882a3ebc259ca0c268d3f14d0562851fbb0",
+    "src/non_destructive_image/target_four_method_noiseless.py": "a9edbfd668a23d77fed615ec4c0086ee11ea87e048c14fe8cc4bf6a12200d64f",
+    "src/non_destructive_image/target_three_state_profiles.py": "05f2939983997d1feb5b1f74ed68897b9d34bac733b12fe62f6427382c2b577e"
+  },
+  "status": "diagnostic_not_retained"
+}

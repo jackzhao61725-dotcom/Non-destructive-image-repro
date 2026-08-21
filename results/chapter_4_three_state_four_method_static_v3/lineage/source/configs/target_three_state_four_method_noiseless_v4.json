@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "label": "target_three_state_four_method_noiseless_v4",
+  "purpose": "Compare the four ideal dispersive readouts for the final Trap III BEC, SSP and ID objects before detector noise, using one Jones response, one optical transfer and one incident-intensity denominator, while recording rather than rejecting circular-branch phase wrapping.",
+  "lifecycle": {
+    "status": "diagnostic_not_retained",
+    "admitted": false,
+    "random_draws": 0,
+    "results_writes_allowed": false,
+    "overwrite_existing_output": false,
+    "output_directory": ".scratch/target_three_state_four_method_noiseless_v4"
+  },
+  "sources": {
+    "profile_contract": {"path": "configs/three_state_target_trap_profiles_v4.json", "sha256": "6ed3c4cf7e3401eb11fd24bd8c2f3c2dcbdecc935570ed73a20f946a682c1043"},
+    "finite_temperature_contract": {"path": "configs/target_geometry_finite_temperature_closure_v4.json", "sha256": "f0ca56ee3ee7e41b1ffb2b4f4d06b4fb1b45ebde08a2ca06b369adcbc7252be9"},
+    "orientation_contract": {"path": "configs/imaging_orientation_contract_v2.json", "sha256": "ff7142dade762fc2aa2afab5c5a949ccc8847a4ec117aadd3cdf2abfec486c8e"},
+    "atomic_config": {"path": "configs/dissertation_v3_orca_fusion.json", "sha256": "3cba57ba4124dea390e7c412735fbd4d38654bf69da528a5672510353079d7b0"},
+    "objective_config": {"path": "configs/erk_401nm_objective_v1.json", "sha256": "78b2c17a3a47a293ead837ab54ecb72960c2bee3746d1808663722bb2ce3801f"},
+    "implementation_sources": [
+      {"path": "src/non_destructive_image/target_three_state_profiles.py", "sha256": "05f2939983997d1feb5b1f74ed68897b9d34bac733b12fe62f6427382c2b577e"},
+      {"path": "src/non_destructive_image/equilibrium_profiles.py", "sha256": "1e458b22f8c4874426ab3f08e7646987e8a7baaeff58d17c8ef54efb7c01a631"},
+      {"path": "src/non_destructive_image/profiles.py", "sha256": "e543d9036bf7bba6d7292ad69f59f882a3ebc259ca0c268d3f14d0562851fbb0"},
+      {"path": "src/non_destructive_image/atomic_response.py", "sha256": "d0a5d6603f6ff865b11407c781958ae5767314280433b6ec9c5d71fb5c559ab2"},
+      {"path": "src/non_destructive_image/light_atom.py", "sha256": "5ffce738f6a8bfc11a47a8187ed2b53e357a1de74b01678782352cd60a94d034"},
+      {"path": "src/non_destructive_image/imaging.py", "sha256": "99ab2eac0beaf466c7889d2c7c1ccaf339fbff2e3bcf45874a802360a0c5dde6"},
+      {"path": "src/non_destructive_image/fourier.py", "sha256": "5ee3312adc45b6ff994642abe4722c959630c82506c60c9d1e06dff825f41536"},
+      {"path": "src/non_destructive_image/camera.py", "sha256": "90bc2f74763d802c6aa729762452d1fa98428cc87f3db420f97703d7c15abfe2"},
+      {"path": "src/non_destructive_image/equilibrium_imaging.py", "sha256": "241c5a564bebc4bca2d608abdb01f99ae821c05b346144c0432d02eeebcae7d8"},
+      {"path": "src/non_destructive_image/parallel_jones_imaging.py", "sha256": "160cc98284852929160a4374d5ed18b4618b6cd5d7fa6209c2d983f0f1e9beac"},
+      {"path": "src/non_destructive_image/four_method_jones_imaging.py", "sha256": "f8c4279fead70bc2d16c9580ba7ce3dc70bec86bf6cdc7d8416b80d2e1b0d3fe"}
+    ],
+    "generation_sources": [
+      {"path": "src/non_destructive_image/target_four_method_noiseless.py", "sha256": "a9edbfd668a23d77fed615ec4c0086ee11ea87e048c14fe8cc4bf6a12200d64f"},
+      {"path": "scripts/run_target_four_method_noiseless.py", "sha256": "f93f19dcc87bb3410bd0cdf187eeef2a422f45f038041fcaa7244f19e5b7e2f4"}
+    ]
+  },
+  "physical_contract": {
+    "states": ["smooth_bec", "connected_modulated", "separated_droplets"],
+    "methods": ["pci", "dgi", "dffi", "dpfi"],
+    "geometry": "B_parallel_k_parallel_plus_x_input_z_faraday_y_camera_y_z",
+    "detuning_reference": "plus_1p5_GHz_from_the_midpoint_of_the_two_driven_circular_branches",
+    "detuning_hz": 1500000000,
+    "probe_power_mw": 1.0,
+    "probe_diameter_m": 0.024,
+    "reference_pulse_duration_us": 200,
+    "duration_role": "declares the common atom-side dose used by the following noisy comparison; the normalised noiseless fields do not depend on duration",
+    "state_feedback": "none",
+    "oxford_tfbec_in_scope": false,
+    "phase_wrapping_policy": "record_by_state_and_circular_branch_without_clipping_or_rejecting_the_forward_field"
+  },
+  "grid_and_transfer": {
+    "object_pixel_m": 5e-8,
+    "object_shape": [161, 641],
+    "camera_pixel_m": 4.44596443228454e-7,
+    "camera_shape": [17, 71],
+    "camera_sampling": "centred_physical_area_integration_of_each_intensity;_DPFI_ports_are_integrated_before_difference_or_ratio",
+    "optical_case": "measured_best",
+    "optical_model": "0.92_um_Gaussian_amplitude_PSF_testbed_transfer",
+    "same_transfer_for_both_linear_polarisations": true
+  },
+  "readout_contract": {
+    "shared_mask_approximation": "phase_dot_or_stop_changes_only_the_uniform_reference_field",
+    "pci_phase_plate_amplitude": 0.95,
+    "pci_phase_plate_phase_rad": 1.5707963267948966,
+    "dgi_stop_optical_depth": 4.0,
+    "dpfi_port_convention": "H_is_plus_and_V_is_minus",
+    "dpfi_display_quantity": "I_H_over_I0_minus_I_V_over_I0",
+    "dpfi_method_native_quantity_retained": "(I_H-I_V)/(I_H+I_V)",
+    "common_display_denominator": "incident_I0",
+    "common_scale": "one_zero_centred_symmetric_scale_across_all_four_methods_and_all_three_states",
+    "negative_values_policy": "retain_signed_DGI_residual_and_DPFI_difference_without_clipping"
+  },
+  "numerical_tolerances": {"maximum_replay_error": 1e-12},
+  "claim_boundary": {
+    "supports": [
+      "noiseless_fractional_camera_response_under_one_target_geometry_and_one_incident_I0_denominator",
+      "visibility_of_the_three_control_morphologies_after_the_declared_testbed_transfer",
+      "exact_unanalysed_DGI_collection_of_common_and_Faraday_intensities",
+      "explicit_inventory_of_circular_branch_phase_wrapping_for_the_final_Trap_III_profiles"
+    ],
+    "does_not_support": [
+      "noise_or_SNR_ranking",
+      "installed_camera_calibration",
+      "experimental_state_classification_probability",
+      "historical_Oxford_perpendicular_geometry_comparison",
+      "single_valued_density_recovery_from_a_phase_wrapped_readout",
+      "any_superseded_profile_family_as_a_primary_object"
+    ]
+  }
+}

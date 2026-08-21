@@ -1,23 +1,36 @@
 from __future__ import annotations
 
+import sys
+from pathlib import Path
+
 import numpy as np
 import pytest
 
-from non_destructive_image.acquisition import (
-    ProcessedDiagnostic,
-    RawElectronFrame,
-    conditional_block_snr,
-    deterministic_raw_electron_frame,
-    delta_method_covariance,
-    dgi_signal_diagnostic,
-    marginal_block_snr,
-    paired_difference_diagnostic,
-    pci_contrast_diagnostic,
-    rai_optical_density_diagnostic,
-    rai_transmission_diagnostic,
-    simulate_intensity_frame,
-    simulate_raw_electron_frame,
+ROOT = Path(__file__).resolve().parents[1]
+if str(ROOT / "src") not in sys.path:
+    sys.path.insert(0, str(ROOT / "src"))
+
+from isolated_non_destructive_image import (  # noqa: E402
+    load_isolated_non_destructive_image_module,
 )
+
+
+_ACQUISITION = load_isolated_non_destructive_image_module(
+    "acquisition", namespace="_ndi_corrected_acquisition_scientific_tests_v1"
+)
+ProcessedDiagnostic = _ACQUISITION.ProcessedDiagnostic
+RawElectronFrame = _ACQUISITION.RawElectronFrame
+conditional_block_snr = _ACQUISITION.conditional_block_snr
+deterministic_raw_electron_frame = _ACQUISITION.deterministic_raw_electron_frame
+delta_method_covariance = _ACQUISITION.delta_method_covariance
+dgi_signal_diagnostic = _ACQUISITION.dgi_signal_diagnostic
+marginal_block_snr = _ACQUISITION.marginal_block_snr
+paired_difference_diagnostic = _ACQUISITION.paired_difference_diagnostic
+pci_contrast_diagnostic = _ACQUISITION.pci_contrast_diagnostic
+rai_optical_density_diagnostic = _ACQUISITION.rai_optical_density_diagnostic
+rai_transmission_diagnostic = _ACQUISITION.rai_transmission_diagnostic
+simulate_intensity_frame = _ACQUISITION.simulate_intensity_frame
+simulate_raw_electron_frame = _ACQUISITION.simulate_raw_electron_frame
 
 
 def _frame(

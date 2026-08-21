@@ -1,0 +1,17 @@
+{
+  "label": "chapter_5_bec_multiframe_recovery_loss_presentation_v1",
+  "purpose": "Presentation-only relation between first-image conditional recovery span and the reduction in condensed population caused by that exposure.",
+  "inputs": {
+    "recovery": {
+      "path": "results/chapter_5_bec_multiframe_eta_ry_dpfi_v1/source_payload/data/endpoint_support_summary.csv",
+      "sha256": "79f4bddd428713ec8831aae49ca8703f6d4b79f211802155908614d15bf3ba9d"
+    },
+    "endpoints": {
+      "path": "results/chapter_5_bec_multiframe_eta_ry_dpfi_v1/source_payload/data/selected_endpoints.csv",
+      "sha256": "3ea9c496e0e58eb18404578b2486f5178e8281a66f07c225d5bbd784c740425a"
+    }
+  },
+  "output_directory": ".scratch/chapter_5_bec_multiframe_recovery_loss_presentation_v2",
+  "durations_us": [25, 100, 150, 200, 250, 300, 350, 400],
+  "claim_boundary": "Presentation-only reuse of authenticated Section 5.2 summaries; no draws, propagation, equilibrium solve or fit."
+}

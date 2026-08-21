@@ -1,0 +1,40 @@
+{
+  "admitted": false,
+  "artifact_count": 6,
+  "artifacts": [
+    {
+      "bytes": 5588,
+      "path": "config_snapshot.json",
+      "sha256": "8052b90a5721a249f776aa25ed4ad09070726581a4e72abe3c162806fd5ecdf8"
+    },
+    {
+      "bytes": 2205,
+      "path": "data/selected_acquisition_contract.json",
+      "sha256": "2c5b563cac01aeaa66096d158aa935e12775f1757ebc0472e6ade0cf413cb1f3"
+    },
+    {
+      "bytes": 607,
+      "path": "data/selection_at_200us.csv",
+      "sha256": "c9cf3034300e45ca9c4ae2faab1f460eb04acb3e806eabedf4ef94a2468b2e05"
+    },
+    {
+      "bytes": 2012,
+      "path": "provenance.json",
+      "sha256": "fa949abd260636281913195ff45ba0d37eae888c8cd3141847988757c4526349"
+    },
+    {
+      "bytes": 441,
+      "path": "selection_statement.txt",
+      "sha256": "a6f9411b565be950ed6e115ed0736b21a4d1b29cec3358c826441c11670eeb03"
+    },
+    {
+      "bytes": 1832,
+      "path": "summary.json",
+      "sha256": "1744929104360685978567d2cdecfe910a98870eb794e562a3ced970aeeeea69"
+    }
+  ],
+  "family": "target_dgi_dpfi_qualification_v5",
+  "schema_version": 1,
+  "status": "diagnostic_not_retained",
+  "total_bytes": 12685
+}

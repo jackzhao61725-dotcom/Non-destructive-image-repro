@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "family": "chapter_5_bec_multiframe_eta_ry_dpfi_v1",
+  "source": {
+    "family": "chapter_5_bec_multiframe_eta_ry_dpfi_v4",
+    "default_relative_path": ".scratch/chapter_5_bec_multiframe_eta_ry_dpfi_v4",
+    "artifact_manifest_sha256": "855ae17aabbc418a14827536cc5fc14ef64e61a36a2254918143bb2a721c4ca5",
+    "required_status": "diagnostic_not_retained",
+    "required_admitted": false,
+    "aggregation_only": true,
+    "production_endpoint_refits": 0
+  },
+  "staging": ".scratch/chapter_5_bec_multiframe_eta_ry_dpfi_v1_admission_staging",
+  "target": "results/chapter_5_bec_multiframe_eta_ry_dpfi_v1",
+  "presentation": {
+    "durations_us": [25, 200, 400],
+    "image_q": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15],
+    "observables": ["eta", "rho_y"],
+    "source_table": "data/endpoint_support_summary.csv",
+    "plotted_values": "presentation/figure_5_2_plotted_values.csv",
+    "pdf": "presentation/figure_5_2_dpfi_eta_rho_repeated_exposures.pdf",
+    "manuscript_pdf": "dissertation/figures/figure_5_2_dpfi_eta_rho_repeated_exposures.pdf"
+  },
+  "inventory": {
+    "durations_us": [25, 100, 150, 200, 250, 300, 350, 400],
+    "images_per_sequence": 15,
+    "sequences_per_duration": 64,
+    "endpoint_rows": 7680,
+    "start_rows": 38400,
+    "random_identities": 17408,
+    "eta_supported_count": 7680,
+    "rho_y_supported_count": 7680
+  },
+  "claim_boundary": {
+    "supports": [
+      "conditional same-model DPFI recovery of eta and rho_y for the eight admitted pulse durations and q=1,...,15",
+      "paired within-sequence q-given-1 changes with complete supported-pair counts",
+      "a presentation of the known equilibrium inputs with recovered medians and conditional 16--84 percentile ranges at 25, 200 and 400 us"
+    ],
+    "does_not_support": [
+      "coverage or an experimental detection probability",
+      "a maximum usable frame or measured condensate depletion",
+      "installed-apparatus precision or validation",
+      "an optimum pulse duration",
+      "a DGI multi-frame recovery result"
+    ]
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "admitted": false,
+  "artifact_count": 15,
+  "artifacts": [
+    {
+      "bytes": 1208,
+      "path": "caption.txt",
+      "sha256": "0f7fe9e78c72141e981c4f1a27a29348cbfd983c9655cd849b61fac8d062b1d9"
+    },
+    {
+      "bytes": 10124,
+      "path": "config_snapshot.json",
+      "sha256": "ce0e90b93e91f8b52c59e156f84d34b75b25c3f0c453f1cf388ba7298b0bd9b9"
+    },
+    {
+      "bytes": 4799345,
+      "path": "data/representative_raw_draw00_snapshot.npz",
+      "sha256": "fa92a5163e5d09e9ffeed9259d76099bffd8831897686e6dd2304ea8478b80a2"
+    },
+    {
+      "bytes": 4582,
+      "path": "data/snr_matrices_snapshot.npz",
+      "sha256": "a4c5d4ec3c6080a1dfe7817ed5b3adc90ae3fd25530c0d0242b312007d3e1794"
+    },
+    {
+      "bytes": 9529,
+      "path": "lineage/noise_config_snapshot.json",
+      "sha256": "894331232657626c52f825214df480fa64d9dc098256f6183e230099bc1c7d0b"
+    },
+    {
+      "bytes": 4430,
+      "path": "lineage/noise_manifest_snapshot.json",
+      "sha256": "647101fd10ee5a73ba91773b4c2062d55fc8e13a8ce8e24da37c5feb079a139b"
+    },
+    {
+      "bytes": 7605,
+      "path": "lineage/noise_summary_snapshot.json",
+      "sha256": "cf89de4d8b7829a2510dc22309ace01a89175b7f645d59689f34923e86430043"
+    },
+    {
+      "bytes": 6210,
+      "path": "lineage/snr_config_snapshot.json",
+      "sha256": "2815054937fe75fa0ed9d0a95153d4813ef2eba8a98fb11cab1406db3c743669"
+    },
+    {
+      "bytes": 3110,
+      "path": "lineage/snr_manifest_snapshot.json",
+      "sha256": "444c12087b7c21b3b42c97e6dbaddfb66411d5f2be2ee3c84872afe774cdf6a9"
+    },
+    {
+      "bytes": 1752,
+      "path": "lineage/snr_summary_snapshot.json",
+      "sha256": "1c173f8a80a602115cc5ae192d5bffeeaeb485b295b9b881c1459377e4964d99"
+    },
+    {
+      "bytes": 8900,
+      "path": "metadata.json",
+      "sha256": "fb0d1dda4852a893bb2c862c924795fccf780d4d4ce945942f61661887213d38"
+    },
+    {
+      "bytes": 107891,
+      "path": "presentation/figure_4_4_target_multiframe_snr_dpfi.pdf",
+      "sha256": "466c7a2e60c84dac69df4dbd012b93148eed0cede0b6d77db6aed7fecb0442ca"
+    },
+    {
+      "bytes": 244947,
+      "path": "presentation/figure_4_4_target_multiframe_snr_dpfi.png",
+      "sha256": "7bf7a1613d2eed606009be9078e51e4a0e564b5bd012e82ecfaf2ea70557c43f"
+    },
+    {
+      "bytes": 7547,
+      "path": "provenance.json",
+      "sha256": "6e1917bdc6cab192815cf9682f4ffa7cf1478b7235ca6548ee9f9a13c06713da"
+    },
+    {
+      "bytes": 8900,
+      "path": "summary.json",
+      "sha256": "fb0d1dda4852a893bb2c862c924795fccf780d4d4ce945942f61661887213d38"
+    }
+  ],
+  "claim_boundary": {
+    "does_not_support": [
+      "experimental probability, classification rate, coverage, or apparatus performance",
+      "a typical, selected, averaged, or denoised noisy realisation",
+      "intermediate dynamics or a continuous trajectory across pulse durations",
+      "integrated-response SNR, feature precision, or universal DGI-DPFI ranking",
+      "globally single-valued DPFI density inversion"
+    ],
+    "supports": [
+      "deterministic whole-image template SNR over the declared DGI and DPFI duration-frame grid",
+      "one fixed predeclared draw-0 DPFI raw-role replay at the 24 guided conditions",
+      "complete re-equilibration between pulses in each independently prepared duration sequence"
+    ]
+  },
+  "consumable": false,
+  "family": "target_dgi_dpfi_multiframe_presentation_v7",
+  "schema_version": 1,
+  "self_hash_policy": "manifest_excluded",
+  "status": "presentation_candidate_not_retained",
+  "total_bytes": 5226080
+}

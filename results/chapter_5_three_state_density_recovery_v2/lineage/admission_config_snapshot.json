@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "label": "chapter_5_three_state_density_recovery_v2",
+  "candidate": ".scratch/chapter_5_three_state_density_recovery_candidate_v2",
+  "staging": ".scratch/.chapter_5_three_state_density_recovery_v2-staging",
+  "target": "results/chapter_5_three_state_density_recovery_v2",
+  "methods": ["dgi", "dpfi"],
+  "states": ["connected_modulated", "separated_droplets"],
+  "display_labels": {
+    "connected_modulated": "SSP",
+    "separated_droplets": "ID"
+  },
+  "durations_us": [25, 50, 100, 200, 400],
+  "draw_ids": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63],
+  "parents": {
+    "dgi": {
+      "directory": ".scratch/chapter_5_three_state_morphology_dgi_v1",
+      "manifest_sha256": "10393927fc71ae4add8a572f50acb99b1f1c4880d3a3b76f6b2f9ee74a742481",
+      "selected_fits_sha256": "4a83862225e774e0997ffdea50f3cee13ba01326ccea4be459620e8654bdbe93",
+      "start_outcomes_sha256": "87bf81c8c6893d848ee079ac918394595991a33769aafb2f65ab6c46d4390912",
+      "seed_ledger_sha256": "5900cde9d91eed2544501f27a8a53d62dfc6d924c7943378c0c6b1abcee49565"
+    },
+    "dpfi": {
+      "directory": ".scratch/chapter_5_three_state_morphology_dpfi_parallel_v3",
+      "manifest_sha256": "a383bac9758231ae9a14b0a79264c8af43f781c2cbac94fd7b913dcb8a6091b1",
+      "selected_fits_sha256": "45b932e611d93ab9845e19a912b9342e1a4634d647baa96c93381d6e5a8ad224",
+      "start_outcomes_sha256": "bd46578b77d79512933cbdcceb6847402f7c274589cd5b8b2430bbed3632b127",
+      "seed_ledger_sha256": "5f2403763d53b99e8a9aca56764f900f1096c2730078edbece4289e8e03caf23"
+    },
+    "support": {
+      "directory": ".scratch/chapter_5_three_state_morphology_likelihood_support_v1",
+      "manifest_sha256": "57dddd0cd8e03345b0539dec6e76cdcf6bfb8aefb70ecebe3ee7ee1ac278cf03",
+      "reclassified_fits_sha256": "ac2b0ad5c93c1a4ae786b4bc28ba713c75e09f52ecca67013dbb9151f4b0c2d4",
+      "support_summary_sha256": "d11cc95eec0ac6c1e085ed194eed2bfcad553177f3d2ccb19d2f396fc53fbcdd"
+    }
+  },
+  "observables": [
+    {"name": "eta", "column": "eta_hat", "truth": 1.0, "unit": "ratio"},
+    {"name": "d_peak", "column": "d_peak_hat_um", "truth_column": "d_peak_truth_um", "unit": "um"},
+    {"name": "nu_vp", "column": "nu_vp_hat", "truth_column": "nu_vp_truth", "unit": "ratio"}
+  ],
+  "claim_boundary": {
+    "permitted": [
+      "Conditional same-model recovery distributions for condensate population, visible mean peak separation and valley-to-neighbouring-peak density ratio for the fixed SSP and ID targets.",
+      "Comparison of DGI and DPFI recovery spread across the declared five pulse durations under the same target, atomic, optical, detector and fitting models.",
+      "Identification of model-internal diminishing returns in recovery spread without selecting an experimental optimum."
+    ],
+    "forbidden": [
+      "blind reconstruction or classification of an unknown experimental density profile",
+      "experimental precision, coverage or detection probability",
+      "a universal DGI-DPFI ranking",
+      "an optimum pulse duration or apparatus operating point",
+      "BEC-SSP-ID transition dynamics or phase coherence"
+    ]
+  }
+}

@@ -1,0 +1,66 @@
+[
+  {
+    "manifest_sha256": "c42dd52003b020d6a7a7a4f6546ccad027ccbd353cf772de717883faec9d48c3",
+    "random_identities": 2176,
+    "selected_rows": 960,
+    "shard_id": "a",
+    "source_directory": "C:\\Users\\Zhaoyifeng\\Documents\\Non-destructive-image\\.scratch\\chapter_5_bec_multiframe_eta_ry_dpfi_v3_shard_a",
+    "start_rows": 4800
+  },
+  {
+    "manifest_sha256": "170be9f9a9fb0829926f64ad3a39276a37ad9421e575965f83f914c123f68e45",
+    "random_identities": 2176,
+    "selected_rows": 960,
+    "shard_id": "b",
+    "source_directory": "C:\\Users\\Zhaoyifeng\\Documents\\Non-destructive-image\\.scratch\\chapter_5_bec_multiframe_eta_ry_dpfi_v3_shard_b",
+    "start_rows": 4800
+  },
+  {
+    "manifest_sha256": "7607288ddec413542350b6b10f4619077cd4fa80131d2d6fa4db5858a921b63f",
+    "random_identities": 2176,
+    "selected_rows": 960,
+    "shard_id": "c",
+    "source_directory": "C:\\Users\\Zhaoyifeng\\Documents\\Non-destructive-image\\.scratch\\chapter_5_bec_multiframe_eta_ry_dpfi_v3_shard_c",
+    "start_rows": 4800
+  },
+  {
+    "manifest_sha256": "2b1560375ea0104640fd2fba38dc04f600818761bda5ea44d0ed0173f451f6d2",
+    "random_identities": 2176,
+    "selected_rows": 960,
+    "shard_id": "d",
+    "source_directory": "C:\\Users\\Zhaoyifeng\\Documents\\Non-destructive-image\\.scratch\\chapter_5_bec_multiframe_eta_ry_dpfi_v3_shard_d",
+    "start_rows": 4800
+  },
+  {
+    "manifest_sha256": "0ded47d47a228d744905f410fe55705a50e6cf1a999db65d87345429b923e27b",
+    "random_identities": 2176,
+    "selected_rows": 960,
+    "shard_id": "e",
+    "source_directory": "C:\\Users\\Zhaoyifeng\\Documents\\Non-destructive-image\\.scratch\\chapter_5_bec_multiframe_eta_ry_dpfi_v3_shard_e",
+    "start_rows": 4800
+  },
+  {
+    "manifest_sha256": "f7936b155d245859828cf5da381874df18b23de08444f746dbe011a971db503e",
+    "random_identities": 2176,
+    "selected_rows": 960,
+    "shard_id": "f",
+    "source_directory": "C:\\Users\\Zhaoyifeng\\Documents\\Non-destructive-image\\.scratch\\chapter_5_bec_multiframe_eta_ry_dpfi_v3_shard_f",
+    "start_rows": 4800
+  },
+  {
+    "manifest_sha256": "a442be704aa7d8f48b1977964870ac0c45791f504149d108fd899e94dc7d5607",
+    "random_identities": 2176,
+    "selected_rows": 960,
+    "shard_id": "g",
+    "source_directory": "C:\\Users\\Zhaoyifeng\\Documents\\Non-destructive-image\\.scratch\\chapter_5_bec_multiframe_eta_ry_dpfi_v3_shard_g",
+    "start_rows": 4800
+  },
+  {
+    "manifest_sha256": "ee5db79fd5042208704a5e94ece752834651390998d797f36b5b013352a4792f",
+    "random_identities": 2176,
+    "selected_rows": 960,
+    "shard_id": "h",
+    "source_directory": "C:\\Users\\Zhaoyifeng\\Documents\\Non-destructive-image\\.scratch\\chapter_5_bec_multiframe_eta_ry_dpfi_v3_shard_h",
+    "start_rows": 4800
+  }
+]

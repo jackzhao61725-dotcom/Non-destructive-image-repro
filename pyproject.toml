@@ -3,21 +3,30 @@ requires = ["setuptools>=68"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "equilibrium-dispersive-imaging-reproduction"
-version = "1.1.0"
-description = "Reproduction code for equilibrium-conditioned dispersive imaging of a dipolar condensate"
-requires-python = ">=3.12,<3.13"
+name = "non-destructive-image-model"
+version = "0.3.0"
+description = "Simulation and inference tools for dispersive imaging of dipolar erbium condensates"
+readme = "README.md"
+requires-python = ">=3.10"
 license = {file = "LICENSE"}
+authors = [
+  {name = "Yifeng Zhao"},
+]
 dependencies = [
-  "numpy==2.3.5",
-  "scipy==1.18.0",
+  "matplotlib",
+  "numpy",
+  "scipy",
 ]
 
 [project.optional-dependencies]
-test = ["pytest==9.1.1"]
+dev = ["pytest"]
+
+[project.urls]
+Repository = "https://github.com/jackzhao61725-dotcom/Non-destructive-image-repro"
 
 [tool.setuptools]
 package-dir = {"" = "src"}
+py-modules = ["isolated_non_destructive_image"]
 
 [tool.setuptools.packages.find]
 where = ["src"]

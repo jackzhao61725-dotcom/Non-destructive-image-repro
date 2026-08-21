@@ -1,0 +1,51 @@
+{
+  "admitted": true,
+  "claim_boundary": {
+    "does_not_support": [
+      "experimental probability, classification rate, coverage or apparatus performance",
+      "a typical, selected, averaged or denoised noisy realisation",
+      "intermediate dynamics, feature precision or a universal DGI-DPFI ranking",
+      "globally single-valued DPFI density inversion"
+    ],
+    "supports": [
+      "deterministic whole-image template SNR over the declared DGI and DPFI duration-frame grid",
+      "one fixed predeclared draw-0 DPFI raw-frame replay at the 24 displayed conditions",
+      "complete re-equilibration between pulses in each independently prepared duration sequence"
+    ]
+  },
+  "consumable": true,
+  "family": "chapter_4_repeated_bec_dgi_dpfi_v1",
+  "mode": "authenticated byte-preserving successor admission",
+  "recomputation": {
+    "new_fits": 0,
+    "new_optical_propagations": 0,
+    "new_random_draws": 0,
+    "new_thermodynamic_solves": 0
+  },
+  "schema_version": 1,
+  "sources": [
+    {
+      "directory": ".scratch/target_dgi_dpfi_multiframe_presentation_v7",
+      "manifest_sha256": "aeeb1cc4ee61c005801aeca149f79de475e2748afc3bcb0bb8bd595018aedc23",
+      "name": "presentation_candidate",
+      "selected_files": [
+        "caption.txt",
+        "config_snapshot.json",
+        "data/representative_raw_draw00_snapshot.npz",
+        "data/snr_matrices_snapshot.npz",
+        "lineage/noise_config_snapshot.json",
+        "lineage/noise_manifest_snapshot.json",
+        "lineage/noise_summary_snapshot.json",
+        "lineage/snr_config_snapshot.json",
+        "lineage/snr_manifest_snapshot.json",
+        "lineage/snr_summary_snapshot.json",
+        "metadata.json",
+        "presentation/figure_4_4_target_multiframe_snr_dpfi.pdf",
+        "presentation/figure_4_4_target_multiframe_snr_dpfi.png",
+        "provenance.json",
+        "summary.json"
+      ]
+    }
+  ],
+  "status": "admitted_immutable"
+}

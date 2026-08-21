@@ -1,0 +1,44 @@
+{
+  "label": "public_chapter_5_snr_recovery_relation_v1",
+  "status": "public_presentation_from_admitted_evidence",
+  "purpose": "Public presentation-only comparison of whole-image SNR with the central-68-percent span of each recovered physical quantity.",
+  "output_directory": "output/public/figure_5_6",
+  "inputs": {
+    "bec_recovery": {
+      "path": "results/chapter_5_bec_multiframe_eta_ry_dpfi_v1/source_payload/data/endpoint_support_summary.csv",
+      "sha256": "79f4bddd428713ec8831aae49ca8703f6d4b79f211802155908614d15bf3ba9d"
+    },
+    "bec_snr": {
+      "path": "results/chapter_5_snr_recovery_relation_v1/source_payload/bec_snr/data/snr_grid.csv",
+      "sha256": "23e3c3989bdfa522369c30b3d9bce0be0239c253758f3ddc34197fee3263727e"
+    },
+    "three_state_recovery": {
+      "path": "results/chapter_5_three_state_density_recovery_v2/data/recovery_summary.csv",
+      "sha256": "33f968482187961884957f82204153f2b63a037403bda0e62463bab19c5880d7"
+    },
+    "dpfi_three_state_snr": {
+      "path": "results/chapter_5_snr_recovery_relation_v1/source_payload/dpfi_three_state_snr/data/deterministic_snr_and_cost.csv",
+      "sha256": "b129b8480241cc6d6308f9849395af333249721a51c5917c7a25ddf73f15f1f4"
+    },
+    "dgi_three_state_snr": {
+      "path": "results/chapter_5_snr_recovery_relation_v1/source_payload/dgi_three_state_snr/data/deterministic_snr_and_cost.csv",
+      "sha256": "e60b736be953d923eed04846ad7d94f83ee87b42bef27f9b2b2a9d65d5cd51c1"
+    }
+  },
+  "bec_durations_us": [25, 100, 150, 200, 250, 300, 350, 400],
+  "three_state_durations_us": [25, 50, 100, 200, 400],
+  "claim_boundary": {
+    "permitted": [
+      "compare whole-image SNR with the central 68 percent recovery span for the same state, readout and observable",
+      "identify model-internal diminishing returns within one curve",
+      "show that whole-image SNR does not impose one observable-independent DGI-DPFI precision ordering"
+    ],
+    "forbidden": [
+      "universal SNR-to-resolution calibration",
+      "experimental precision or validation",
+      "blind density reconstruction",
+      "optimal pulse duration",
+      "new random draws, optical propagation, equilibrium solves or nonlinear fits"
+    ]
+  }
+}

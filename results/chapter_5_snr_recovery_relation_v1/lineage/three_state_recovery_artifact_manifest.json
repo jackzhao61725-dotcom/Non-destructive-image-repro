@@ -1,0 +1,159 @@
+{
+  "admitted": true,
+  "artifact_count": 27,
+  "artifacts": [
+    {
+      "bytes": 1485,
+      "path": "admission_contract_snapshot.json",
+      "sha256": "db0b149bbbabde357cc782ca2719da196e6b718bfe5498652bb4dcc2f2b2228c"
+    },
+    {
+      "bytes": 203,
+      "path": "caption.txt",
+      "sha256": "d40da459876a39274f1bbb7ddfa7633d6d2930ead68ca694e2e5042997ef9b26"
+    },
+    {
+      "bytes": 982,
+      "path": "data/qualification_summary.csv",
+      "sha256": "52218ef875b336fb4e33abb50867d5b7b673c1d919bc3b94650cd8d3813f0c0e"
+    },
+    {
+      "bytes": 184507,
+      "path": "data/recovery_draws.csv",
+      "sha256": "5c5a37b2adc70a7d7cb8c8d120759fb23eb7d189c62aecd44ed518695e8cb605"
+    },
+    {
+      "bytes": 10678,
+      "path": "data/recovery_summary.csv",
+      "sha256": "33f968482187961884957f82204153f2b63a037403bda0e62463bab19c5880d7"
+    },
+    {
+      "bytes": 27940,
+      "path": "figures/figure_5_5_three_state_density_recovery.pdf",
+      "sha256": "9c09eeba1ebcb44493525138112f6053a19adf42ab86bc61d309369aa6fb796a"
+    },
+    {
+      "bytes": 178262,
+      "path": "figures/figure_5_5_three_state_density_recovery.png",
+      "sha256": "ce32f41e9bd928d854ec99b3dc06478422d9f9774057d728f8af91f3b4edf0a3"
+    },
+    {
+      "bytes": 3336,
+      "path": "lineage/admission_config_snapshot.json",
+      "sha256": "4be5f5e82f47aead2d9ab44427c27cd57973ccf0c561de0a26808ddb36c771f6"
+    },
+    {
+      "bytes": 4010,
+      "path": "lineage/candidate_manifest_snapshot.json",
+      "sha256": "2266ad86dc2ae8f0d46b3b25eba8659f616003b65a34b50a76f83c22a2697f77"
+    },
+    {
+      "bytes": 1833,
+      "path": "lineage/candidate_provenance_snapshot.json",
+      "sha256": "b1441ff7dbd84abbc86c52a2ed496ca4f10ff0e940dd7fd8a986310ecd67ad34"
+    },
+    {
+      "bytes": 1440,
+      "path": "lineage/candidate_summary_snapshot.json",
+      "sha256": "ac9ca536eb2d81579e2bc4b8dfb2263609c432a778c66d52e3420057c6107aa7"
+    },
+    {
+      "bytes": 3221,
+      "path": "lineage/parent_manifests/dgi.json",
+      "sha256": "10393927fc71ae4add8a572f50acb99b1f1c4880d3a3b76f6b2f9ee74a742481"
+    },
+    {
+      "bytes": 2282,
+      "path": "lineage/parent_manifests/dpfi.json",
+      "sha256": "a383bac9758231ae9a14b0a79264c8af43f781c2cbac94fd7b913dcb8a6091b1"
+    },
+    {
+      "bytes": 1055,
+      "path": "lineage/parent_manifests/support.json",
+      "sha256": "57dddd0cd8e03345b0539dec6e76cdcf6bfb8aefb70ecebe3ee7ee1ac278cf03"
+    },
+    {
+      "bytes": 1183,
+      "path": "lineage/source/scripts/build_chapter_5_three_state_density_recovery.py",
+      "sha256": "564be1361c8774104fa12ca1a622bf2e9089c4eadb2d1eca9cdd5e8c0803922e"
+    },
+    {
+      "bytes": 26612,
+      "path": "lineage/source/src/non_destructive_image/chapter5_three_state_density_recovery.py",
+      "sha256": "61be8a2ec445ec564fc9def10de05668fd4fe85b88a59cda19ba0d9cefcaaf5b"
+    },
+    {
+      "bytes": 1353,
+      "path": "lineage/source/tests/test_chapter5_three_state_density_recovery.py",
+      "sha256": "998bee953e26fe63b1c8f2c55642a96c03d4d5669ee4b9426ad49b1c610849c8"
+    },
+    {
+      "bytes": 236826,
+      "path": "parents/dgi/seed_ledger.csv",
+      "sha256": "5900cde9d91eed2544501f27a8a53d62dfc6d924c7943378c0c6b1abcee49565"
+    },
+    {
+      "bytes": 265568,
+      "path": "parents/dgi/selected_fits.csv",
+      "sha256": "4a83862225e774e0997ffdea50f3cee13ba01326ccea4be459620e8654bdbe93"
+    },
+    {
+      "bytes": 1996187,
+      "path": "parents/dgi/start_outcomes.csv",
+      "sha256": "87bf81c8c6893d848ee079ac918394595991a33769aafb2f65ab6c46d4390912"
+    },
+    {
+      "bytes": 271634,
+      "path": "parents/dpfi/seed_ledger.csv",
+      "sha256": "5f2403763d53b99e8a9aca56764f900f1096c2730078edbece4289e8e03caf23"
+    },
+    {
+      "bytes": 280644,
+      "path": "parents/dpfi/selected_fits.csv",
+      "sha256": "45b932e611d93ab9845e19a912b9342e1a4634d647baa96c93381d6e5a8ad224"
+    },
+    {
+      "bytes": 1989522,
+      "path": "parents/dpfi/start_outcomes.csv",
+      "sha256": "bd46578b77d79512933cbdcceb6847402f7c274589cd5b8b2430bbed3632b127"
+    },
+    {
+      "bytes": 295410,
+      "path": "parents/support/reclassified_fits.csv",
+      "sha256": "ac2b0ad5c93c1a4ae786b4bc28ba713c75e09f52ecca67013dbb9151f4b0c2d4"
+    },
+    {
+      "bytes": 5000,
+      "path": "parents/support/support_summary.csv",
+      "sha256": "d11cc95eec0ac6c1e085ed194eed2bfcad553177f3d2ccb19d2f396fc53fbcdd"
+    },
+    {
+      "bytes": 461,
+      "path": "provenance.json",
+      "sha256": "c21e7d758b77902a172a3e2980bbda93cb89d2a67ec0485ba43d5965a1a26504"
+    },
+    {
+      "bytes": 1519,
+      "path": "summary.json",
+      "sha256": "5c6bea44370826472df298cc7ad8871dec3d7703b569076954b7468f5d51f817"
+    }
+  ],
+  "claim_boundary": {
+    "forbidden": [
+      "blind reconstruction or classification of an unknown experimental density profile",
+      "experimental precision, coverage or detection probability",
+      "a universal DGI-DPFI ranking",
+      "an optimum pulse duration or apparatus operating point",
+      "BEC-SSP-ID transition dynamics or phase coherence"
+    ],
+    "permitted": [
+      "Conditional same-model recovery distributions for condensate population, visible mean peak separation and valley-to-neighbouring-peak density ratio for the fixed SSP and ID targets.",
+      "Comparison of DGI and DPFI recovery spread across the declared five pulse durations under the same target, atomic, optical, detector and fitting models.",
+      "Identification of model-internal diminishing returns in recovery spread without selecting an experimental optimum."
+    ]
+  },
+  "family": "chapter_5_three_state_density_recovery_v2",
+  "schema_version": 1,
+  "status": "admitted_immutable",
+  "total_bytes": 5793153
+}

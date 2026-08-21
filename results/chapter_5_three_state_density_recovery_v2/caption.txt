@@ -1,0 +1,1 @@
+Median and central 68% recovery ranges for condensate population, visible mean peak separation and valley-to-neighbouring-peak density ratio across 64 model-matched camera-noise acquisitions per point.

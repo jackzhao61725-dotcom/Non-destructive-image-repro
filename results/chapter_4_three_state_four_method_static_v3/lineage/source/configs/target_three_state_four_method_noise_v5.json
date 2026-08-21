@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "label": "target_three_state_four_method_noise_v5",
+  "purpose": "Hardened 200-us four-readout noise and whole-image-SNR comparison for the final Trap III three-state objects, retaining the phase-wrapped ID forward response.",
+  "parents": {
+    "noiseless_manifest": {"path": ".scratch/target_three_state_four_method_noiseless_v4/artifact_manifest.json", "sha256": "4f5b8f7fcbea44435470ede1229c9322fd1c1d0c8d86655905c76700ae2446d9"},
+    "noiseless_payload": {"path": ".scratch/target_three_state_four_method_noiseless_v4/data/target_four_method_camera_and_fields.npz", "sha256": "dc3bae3101ffda28ee5a8f8a5c32c3b12950c577fabac2df72177206c5e7707e"},
+    "noiseless_summary": {"path": ".scratch/target_three_state_four_method_noiseless_v4/summary.json", "sha256": "64ab11dcbbf7b2e4e12acd33742f200d10b9c4f1e5e010ef7337e8e8de05a843"},
+    "incident_count_scale": {"path": "results/chapter_4_5_three_state_corrected_pci_dgi_acquisition_v1/data/deterministic_validation.csv", "sha256": "e0d0a97c741fd2dc5752bca7f3b6004a64359205234901523beaead45735208f"},
+    "incident_count_manifest": {"path": "results/chapter_4_5_three_state_corrected_pci_dgi_acquisition_v1/artifact_manifest.json", "sha256": "649685ef77f2d19fcf79ab68a05c83c011377b353af355f93c5fe516a0558180"}
+  },
+  "implementation": {
+    "runner": {"path": "scripts/run_target_four_method_noise.py", "sha256": "2db6b8463093ed2b2bf73b70afbf37862fd4d0f19710afa53c225d0b50a873db"},
+    "pci_dgi_noise_algebra": {"path": "src/non_destructive_image/chapter4_noise_weighted_snr.py", "sha256": "7ba181487ceb7286c357b85a81da5b8ecb5202104f0a9fd17d4711d69d2a536a"},
+    "faraday_noise_algebra": {"path": "src/non_destructive_image/four_method_camera_noise.py", "sha256": "51433af212f2f578e78727585529a231fde1453f61b2a98e84af33d6e549288c"}
+  },
+  "states": ["smooth_bec", "connected_modulated", "separated_droplets"],
+  "methods": ["pci", "dgi", "dffi", "dpfi"],
+  "pulse_durations_us": [25, 50, 75, 100, 125, 150, 175, 200, 225, 250, 275, 300],
+  "display_pulse_duration_us": 200,
+  "detector": {
+    "read_noise_electrons_rms_per_port_pixel": 0.7,
+    "dark_mean_electrons_per_pixel": 0.0,
+    "full_well_electrons": 15000.0,
+    "full_well_gate": "maximum_expected_plus_6sigma_below_full_well",
+    "clipping": false,
+    "noise_model": "independent_Poisson_photoelectrons_plus_independent_Gaussian_read_noise_for_every_raw_frame_or_port",
+    "technical_probe_noise": "not_modelled"
+  },
+  "acquisition": {
+    "common_atom_side_pulse": "1_mW_plus_1p5_GHz_24_mm_beam_200_us",
+    "pci_raw_roles": ["atom", "bright_reference", "dark"],
+    "dgi_raw_roles": ["atom_stop", "leakage_stop", "stop_dark", "open_reference", "open_dark"],
+    "dffi_raw_roles": ["crossed_atom", "crossed_blank", "crossed_dark", "open_reference", "open_dark"],
+    "dpfi_raw_roles": ["atom_h", "atom_v", "blank_h", "blank_v", "dark_h", "dark_v"],
+    "dpfi_port_policy": "H_and_V_are_camera_sampled_and_noised_independently_before_their_common_I0_difference_is_formed",
+    "balanced_detection_boundary": "equal_mean_background_cancels_but_the_two_port_shot_and_read_noise_variances_add",
+    "faraday_calibration_boundary": "ideal_matched_analyser_and_ports;_gain_extinction_registration_and_port_specific_PSF_are_not_calibrated_apparatus_inputs",
+    "redraws_allowed": false
+  },
+  "image_snr": {
+    "definition": "sqrt(sum_over_camera_pixels(mu_squared/variance))",
+    "variance": "pixelwise_delta_method_propagation_of_all_declared_raw_role_Poisson_and_read_noise_variances",
+    "role": "whole_image_template_strength_not_resolution_feature_precision_or_state_classification"
+  },
+  "randomness": {
+    "bit_generator": "PCG64",
+    "seed_prefix": [20260818, 4405],
+    "draw_id": 0,
+    "expected_random_identities": 57,
+    "redraws_allowed": false
+  },
+  "presentation": {
+    "noisy_layout": "four_method_rows_by_three_state_columns",
+    "noisy_scale": "one_zero_centred_scale_shared_by_all_twelve_panels",
+    "snr_layout": "four_method_panels_with_shared_axes_and_three_state_curves",
+    "snr_vertical_marker_us": 200
+  },
+  "claim_boundary": {
+    "permitted": [
+      "compare_the_four_ideal_readouts_under_the_same_final_Trap_III_profiles_atom_side_pulse_camera_sampling_and_declared_detector_noise",
+      "show_that_DPFI_mean_background_cancellation_does_not_cancel_port_shot_or_read_noise",
+      "use_noisy_images_and_whole_image_SNR_as_evidence_before_narrowing_later_readouts",
+      "retain_the_ID_phase_wrapped_forward_response_without_claiming_a_single_valued_density_inverse"
+    ],
+    "forbidden": [
+      "installed_apparatus_performance",
+      "general_method_ranking",
+      "claim_that_real_DFFI_has_zero_background",
+      "claim_that_real_DPFI_has_perfect_gain_registration_or_PSF_matching",
+      "feature_recovery_precision_or_state_classification_probability",
+      "single_valued_ID_density_recovery_from_phase_or_intensity"
+    ]
+  },
+  "lifecycle": {
+    "status": "diagnostic_not_retained",
+    "admitted": false,
+    "output_directory": ".scratch/target_three_state_four_method_noise_v5",
+    "overwrite": false,
+    "results_writes": 0
+  }
+}

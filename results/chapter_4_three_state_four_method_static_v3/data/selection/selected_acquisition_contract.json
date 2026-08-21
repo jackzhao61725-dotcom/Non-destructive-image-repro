@@ -1,0 +1,60 @@
+{
+  "claim_boundary": {
+    "does_not_support": [
+      "universal_DPFI_or_DGI_superiority",
+      "feature_precision_or_state_classification",
+      "globally_single_valued_ID_density_inversion",
+      "installed_port_gain_extinction_registration_or_differential_transfer_performance",
+      "real_apparatus_prediction_without_calibration"
+    ],
+    "supports": [
+      "configuration_specific_DPFI_DGI_selection",
+      "DPFI_as_the_strongest_signed_port_difference_readout_with_leading_order_linear_response_in_the_declared_whole_image_SNR_comparison",
+      "DGI_as_the_second_ranked_dark_background_quadratic_comparator",
+      "complete_selected_raw_role_and_processing_contracts",
+      "explicit_ideal_calibration_assumptions_and_full_well_margin"
+    ]
+  },
+  "detector": {
+    "clipping": false,
+    "dark_mean_electrons": 0.0,
+    "full_well_electrons": 15000.0,
+    "full_well_gate": "maximum_expected_plus_6sigma_below_full_well",
+    "pulse_duration_us": 200,
+    "read_noise_electrons_rms": 0.7
+  },
+  "dgi": {
+    "open_to_stop_gain": 1.0,
+    "processed_quantity": "((atom_stop-stop_dark)-(leakage_stop-stop_dark))/(open_reference-open_dark)",
+    "raw_roles": [
+      "atom_stop",
+      "leakage_stop",
+      "stop_dark",
+      "open_reference",
+      "open_dark"
+    ],
+    "residual_reference_field_amplitude": 0.01,
+    "signed_residual_policy": "retain_without_clipping",
+    "stop_leakage": "uniform_and_exactly_calibrated_in_the_primary_numerical_case",
+    "stop_optical_depth": 4.0,
+    "stop_position_error": "not_modelled"
+  },
+  "dpfi": {
+    "calibration_boundary": "finite_extinction_gain_imbalance_differential_transfer_and_registration_error_require_apparatus_calibration_and_are_not_in_the_primary_ideal_case",
+    "cross_port_leakage_fraction": 0.0,
+    "h_gain": 1.0,
+    "port_convention": "H_plus_V_minus",
+    "processed_quantity": "((atom_h-dark_h)-(atom_v-dark_v))/((blank_h-dark_h)+(blank_v-dark_v))",
+    "raw_roles": [
+      "atom_h",
+      "atom_v",
+      "blank_h",
+      "blank_v",
+      "dark_h",
+      "dark_v"
+    ],
+    "registration": "exact",
+    "shared_psf": true,
+    "v_gain": 1.0
+  }
+}

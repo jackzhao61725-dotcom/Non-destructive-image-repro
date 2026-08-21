@@ -1,0 +1,30 @@
+{
+  "admitted": true,
+  "aggregation": {
+    "camera_noise_draws_per_cell": 64,
+    "interval": "central 68 percent, bounded by the 16th and 84th percentiles",
+    "selected_fit_population": "all finite selected fits",
+    "support_filter_applied_to_plotted_distribution": false
+  },
+  "candidate_manifest_sha256": "2266ad86dc2ae8f0d46b3b25eba8659f616003b65a34b50a76f83c22a2697f77",
+  "claim_boundary": {
+    "forbidden": [
+      "blind reconstruction or classification of an unknown experimental density profile",
+      "experimental precision, coverage or detection probability",
+      "a universal DGI-DPFI ranking",
+      "an optimum pulse duration or apparatus operating point",
+      "BEC-SSP-ID transition dynamics or phase coherence"
+    ],
+    "permitted": [
+      "Conditional same-model recovery distributions for condensate population, visible mean peak separation and valley-to-neighbouring-peak density ratio for the fixed SSP and ID targets.",
+      "Comparison of DGI and DPFI recovery spread across the declared five pulse durations under the same target, atomic, optical, detector and fitting models.",
+      "Identification of model-internal diminishing returns in recovery spread without selecting an experimental optimum."
+    ]
+  },
+  "family": "chapter_5_three_state_density_recovery_v2",
+  "new_nonlinear_fits": 0,
+  "new_optical_propagations": 0,
+  "new_random_draws": 0,
+  "schema_version": 1,
+  "status": "admitted_immutable"
+}

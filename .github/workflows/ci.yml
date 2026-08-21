@@ -1,4 +1,4 @@
-name: CI
+name: Public reproduction checks
 
 on:
   push:
@@ -11,7 +11,7 @@ jobs:
   test:
     name: Python 3.12 / ${{ matrix.os }}
     runs-on: ${{ matrix.os }}
-    timeout-minutes: 20
+    timeout-minutes: 45
     strategy:
       fail-fast: false
       matrix:
@@ -28,7 +28,7 @@ jobs:
           cache: pip
 
       - name: Install package and test dependencies
-        run: python -m pip install ".[test]"
+        run: python -m pip install -e ".[dev]"
 
       - name: Check installed dependencies
         run: python -m pip check
@@ -36,19 +36,11 @@ jobs:
       - name: Run tests
         run: python -m pytest -q
 
-      - name: Validate forward-model contract
-        run: python scripts/reproduce_forward_model.py --validate-only
+      - name: Run bounded public example
+        run: python scripts/run_public_example.py
 
-      - name: Validate inference contract
-        run: python scripts/reproduce_inference.py --validate-only
+      - name: Verify bundled evidence
+        run: python scripts/verify_bundled_evidence.py
 
-      - name: Check deterministic reference
-        if: matrix.os == 'ubuntu-latest'
-        run: python scripts/check_reference.py
-
-      - name: Check deterministic reference including inference
-        if: matrix.os == 'ubuntu-latest'
-        run: python scripts/check_reference.py --include-inference
-
-      - name: Check bundled retained evidence
-        run: python scripts/check_evidence.py
+      - name: Verify dissertation figures
+        run: python scripts/render_public_figures.py --check-only

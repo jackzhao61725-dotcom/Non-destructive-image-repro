@@ -1,0 +1,16 @@
+{
+  "admission_mode": "authenticated canonical byte reuse plus presentation-only rendering",
+  "admitted": true,
+  "family": "chapter_5_bec_multiframe_eta_ry_dpfi_v1",
+  "new_endpoint_fits": 0,
+  "new_optical_propagations": 0,
+  "new_random_draws": 0,
+  "no_live_scratch_dependency_after_admission": true,
+  "python": "3.12.13 (main, Aug  7 2026, 02:26:41) [MSC v.1944 64 bit (AMD64)]",
+  "reportlab": "4.4.9",
+  "schema_version": 1,
+  "source_artifact_manifest_sha256": "855ae17aabbc418a14827536cc5fc14ef64e61a36a2254918143bb2a721c4ca5",
+  "source_family": "chapter_5_bec_multiframe_eta_ry_dpfi_v4",
+  "source_payload_preserved": true,
+  "status": "admitted_immutable"
+}

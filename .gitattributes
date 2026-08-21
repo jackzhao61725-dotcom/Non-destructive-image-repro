@@ -1,9 +1,16 @@
 * text=auto eol=lf
 
-*.ipynb text eol=lf
-*.svg text eol=lf whitespace=-blank-at-eol
+*.csv text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+*.py text eol=lf
+*.tex text eol=lf
 
 *.npy binary
 *.npz binary
 *.pdf binary
 *.png binary
+
+# Retained evidence is identity-checked byte for byte.  Do not let Git
+# normalise line endings inside these immutable result trees.
+results/** -text -diff

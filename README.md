@@ -1,156 +1,148 @@
-# Equilibrium-conditioned dispersive imaging
+# Simulating dispersive imaging of dipolar erbium condensates
 
-This repository is a simulation-only reproduction package for repeated
-dispersive imaging of a polarised `166Er` condensate. It links a dipolar
-Thomas–Fermi equilibrium model to finite-aperture optical transfer, camera
-counts, conditional probe heating and low-order morphology inference.
+This repository accompanies the MSc dissertation *Simulating Dispersive
+Imaging of Dipolar Erbium Condensates*. It is a simulation-only package for
+asking what physical information can be recovered from dispersive images when
+the same probe also disturbs the condensate.
 
-The public surface has two complementary layers:
+The dissertation separates that question into two calculations because the
+available models do not describe a pulse-affected dynamical transition from a
+smooth condensate into modulated and droplet states.
 
-- re-runnable software for the deterministic forward chain and one fixed-seed
-  PCI endpoint-inference workflow;
-- a compact, hash-identified evidence bundle containing selected retained
-  synthetic camera arrays, conditional refits, result tables and figures.
+```mermaid
+flowchart LR
+    O[Oxford-informed equilibrium] --> B[BEC0]
+    B --> R[Repeated equilibrium BEC endpoints]
+    R --> RF[DPFI recovery of population and axial size]
+    B --> S[Constructed SSP and ID profiles]
+    S --> I[PCI / DGI / DFFI / DPFI imaging]
+    I --> MF[Recovery of peak spacing and valley ratio]
+```
 
-No laboratory image dataset is analysed in this repository. Selected
-reference-state values are transcribed with provenance from the identified
-Oxford ORA source archive, but the imaging targets and fitted results shown
-below are synthetic.
+The repeated-BEC route follows equilibrium endpoints after accumulated recoil
+energy. The static route compares the same smooth BEC with source-informed SSP
+and ID density profiles. The arrows between BEC0, SSP and ID above do **not**
+represent a simulated state-transition trajectory.
 
 ## Results at a glance
 
-Two independently generated first-exposure PCI targets show the simulated
-orientation-conditioned morphology before fitting:
+The common camera model shows how the four readouts respond to the three
+density objects at one representative exposure:
 
-![Synthetic PCI orientation targets](evidence/retained_v1/figures/figure_5_2_orientation_raw_pci_pair.png)
+![Four simulated readouts](results/chapter_4_three_state_four_method_static_v3/presentation/figure_4_target_four_method_noisy_200us.png)
 
-The retained conditional refits constrain positive fitted width contrasts
-within the declared projected-profile family:
+Repeated DPFI images can recover the population ratio and axial-radius ratio of
+the smooth BEC sequence, while the recovery ceases to improve systematically
+as the pulse is made longer:
 
-![Orientation-conditioned projected widths](evidence/retained_v1/figures/figure_5_3_orientation_morphology.png)
+![Repeated BEC recovery](assets/figure_5_2_dpfi_eta_rho_repeated_exposures.png)
 
-These are same-model synthetic results, not experimental magnetostriction or
-independent validation of the state, profile or installed optical system. The
-full interpretation boundary and machine-readable files are documented in
-[evidence/retained_v1](evidence/retained_v1/README.md).
+For the SSP and ID, the fitted physical outputs are the visible peak spacing
+and valley-to-peak density ratio. DPFI has the strongest response on the smooth
+single-branch BEC, but its periodic response becomes harder to interpret at the
+higher three-peak densities. DGI provides a useful second readout because its
+static morphology remains more directly visible there.
 
-## Public coverage
+![Three-state density recovery](results/chapter_5_three_state_density_recovery_v2/figures/figure_5_5_three_state_density_recovery.png)
 
-| Result or workflow | Public status | Public surface |
-| --- | --- | --- |
-| Dipolar equilibrium, optical response and conditional sequence | Recomputed | Deterministic forward driver and software-verification reference |
-| Fixed-seed PCI endpoint fit | Recomputed as a workflow check | One independently generated pair with four-start fitting |
-| Linked first/second-exposure PCI result | Bundled retained evidence | Synthetic raw target, 64-refit route data, status matrix and residual diagnostics |
-| Independent orientation PCI result | Bundled retained evidence | Two synthetic raw targets, endpoint and route tables, and 64 conditional refits per endpoint |
-| 17-point PCI/DGI scans and slope regressions | Not retained | No plotted values are reconstructed from the dissertation |
-| Profile-qualification presentation, thermal-halo stress and later-exposure fits | Not retained | Their manuscript conclusions are not promoted to public numerical evidence |
-| Experimental imaging data | Not part of this reproduction | The ORA archive only anchors selected declared reference values |
+These are same-model synthetic results. They are not experimental performance
+measurements or a demonstration of blind density reconstruction.
 
-See [docs/results.md](docs/results.md) for the precise evidence classes and
-claim boundaries.
+## Five-minute reproduction
 
-## Quick start
-
-Use Python 3.12 in a fresh environment, then run from the repository root:
+Use Python 3.10 or newer from the repository root:
 
 ```text
-python -m pip install ".[test]"
-python -m pytest -q
-python scripts/reproduce_forward_model.py --validate-only
-python scripts/reproduce_inference.py --validate-only
-python scripts/check_reference.py
-python scripts/check_evidence.py
+python -m venv .venv
 ```
 
-Use the tagged GitHub source archive or a repository checkout: the scripts,
-configurations and evidence files are source-tree assets, so this release is
-not advertised as a standalone PyPI distribution.
-
-A successful run prints both validation messages and two `PASS` messages:
+Activate that environment (`.\.venv\Scripts\Activate.ps1` in Windows
+PowerShell, or `source .venv/bin/activate` on macOS and Linux), then run:
 
 ```text
-configuration and forward-model contract validated
-configuration and inference contract validated
-PASS forward (...)
-PASS evidence (16 files, 2366025 bytes)
+python -m pip install -e ".[dev]"
+python scripts/run_public_example.py
+python scripts/verify_bundled_evidence.py
+python scripts/render_public_figures.py --check-only
 ```
 
-The default reference check covers the deterministic forward-model reference.
-To include the fixed-seed PCI endpoint fit, run:
+The first command-line example takes about ten seconds on the development
+machine. It recomputes the three density objects and all four readouts, then
+runs one fixed-seed DPFI fit of BEC population and axial size. It reads two
+repeated-BEC endpoints from the authenticated ensemble summary instead of
+rerunning the slower finite-temperature sequence. Its JSON output labels this
+boundary explicitly.
+
+To save the example result without overwriting an existing file:
 
 ```text
-python scripts/check_reference.py --include-inference
+python scripts/run_public_example.py --output output/public_example.json
 ```
 
-The inference check is optional because it is slower. `check_reference.py`
-recomputes software-verification values. `check_evidence.py` performs no fitting
-or scientific calculation; it verifies the frozen evidence inventory, byte
-counts, SHA-256 digests, CSV row counts and NPZ schemas.
+`verify_bundled_evidence.py` checks all six admitted result families: root
+manifest identities, the complete 183-file inventory, byte counts and SHA-256
+digests. `render_public_figures.py --check-only` checks the 17 exact PDFs used
+by the dissertation. Omitting `--check-only` collects those PDFs and writes a
+machine-readable index; it does not pretend to repeat the long stochastic
+calculations that produced the evidence.
 
-## Generate local JSON outputs
+## What is recomputed and what is bundled
 
-The public drivers keep validation separate from writing output:
+| Part | Public treatment |
+| --- | --- |
+| BEC0, SSP and ID density objects | Recomputed by the public example |
+| Four ideal readouts and objective/camera sampling | Recomputed by the public example |
+| One noisy DPFI BEC fit | Recomputed as a fixed-seed workflow check |
+| Repeated-BEC and SSP/ID recovery ensembles | Bundled as hash-verified admitted evidence |
+| Exact dissertation figures | Bundled and hash-verified |
+| BEC–SSP–ID transition dynamics | Not modelled |
+| Experimental images or installed-apparatus validation | Not included |
 
-```text
-python scripts/reproduce_forward_model.py --output outputs/forward_model.json
-python scripts/reproduce_inference.py --draws 1 --output outputs/inference.json
-```
-
-Existing output paths are refused by default. Pass `--overwrite` only after
-inspecting the file you intend to replace.
-
-What you should see:
-
-- `outputs/forward_model.json` has status
-  `model_conditional_reproduction` and records the two independently minimised
-  equilibrium endpoints, optical response, mean raw counts, scattering and the
-  conditional thermodynamic sequence;
-- `outputs/inference.json` has status
-  `fixed_seed_point_fits_not_sampling_coverage`, records one fixed-seed draw by
-  default, and states that generator truth was not used by the fit;
-- rerunning with unchanged inputs reproduces the deterministic forward payload
-  and seed policy. Generated files remain local software artefacts and do not
-  replace the immutable evidence bundle.
-
-The two endpoints, `B_parallel_y` and `B_parallel_z`, are independent
-equilibrium states under a common PCI design. They are not a simulated magnetic
-field-rotation trajectory. The repeated-exposure update is likewise conditional:
-it assumes fixed trapped number, recoil-only deposited energy and complete
-re-equilibration between exposures.
+The distinction matters: a successful quick-start fit checks that the released
+software still follows the declared chain; it is not a new statistical result.
+See [Evidence and result identity](docs/EVIDENCE.md) for the six evidence
+families and [Model and limits](docs/model.md) for the physical assumptions.
 
 ## Repository map
 
-- `src/non_destructive_image/`: physical, detector and inverse models;
-- `configs/`: frozen numerical inputs and source-data identity;
-- `scripts/`: validation, reproduction and integrity-checking entry points;
-- `tests/`: unit, contract and release-surface tests;
-- `evidence/retained_v1/`: selected admitted synthetic targets, fitted
-  summaries, figures and provenance;
-- `reference/`: compact software-verification values;
-- `docs/`: model, inference, result-boundary and reproduction documentation;
-- `THIRD_PARTY.md`: data, article and dependency attribution.
+- `src/non_destructive_image/` — density, atom–light, optical-transfer, camera
+  and fitting code used by the current dissertation route;
+- `configs/` — numerical contracts used by the public example and the retained
+  calculations;
+- `scripts/` — the three public entry points and the figure sources that map
+  directly to the dissertation;
+- `results/` — complete admitted evidence trees with immutable manifests;
+- `dissertation/figures/` — the 17 exact figure PDFs used in the manuscript;
+- `docs/FIGURES.md` — reader-facing figure crosswalk;
+- `tests/` — focused model, camera, fit and release-integrity checks.
 
-The Oxford ORA dataset identified by DOI `10.5287/ora-m8gpvdr2y` is not bundled.
-Only values required by the public drivers are transcribed into configuration
-with provenance and integrity metadata. The drivers do not access the network
-or the archive. See `THIRD_PARTY.md` before obtaining or redistributing the
-original dataset.
+Run the focused public tests with:
 
-## AI-assisted development
+```text
+python -m pytest -q
+```
 
-OpenAI Codex (5.6 Sol) was used for selected implementation tasks, codebase
-organisation and maintenance, and code review. Suggestions adopted into the
-repository were reviewed by the author and, where applicable, checked using the
-repository's tests and validation workflows. The scientific model, numerical
-methodology and interpretation of results were determined by the author, who
-remains responsible for the code and its outputs.
+## Scientific boundary
 
-## Identity, citation and licence
+The optical model uses an isolated 401-nm erbium transition, a fixed
+polarisation/field geometry, idealised readout elements and a measured-testbed
+objective transfer. The camera model includes physical pixel integration,
+photon-counting noise and read noise. The repeated-condensate calculation adds
+probe recoil energy and solves for later finite-temperature equilibria, but it
+does not simulate the motion between them. The SSP and ID are constructed
+density profiles informed by the morphology and spatial scale reported by
+Chomaz *et al.*; they are not equilibrium solutions for the Oxford trap.
 
-Version `1.1.0` retains runnable source snapshot commit
-`afc8050fbe86c7ce5741fec608bb354591790f03` and adds the selected retained
-synthetic evidence bundle. Citation metadata is in `CITATION.cff`.
+For an experiment, the simulation supplies a decision method rather than a
+finished optical prescription: calibrate the installed transfer and detector,
+choose the physical quantity to recover, test the shortest probe setting that
+recovers it adequately, and compare dispersive estimates with the Oxford RAI
+system where that provides a suitable independent reference.
 
-The repository code is released under the BSD 3-Clause License; see `LICENSE`.
-Third-party data, publications and dependencies remain governed by their own
-terms.
+## Citation and licence
+
+Citation metadata is provided in [`CITATION.cff`](CITATION.cff). Repository
+code is released under the BSD 3-Clause License. External publications, the
+Oxford source dataset, the group-supplied objective report and software
+dependencies retain their own terms; see
+[`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md).

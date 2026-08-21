@@ -1,0 +1,36 @@
+{
+  "admitted": false,
+  "artifact_count": 5,
+  "artifacts": [
+    {
+      "bytes": 3572,
+      "path": "config_snapshot.json",
+      "sha256": "ffaac44e3db52930e702642ada93b98cd9b7798f70607828560f6fe0b20f9795"
+    },
+    {
+      "bytes": 24571,
+      "path": "data/distinct_alternative_diagnostics.csv",
+      "sha256": "374e17d1aadc882d360148ba4176f54c8dfc91133ea7bb9a3f788e07ec330f3a"
+    },
+    {
+      "bytes": 295410,
+      "path": "data/reclassified_fits.csv",
+      "sha256": "ac2b0ad5c93c1a4ae786b4bc28ba713c75e09f52ecca67013dbb9151f4b0c2d4"
+    },
+    {
+      "bytes": 5000,
+      "path": "data/support_summary.csv",
+      "sha256": "d11cc95eec0ac6c1e085ed194eed2bfcad553177f3d2ccb19d2f396fc53fbcdd"
+    },
+    {
+      "bytes": 20600,
+      "path": "summary.json",
+      "sha256": "a21fa322805f16cf99f7b6a21786f0097da5653db8c43bd4fb016271a209020e"
+    }
+  ],
+  "family": "chapter_5_three_state_morphology_likelihood_support_v1",
+  "postprocess_only": true,
+  "schema_version": 1,
+  "status": "diagnostic_not_retained",
+  "total_bytes": 349153
+}

@@ -1,0 +1,103 @@
+{
+  "admitted": true,
+  "claim_boundary": {
+    "does_not_support": [
+      "universal method superiority or installed-apparatus performance",
+      "feature precision, spacing recovery, state classification or experimental probability",
+      "a globally single-valued ID density inversion",
+      "calibrated extinction, port-gain balance, registration or differential-transfer performance",
+      "an optimum pulse duration, detector threshold or experimental validation",
+      "Oxford, multiframe, Chapter-5, binary-mixture or dynamical claims"
+    ],
+    "supports": [
+      "common-I0 noiseless fractional camera response for PCI, DGI, DFFI and DPFI under the declared final Trap-III geometry",
+      "one fixed draw-0 200-us noisy camera acquisition for each of the four methods and three target states under the declared ideal detector model",
+      "whole-image template SNR over the 25-300-us duration grid",
+      "configuration-specific continuation with DPFI first and DGI second by whole-image SNR for each state at 200 us",
+      "forward ID response with explicit stronger-branch phase wrapping"
+    ]
+  },
+  "consumable": true,
+  "family": "chapter_4_three_state_four_method_static_v3",
+  "noise": {
+    "common_scale": 2.1105806605656316,
+    "seed_identities": 57,
+    "snr_200us": {
+      "connected_modulated__dffi": 57.09482973927021,
+      "connected_modulated__dgi": 74.64819918105337,
+      "connected_modulated__dpfi": 84.15314321465617,
+      "connected_modulated__pci": 61.73261051830112,
+      "separated_droplets__dffi": 54.29283481925846,
+      "separated_droplets__dgi": 70.19309152671886,
+      "separated_droplets__dpfi": 71.44775813142076,
+      "separated_droplets__pci": 54.99533552427349,
+      "smooth_bec__dffi": 41.72439876500029,
+      "smooth_bec__dgi": 59.24418599769786,
+      "smooth_bec__dpfi": 79.55975981916528,
+      "smooth_bec__pci": 54.89494874308003
+    },
+    "snr_rows": 144
+  },
+  "noiseless": {
+    "common_scale": 2.011999399447263,
+    "maximum_phase_rad": 3.7073737479043483,
+    "wrapped_pixels": 137
+  },
+  "presentation": {
+    "clipping": false,
+    "dpi": 300,
+    "font_sizes_pt": {
+      "axes_label": 9.2,
+      "base": 9.2,
+      "legend": 9.0,
+      "tick": 9.0,
+      "title": 9.6
+    },
+    "minimum_font_pt": 9.0,
+    "noiseless_common_scale": 2.011999399447263,
+    "noisy_common_scale": 2.1105806605656316,
+    "panel_height_inches": 5.1,
+    "physical_aspect_preserved": true,
+    "scale_policy": "one zero-centred symmetric common scale across all four methods and all three states within each figure",
+    "snr_height_inches": 4.4,
+    "width_inches": 6.61
+  },
+  "recomputation": {
+    "new_fits": 0,
+    "new_optical_propagations": 0,
+    "new_presentations": 3,
+    "new_random_draws": 0,
+    "new_thermodynamic_solves": 0
+  },
+  "schema_version": 1,
+  "selection": {
+    "selected_methods": [
+      "dpfi",
+      "dgi"
+    ],
+    "selection_rows": 12
+  },
+  "status": "admitted_immutable",
+  "superseded_presentations": [
+    {
+      "family": "chapter_4_three_state_four_method_static_v1",
+      "manifest_sha256": "ff4488d32e8dfb50777c8c721a845a8a544f51ea0cc40fee9196fc70474c7dbf",
+      "reason": "the first admission staging retained engineering language in its reader-facing captions; its numerical payloads and figures are otherwise unchanged"
+    },
+    {
+      "family": "chapter_4_three_state_four_method_static_v2",
+      "manifest_sha256": "ca40d9be8abcb75bda0fa49a60129453f6f852ba64f2185d59736aec8012c470",
+      "reason": "the v2 staging is superseded by the manifest-first exact-inventory and parent-payload validation closure; all numerical payloads and rendered pixels are unchanged"
+    },
+    {
+      "family": "target_three_state_four_method_noiseless_presentation_v9",
+      "manifest_sha256": "9f86bd0e1f92dd729c8772760ba32ee93b28894ee843141661e14bc1950c3c37",
+      "reason": "source width 7.108 inches and 8.5-point ticks fall below the final 9-point floor when reduced to 6.61 inches"
+    },
+    {
+      "family": "target_three_state_four_method_noise_presentation_v5",
+      "manifest_sha256": "6904540fbd824ed29ca7d84b83f160e0508b846618c1205c4c7d34cc71fb6ae8",
+      "reason": "source figures are 7.108 or 7.2 inches wide and include 8.0-8.5-point text below the final 9-point floor after reduction"
+    }
+  ]
+}

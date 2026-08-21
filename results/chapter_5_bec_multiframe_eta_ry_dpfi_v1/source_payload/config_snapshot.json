@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "label": "chapter_5_bec_multiframe_eta_ry_dpfi_v4",
+  "purpose": "Aggregation-only canonical successor for the completed eight-duration Section-5.2 v3 DPFI shards, with grid-correct paired summaries and explicit dark-floor diagnostics.",
+  "lifecycle": {
+    "status": "diagnostic_not_retained",
+    "admitted": false,
+    "full_production": true,
+    "output_directory": ".scratch/chapter_5_bec_multiframe_eta_ry_dpfi_v4",
+    "overwrite": false,
+    "results_writes": 0,
+    "production_endpoint_refits": 0,
+    "new_camera_random_identities": 0
+  },
+  "grid": {
+    "pulse_durations_us": [25, 100, 150, 200, 250, 300, 350, 400],
+    "draw_ids": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63],
+    "image_q": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15],
+    "start_ids": [0, 1, 2, 3, 4]
+  },
+  "parent_v3": {
+    "config_path": "configs/chapter_5_bec_multiframe_eta_ry_dpfi_v3.json",
+    "config_sha256": "a34e8d8d50eb234d8b8f18353d005dd43a20decbd470442e926c4977d6e0f537",
+    "supervisor_receipt_path": ".scratch/chapter_5_bec_multiframe_eta_ry_dpfi_v3_run_diagnostics/supervisor_receipt.json",
+    "supervisor_receipt_sha256": "5c1685d43b8e17fd129ba46a89e3f5f075b5f8cea0b07c3e91ab1e09c75df1ea",
+    "shards": [
+      {"shard_id": "a", "manifest_sha256": "c42dd52003b020d6a7a7a4f6546ccad027ccbd353cf772de717883faec9d48c3"},
+      {"shard_id": "b", "manifest_sha256": "170be9f9a9fb0829926f64ad3a39276a37ad9421e575965f83f914c123f68e45"},
+      {"shard_id": "c", "manifest_sha256": "7607288ddec413542350b6b10f4619077cd4fa80131d2d6fa4db5858a921b63f"},
+      {"shard_id": "d", "manifest_sha256": "2b1560375ea0104640fd2fba38dc04f600818761bda5ea44d0ed0173f451f6d2"},
+      {"shard_id": "e", "manifest_sha256": "0ded47d47a228d744905f410fe55705a50e6cf1a999db65d87345429b923e27b"},
+      {"shard_id": "f", "manifest_sha256": "f7936b155d245859828cf5da381874df18b23de08444f746dbe011a971db503e"},
+      {"shard_id": "g", "manifest_sha256": "a442be704aa7d8f48b1977964870ac0c45791f504149d108fd899e94dc7d5607"},
+      {"shard_id": "h", "manifest_sha256": "ee5db79fd5042208704a5e94ece752834651390998d797f36b5b013352a4792f"}
+    ]
+  },
+  "support_policy": {
+    "physical_observable_support": "inherit the v3 eta and rho_y nuisance-projected direction, conditional-interval and physical-bound flags without alteration",
+    "dark_floor": "a fitted non-negative dark mean at its physically allowed zero floor is reported separately and does not by itself censor eta or rho_y",
+    "gain_boundary": "a gain boundary remains a calibration warning requiring separate review",
+    "same_model_boundary": true
+  },
+  "nuisance_boundary_reporting": {
+    "absolute_tolerance": 1e-7,
+    "reported_per_endpoint": true
+  },
+  "dark_floor_sensitivity": {
+    "duration_us": [25, 200, 400],
+    "image_q": [1, 8, 15],
+    "draw_id": 0,
+    "fixed_dark_upper_electrons_per_pixel": 1e-9,
+    "maximum_shift_in_baseline_conditional_sd": 0.5
+  },
+  "implementation": [
+    {
+      "path": "src/non_destructive_image/chapter5_bec_multiframe_eta_ry_dpfi_v4.py",
+      "sha256": "dbd175ddfbc8951c0963754238abfdc26f4f4f9e5565455441219dd08b99406e"
+    },
+    {
+      "path": "scripts/run_chapter_5_bec_multiframe_eta_ry_dpfi_v4.py",
+      "sha256": "599a1b0682be5fab2218680042250a2af620440bada4015957733ebb9b45e2be"
+    }
+  ],
+  "maximum_output_bytes": 104857600,
+  "claim_boundary": {
+    "supports": [
+      "conditional same-model DPFI endpoint recovery of eta and rho_y for the eight selected durations",
+      "paired within-sequence q-given-1 changes with complete supported-pair counts",
+      "separate reporting of expected dark-floor nuisance boundaries"
+    ],
+    "does_not_support": [
+      "coverage or detection probability",
+      "maximum usable frame",
+      "measured depletion",
+      "installed-apparatus precision",
+      "optimum duration",
+      "DGI multiframe manuscript result"
+    ]
+  }
+}

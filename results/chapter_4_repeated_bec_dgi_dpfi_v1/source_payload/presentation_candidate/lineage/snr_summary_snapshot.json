@@ -1,0 +1,82 @@
+{
+  "admitted": false,
+  "claim_boundary": {
+    "does_not_support": [
+      "integrated-response SNR or feature-specific precision",
+      "observed-draw probability, coverage, or classification",
+      "installed-apparatus performance or universal method ranking",
+      "cross-frame change SNR without the shared-calibration covariance"
+    ],
+    "supports": [
+      "same-model deterministic whole-image template SNR for DGI and DPFI over the declared duration-frame grid",
+      "explicit raw-role Poisson and read-noise delta-variance accounting"
+    ]
+  },
+  "dgi_stop_dark_max_abs_Jacobian": 0.0,
+  "duration_monotonicity_required": false,
+  "expected_full_well_margin_electrons": 14412.773622068744,
+  "fits": 0,
+  "grid_points": 240,
+  "image_q": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "label": "target_dgi_dpfi_multiframe_snr_grid_v2",
+  "maximum_expected_plus_6sigma_electrons": 587.2263779312559,
+  "maximum_maintained_Jacobian_error": 0.0,
+  "maximum_maintained_value_error": 0.0,
+  "method_cells": 480,
+  "methods": [
+    "dgi",
+    "dpfi"
+  ],
+  "minimum_denominator_electrons": 28.666231564336307,
+  "observed_arrays_consumed": false,
+  "optical_propagations": 0,
+  "pulse_durations_us": [
+    25,
+    50,
+    75,
+    100,
+    125,
+    150,
+    175,
+    200,
+    225,
+    250,
+    275,
+    300,
+    325,
+    350,
+    375,
+    400
+  ],
+  "random_draws": 0,
+  "results_writes": 0,
+  "schema_version": 1,
+  "status": "diagnostic_not_retained",
+  "thermodynamic_solves": 0,
+  "whole_image_template_snr_ranges": {
+    "dgi": [
+      17.678688204690786,
+      84.9882667437899
+    ],
+    "dpfi": [
+      26.57325993955727,
+      112.75593408175776
+    ]
+  }
+}

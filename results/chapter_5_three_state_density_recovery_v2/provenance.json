@@ -1,0 +1,13 @@
+{
+  "admission_git_state": {
+    "branch": "codex/binary-supersolid-static",
+    "dirty_tree": true,
+    "head": "6a1af433db0da227b750a3c48df261a92c8275d9"
+  },
+  "candidate": ".scratch/chapter_5_three_state_density_recovery_candidate_v2",
+  "candidate_manifest_sha256": "2266ad86dc2ae8f0d46b3b25eba8659f616003b65a34b50a76f83c22a2697f77",
+  "new_nonlinear_fits": 0,
+  "new_optical_propagations": 0,
+  "new_random_draws": 0,
+  "schema_version": 1
+}

@@ -1,0 +1,210 @@
+{
+  "schema_version": 2,
+  "label": "three_state_jones_and_oxford_scalar_orientation_contract_v2",
+  "status": "active_successor_physics_contract_not_a_result",
+  "purpose": "Separate the full Jones response required for the Chomaz-informed BEC, SSP and ID comparison from the scalar perpendicular-eigenmode response retained for the Oxford TFBEC multiframe study.",
+  "supersedes_for_future_consumers": "configs/imaging_orientation_contract_v1.json",
+  "coordinate_system": {
+    "handedness": "right_handed",
+    "axis_order": [
+      "x",
+      "y",
+      "z"
+    ]
+  },
+  "geometries": {
+    "three_state_equilibrium": {
+      "consumer_scope": "BEC, SSP and ID single-exposure comparisons of PCI, DGI, DFFI and DPFI; the three density objects are independent and state_feedback remains none.",
+      "source_geometry": {
+        "citation_key": "Chomaz2019",
+        "doi": "10.1103/PhysRevX.9.021012",
+        "magnetic_and_dipole_axis": "source_z",
+        "density_modulation_and_weak_trap_axis": "source_y",
+        "trap_frequency_hz_by_source_axis": {
+          "x": 227.0,
+          "y": 31.5,
+          "z": 151.0
+        },
+        "reported_density_information": "The source fixes the axial line-density morphology n(y); it does not provide the transverse widths used by the thesis analytic y-z column-density objects."
+      },
+      "source_to_thesis_axis_mapping": {
+        "definition": "x_thesis = z_source, y_thesis = y_source, z_thesis = -x_source",
+        "matrix_rows_thesis_from_source": [
+          [
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            -1.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "mapped_trap_frequency_hz_by_thesis_axis": {
+          "x": 151.0,
+          "y": 31.5,
+          "z": 227.0
+        },
+        "density_array_consequence": "The y coordinate and source axial line density are unchanged. The thesis-controlled transverse z widths remain unchanged, so the existing BEC, SSP and ID y-z arrays do not require numerical rotation or resampling.",
+        "physical_boundary": "This is a global right-handed relabelling of the source geometry, not a rotation of B relative to a fixed cloud. The source absorption technique and time-of-flight expansion are not imported into the thesis imaging model."
+      },
+      "jones_atomic_response": {
+        "model_status": "ideal isolated-401-nm-line, fully polarised, weak-probe, common-detuning Jones response; not a calibrated multilevel apparatus response",
+        "transition": {
+          "species": "166Er",
+          "label": "401 nm J=6,m_J=-6 to J'=7",
+          "ground_J": 6,
+          "ground_m_J": -6,
+          "excited_J": 7,
+          "line_strength_normalisation": "q=-1 stretched branch equals one"
+        },
+        "geometry": {
+          "probe_wavevector_unit_vector": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "quantisation_axis_unit_vector": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "input_linear_polarisation_unit_vector": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "faraday_orthogonal_axis_unit_vector": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "faraday_axis_definition": "epsilon_F = epsilon_in cross k_hat"
+        },
+        "spherical_basis_convention": {
+          "quantisation_direction": "q is defined relative to +B=+x",
+          "basis_vectors": "epsilon_plus = -(e_y + i*e_z)/sqrt(2), epsilon_minus = (e_y - i*e_z)/sqrt(2)",
+          "input_decomposition": "e_z = i*(epsilon_plus + epsilon_minus)/sqrt(2)"
+        },
+        "detuning_convention": {
+          "detuning_hz": "the common-detuning value is probe frequency minus the midpoint reference of the two driven branch frequencies; explicit branch detunings, when supplied, are probe frequency minus each branch frequency, in cycles per second",
+          "positive_detuning_phase_sign": "positive",
+          "active_branch_treatment": "common_detuning",
+          "exact_branch_detunings": "Optional absolute probe-minus-branch-transition detunings may be supplied to the Jones response; otherwise both circular branches use the stated common detuning."
+        },
+        "branches": [
+          {
+            "label": "sigma_minus",
+            "q": -1,
+            "incident_power_fraction": 0.5,
+            "relative_line_strength": 1.0,
+            "closure_status": "cycling within the selected J=6 to J'=7 manifold; metastable leakage is excluded"
+          },
+          {
+            "label": "pi",
+            "q": 0,
+            "incident_power_fraction": 0.0,
+            "relative_line_strength": 0.14285714285714285,
+            "closure_status": "absent from the transverse input field when k is parallel to B"
+          },
+          {
+            "label": "sigma_plus",
+            "q": 1,
+            "incident_power_fraction": 0.5,
+            "relative_line_strength": 0.01098901098901099,
+            "closure_status": "weak non-cycling branch within the selected manifold"
+          }
+        ],
+        "field_definition": {
+          "circular_eigen_transmissions": "t_q = exp[-OD_2L*s_q/2 + i*phi_2L*s_q], with s_minus=1 and s_plus=1/91",
+          "co_polarised_component": "t_co = (t_minus + t_plus)/2",
+          "faraday_orthogonal_component": "t_F = i*(t_minus - t_plus)/2 along epsilon_F",
+          "common_phase": "phi_c = (phi_minus + phi_plus)/2 = (46/91)*phi_2L",
+          "faraday_rotation": "theta_F = (phi_plus - phi_minus)/2 = (-45/91)*phi_2L",
+          "intensity_identity": "abs(t_co)^2 + abs(t_F)^2 = [abs(t_minus)^2 + abs(t_plus)^2]/2",
+          "weighting_boundary": "The full line strengths belong in t_minus and t_plus. The one-half incident-power fractions enter scattering and the circular-to-linear field projection; they are not multiplied into each eigen-transmission exponent."
+        },
+        "scattering_definition": {
+          "branch_weights": {
+            "sigma_minus": 0.5,
+            "pi": 0.0,
+            "sigma_plus": 0.005494505494505495
+          },
+          "total_common_detuning_strength": 0.5054945054945055,
+          "total_common_detuning_strength_exact": "46/91",
+          "continuity": "The branch-summed single-pulse scattering and recoil calculation is unchanged because it already uses the same incident power fractions and line strengths."
+        }
+      },
+      "downstream_correction": {
+        "must_be_regenerated": [
+          "three-state PCI and DGI mean camera images",
+          "three-state PCI and DGI noisy camera images",
+          "three-state whole-image SNR",
+          "three-state axial profiles and apparent contrast",
+          "three-state apparent-contrast duration ensembles",
+          "three-state SNR-versus-fit-spread presentation"
+        ],
+        "may_be_reused": [
+          "BEC, SSP and ID analytic y-z column-density arrays",
+          "branch-summed single-pulse scattering and recoil values",
+          "finite-resolution propagation operator",
+          "camera pixel-integration and noise machinery"
+        ],
+        "legacy_boundary": "Existing retained three-state camera and fit payloads preserve their historical provenance but must not support the corrected B-parallel-k comparison. No payload is silently overwritten."
+      }
+    },
+    "oxford_tfbec": {
+      "consumer_scope": "Oxford partially condensed smooth-TFBEC repeated-equilibrium-endpoint calculations only; it is not used for the four-method three-state comparison.",
+      "atomic_response_mode": "scalar_perpendicular_linear_eigenmode",
+      "geometry": {
+        "probe_wavevector_unit_vector": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "quantisation_axis_unit_vector": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "selected_polarisation_unit_vector": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "selected_linear_eigenmode": "perpendicular",
+        "effective_line_strength": 0.5054945054945055,
+        "effective_line_strength_exact": "46/91",
+        "leading_faraday_rotation": 0.0
+      },
+      "multiframe_binding": {
+        "initial_state_config": "configs/dpfi_initial_condition_suite_v1_orca_fusion_m10.json",
+        "atomic_and_thermodynamic_model_config": "configs/dissertation_v3_orca_fusion.json",
+        "population_temperature_and_radius_updates_apply_only_to_oxford_tfbec": true,
+        "three_state_profile_feedback_forbidden": true
+      },
+      "preservation_boundary": "The Oxford scalar optical response, branch-summed recoil, equilibrium update and admitted Chapter 4-5 multiframe results are unchanged by the three-state Jones correction."
+    }
+  },
+  "consumer_policy": {
+    "future_three_state_successors_must_reference": "geometries.three_state_equilibrium",
+    "oxford_tfbec_consumers_must_reference": "geometries.oxford_tfbec",
+    "mixed_scalar_contract_forbidden": "The three-state Jones response must not be replaced by exp[-OD_c/2+i*phi_c], and the Oxford scalar branch must not be promoted to a Faraday signal.",
+    "three_state_propagation_rule": "Without an output analyser, propagate the co-polarised and Faraday-orthogonal atom-dependent complex fields separately through the appropriate optical operator and add their camera intensities. Never propagate total_intensity_fraction as a complex field.",
+    "result_lifecycle": "This file is a physics/configuration contract only. It admits no numerical result and authorises no overwrite of retained evidence."
+  },
+  "claim_boundary": {
+    "changes_three_state_camera_output": true,
+    "changes_oxford_camera_output": false,
+    "changes_oxford_multiframe_update": false,
+    "validates_experiment": false,
+    "admits_results": false,
+    "creates_new_numerical_evidence": false
+  }
+}

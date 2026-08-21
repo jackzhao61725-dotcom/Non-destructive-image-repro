@@ -1,0 +1,424 @@
+{
+  "admitted": true,
+  "artifact_count": 79,
+  "artifacts": [
+    {
+      "bytes": 795,
+      "path": "captions/figure_4_target_four_method_noiseless_common_scale.txt",
+      "sha256": "ff3bd9d7003414de1ad50735e533fd640faa444429e5b43ee803033c569f54c9"
+    },
+    {
+      "bytes": 689,
+      "path": "captions/figure_4_target_four_method_noisy_200us.txt",
+      "sha256": "699cb5e500c1824487cf17e1881c4c79885f86e8f7bf078c59bbf441cafd25cf"
+    },
+    {
+      "bytes": 548,
+      "path": "captions/figure_4_target_four_method_snr.txt",
+      "sha256": "7e888fe9d16dff93edb99085206a99361a5a5ec8ab091f55c42eccf1370f253d"
+    },
+    {
+      "bytes": 15378,
+      "path": "config_snapshot.json",
+      "sha256": "ca701fc7de8ed15eaec36d8b6b6872beca44f7ae8d29ff6abb49b3fc646af6fb"
+    },
+    {
+      "bytes": 832255,
+      "path": "data/noise/four_method_noise_arrays.npz",
+      "sha256": "04f969962be2ade2fd43b80b2a0534169eef4ce1739a2b8fdc3e28472628df20"
+    },
+    {
+      "bytes": 9090,
+      "path": "data/noise/four_method_snr.csv",
+      "sha256": "8ae12590e954d14577a853f809eb6ad9555d6c15a9b82289b4a52a9ef774b460"
+    },
+    {
+      "bytes": 3128,
+      "path": "data/noise/seed_ledger.csv",
+      "sha256": "7209071bb016d0e9c86238ea5d40b02cd7b283056e03d48bc814376dc0ff2763"
+    },
+    {
+      "bytes": 1364,
+      "path": "data/noiseless/state_method_extrema.csv",
+      "sha256": "b202daa4b0b4b4817f5e713118d6dd6a7df71b7fc5842eb02600fa07fce58ea1"
+    },
+    {
+      "bytes": 22543291,
+      "path": "data/noiseless/target_four_method_camera_and_fields.npz",
+      "sha256": "dc3bae3101ffda28ee5a8f8a5c32c3b12950c577fabac2df72177206c5e7707e"
+    },
+    {
+      "bytes": 2205,
+      "path": "data/selection/selected_acquisition_contract.json",
+      "sha256": "2c5b563cac01aeaa66096d158aa935e12775f1757ebc0472e6ade0cf413cb1f3"
+    },
+    {
+      "bytes": 607,
+      "path": "data/selection/selection_at_200us.csv",
+      "sha256": "c9cf3034300e45ca9c4ae2faab1f460eb04acb3e806eabedf4ef94a2468b2e05"
+    },
+    {
+      "bytes": 441,
+      "path": "data/selection/selection_statement.txt",
+      "sha256": "a6f9411b565be950ed6e115ed0736b21a4d1b29cec3358c826441c11670eeb03"
+    },
+    {
+      "bytes": 181,
+      "path": "environment.json",
+      "sha256": "09d322e88ae337eafd4cf56711c1a602f3a5a1babe6482425b561a3580c66d6a"
+    },
+    {
+      "bytes": 20604,
+      "path": "lineage/count_scale_parent/deterministic_validation.csv",
+      "sha256": "e0d0a97c741fd2dc5752bca7f3b6004a64359205234901523beaead45735208f"
+    },
+    {
+      "bytes": 2251,
+      "path": "lineage/parents/noise_artifact_manifest.json",
+      "sha256": "c6190cc31af3c46bca1270fc4999924db9fc6290f4c1617432258c549832f98e"
+    },
+    {
+      "bytes": 5678,
+      "path": "lineage/parents/noise_config_snapshot.json",
+      "sha256": "b89928d8cc978adf14e61606e680ffadaf884a0a21f2828809250311da1080d8"
+    },
+    {
+      "bytes": 1430,
+      "path": "lineage/parents/noise_presentation_manifest.json",
+      "sha256": "6904540fbd824ed29ca7d84b83f160e0508b846618c1205c4c7d34cc71fb6ae8"
+    },
+    {
+      "bytes": 1180,
+      "path": "lineage/parents/noise_presentation_metadata.json",
+      "sha256": "770a39975fa4bafd9dc089a6c584eeee27fc97b3e56ca175b05ef774405b8452"
+    },
+    {
+      "bytes": 843,
+      "path": "lineage/parents/noise_provenance.json",
+      "sha256": "9e55ea7690d0df169df736707cd3a4af55b56b440a19475cbe70c2b479621af6"
+    },
+    {
+      "bytes": 1609,
+      "path": "lineage/parents/noise_summary.json",
+      "sha256": "b0daa88a5e53c15a8c677860d17b2d2046fb19dd3164970449d891b117f94e4f"
+    },
+    {
+      "bytes": 1100,
+      "path": "lineage/parents/noiseless_artifact_manifest.json",
+      "sha256": "4f5b8f7fcbea44435470ede1229c9322fd1c1d0c8d86655905c76700ae2446d9"
+    },
+    {
+      "bytes": 6815,
+      "path": "lineage/parents/noiseless_config_snapshot.json",
+      "sha256": "64c4b6dbd5dfa5f37896d351c32f62e2e21f565e979e59d5b7120b4ef85dc1c2"
+    },
+    {
+      "bytes": 943,
+      "path": "lineage/parents/noiseless_presentation_manifest.json",
+      "sha256": "9f86bd0e1f92dd729c8772760ba32ee93b28894ee843141661e14bc1950c3c37"
+    },
+    {
+      "bytes": 1071,
+      "path": "lineage/parents/noiseless_presentation_metadata.json",
+      "sha256": "f0f30c434e14c230b7b2ddda57a870ebca3aa450119f785e227be51a43862267"
+    },
+    {
+      "bytes": 2895,
+      "path": "lineage/parents/noiseless_provenance.json",
+      "sha256": "ed305ea49f45b2b2b3826799ce77706159d606a7009756bd3132ef1fe9570d49"
+    },
+    {
+      "bytes": 2366,
+      "path": "lineage/parents/noiseless_summary.json",
+      "sha256": "64ab11dcbbf7b2e4e12acd33742f200d10b9c4f1e5e010ef7337e8e8de05a843"
+    },
+    {
+      "bytes": 1186,
+      "path": "lineage/parents/qualification_artifact_manifest.json",
+      "sha256": "fd515079a73302fb7826fc35a7b9eba6d601aff2c328f46ab7b36ffaf0209a82"
+    },
+    {
+      "bytes": 5588,
+      "path": "lineage/parents/qualification_config_snapshot.json",
+      "sha256": "8052b90a5721a249f776aa25ed4ad09070726581a4e72abe3c162806fd5ecdf8"
+    },
+    {
+      "bytes": 2012,
+      "path": "lineage/parents/qualification_provenance.json",
+      "sha256": "fa949abd260636281913195ff45ba0d37eae888c8cd3141847988757c4526349"
+    },
+    {
+      "bytes": 1832,
+      "path": "lineage/parents/qualification_summary.json",
+      "sha256": "1744929104360685978567d2cdecfe910a98870eb794e562a3ced970aeeeea69"
+    },
+    {
+      "bytes": 15095,
+      "path": "lineage/source/configs/dissertation_v3_orca_fusion.json",
+      "sha256": "3cba57ba4124dea390e7c412735fbd4d38654bf69da528a5672510353079d7b0"
+    },
+    {
+      "bytes": 7224,
+      "path": "lineage/source/configs/erk_401nm_objective_v1.json",
+      "sha256": "78b2c17a3a47a293ead837ab54ecb72960c2bee3746d1808663722bb2ce3801f"
+    },
+    {
+      "bytes": 9920,
+      "path": "lineage/source/configs/imaging_orientation_contract_v2.json",
+      "sha256": "ff7142dade762fc2aa2afab5c5a949ccc8847a4ec117aadd3cdf2abfec486c8e"
+    },
+    {
+      "bytes": 5024,
+      "path": "lineage/source/configs/target_dgi_dpfi_qualification_v5.json",
+      "sha256": "77c80ec2dda026f2224eef973694b0a33f907c7344a241ff8774554b0ac92bd1"
+    },
+    {
+      "bytes": 11084,
+      "path": "lineage/source/configs/target_geometry_finite_temperature_closure_v4.json",
+      "sha256": "f0ca56ee3ee7e41b1ffb2b4f4d06b4fb1b45ebde08a2ca06b369adcbc7252be9"
+    },
+    {
+      "bytes": 5136,
+      "path": "lineage/source/configs/target_three_state_four_method_noise_v5.json",
+      "sha256": "93b1d2f2f8fe45d752d320e0183590df9f0415dec0c292fb08fa5a287729a4f4"
+    },
+    {
+      "bytes": 6152,
+      "path": "lineage/source/configs/target_three_state_four_method_noiseless_v4.json",
+      "sha256": "bde1c7263ee89fbc298aa86b781fa9451086c5856d4b275e830ac85f29ff0b02"
+    },
+    {
+      "bytes": 6468,
+      "path": "lineage/source/configs/three_state_target_trap_profiles_v4.json",
+      "sha256": "6ed3c4cf7e3401eb11fd24bd8c2f3c2dcbdecc935570ed73a20f946a682c1043"
+    },
+    {
+      "bytes": 545,
+      "path": "lineage/source/pyproject.toml",
+      "sha256": "759579abb03ac01dc2541ffe4e9b60c1105f86d41a11f7be1c1b229f3e55e983"
+    },
+    {
+      "bytes": 1697,
+      "path": "lineage/source/scripts/prepare_chapter4_static_retained_staging.py",
+      "sha256": "0d71aee0a1b5656f686c09de7988f00a6b0fddfb71ab2939dc4a21c2684b0bcf"
+    },
+    {
+      "bytes": 1558,
+      "path": "lineage/source/scripts/run_target_dgi_dpfi_qualification.py",
+      "sha256": "b9890328fed76bd5e0143f91f2c4198d8bc76ea130b8fda5641a1d4adf5a53fa"
+    },
+    {
+      "bytes": 29079,
+      "path": "lineage/source/scripts/run_target_four_method_noise.py",
+      "sha256": "2db6b8463093ed2b2bf73b70afbf37862fd4d0f19710afa53c225d0b50a873db"
+    },
+    {
+      "bytes": 1584,
+      "path": "lineage/source/scripts/run_target_four_method_noiseless.py",
+      "sha256": "f93f19dcc87bb3410bd0cdf187eeef2a422f45f038041fcaa7244f19e5b7e2f4"
+    },
+    {
+      "bytes": 2962,
+      "path": "lineage/source/src/isolated_non_destructive_image.py",
+      "sha256": "cb7d0511602be3175c2b00645d8c71da1d6d0b5803ff5e3bece0cd902db55997"
+    },
+    {
+      "bytes": 7072,
+      "path": "lineage/source/src/non_destructive_image/__init__.py",
+      "sha256": "c955324ea73edfd1a6cde0c4b19c5254afc887fe62a3806e2e7c1e8aa70de7f7"
+    },
+    {
+      "bytes": 45058,
+      "path": "lineage/source/src/non_destructive_image/atomic_response.py",
+      "sha256": "d0a5d6603f6ff865b11407c781958ae5767314280433b6ec9c5d71fb5c559ab2"
+    },
+    {
+      "bytes": 10196,
+      "path": "lineage/source/src/non_destructive_image/camera.py",
+      "sha256": "90bc2f74763d802c6aa729762452d1fa98428cc87f3db420f97703d7c15abfe2"
+    },
+    {
+      "bytes": 30730,
+      "path": "lineage/source/src/non_destructive_image/chapter4_noise_weighted_snr.py",
+      "sha256": "7ba181487ceb7286c357b85a81da5b8ecb5202104f0a9fd17d4711d69d2a536a"
+    },
+    {
+      "bytes": 49095,
+      "path": "lineage/source/src/non_destructive_image/chapter4_static_retained_staging.py",
+      "sha256": "b70b123115428d7ac89de4e67c2998a527d506fe24eac141731b6231a848c86f"
+    },
+    {
+      "bytes": 24148,
+      "path": "lineage/source/src/non_destructive_image/equilibrium_imaging.py",
+      "sha256": "241c5a564bebc4bca2d608abdb01f99ae821c05b346144c0432d02eeebcae7d8"
+    },
+    {
+      "bytes": 13161,
+      "path": "lineage/source/src/non_destructive_image/equilibrium_profiles.py",
+      "sha256": "1e458b22f8c4874426ab3f08e7646987e8a7baaeff58d17c8ef54efb7c01a631"
+    },
+    {
+      "bytes": 8783,
+      "path": "lineage/source/src/non_destructive_image/four_method_camera_noise.py",
+      "sha256": "51433af212f2f578e78727585529a231fde1453f61b2a98e84af33d6e549288c"
+    },
+    {
+      "bytes": 9188,
+      "path": "lineage/source/src/non_destructive_image/four_method_jones_imaging.py",
+      "sha256": "f8c4279fead70bc2d16c9580ba7ce3dc70bec86bf6cdc7d8416b80d2e1b0d3fe"
+    },
+    {
+      "bytes": 1015,
+      "path": "lineage/source/src/non_destructive_image/fourier.py",
+      "sha256": "5ee3312adc45b6ff994642abe4722c959630c82506c60c9d1e06dff825f41536"
+    },
+    {
+      "bytes": 19488,
+      "path": "lineage/source/src/non_destructive_image/imaging.py",
+      "sha256": "99ab2eac0beaf466c7889d2c7c1ccaf339fbff2e3bcf45874a802360a0c5dde6"
+    },
+    {
+      "bytes": 5517,
+      "path": "lineage/source/src/non_destructive_image/light_atom.py",
+      "sha256": "5ffce738f6a8bfc11a47a8187ed2b53e357a1de74b01678782352cd60a94d034"
+    },
+    {
+      "bytes": 10415,
+      "path": "lineage/source/src/non_destructive_image/parallel_jones_imaging.py",
+      "sha256": "160cc98284852929160a4374d5ed18b4618b6cd5d7fa6209c2d983f0f1e9beac"
+    },
+    {
+      "bytes": 1187,
+      "path": "lineage/source/src/non_destructive_image/profiles.py",
+      "sha256": "e543d9036bf7bba6d7292ad69f59f882a3ebc259ca0c268d3f14d0562851fbb0"
+    },
+    {
+      "bytes": 15594,
+      "path": "lineage/source/src/non_destructive_image/target_dgi_dpfi_qualification.py",
+      "sha256": "35d6784b036b037283f4e071fe3342d73b6b85fb5a4970380231d082d8e98de8"
+    },
+    {
+      "bytes": 24318,
+      "path": "lineage/source/src/non_destructive_image/target_four_method_noiseless.py",
+      "sha256": "a9edbfd668a23d77fed615ec4c0086ee11ea87e048c14fe8cc4bf6a12200d64f"
+    },
+    {
+      "bytes": 7219,
+      "path": "lineage/source/src/non_destructive_image/target_three_state_profiles.py",
+      "sha256": "05f2939983997d1feb5b1f74ed68897b9d34bac733b12fe62f6427382c2b577e"
+    },
+    {
+      "bytes": 6619,
+      "path": "lineage/source/tests/test_chapter4_noise_weighted_snr.py",
+      "sha256": "94dc9ed0d373ad060a19e1f7ff0ebd33b734fb4a288af089365f9a006e8f2596"
+    },
+    {
+      "bytes": 9025,
+      "path": "lineage/source/tests/test_chapter4_static_retained_staging.py",
+      "sha256": "c10efb3d27930ab5af46734d4f702d5b89d8313cb12780efe8a2db77a831856f"
+    },
+    {
+      "bytes": 3382,
+      "path": "lineage/source/tests/test_four_method_camera_noise.py",
+      "sha256": "f1cec1452a1f5927a258f013d63a4e755a3f342119151d041d84bd6e4fa03773"
+    },
+    {
+      "bytes": 5299,
+      "path": "lineage/source/tests/test_four_method_jones_imaging.py",
+      "sha256": "fd01791304f42660bca57ce88a4249f9e826f3e74d255b505936cd481225bcc9"
+    },
+    {
+      "bytes": 7831,
+      "path": "lineage/source/tests/test_parallel_jones_imaging.py",
+      "sha256": "2f45a148bdbdcca8ad7e0ac9e12266d1ee71ad0cfbe070eafe7d5e49101c3aac"
+    },
+    {
+      "bytes": 9333,
+      "path": "lineage/source/tests/test_parallel_jones_response.py",
+      "sha256": "de6c25fee4f4a3921588abfd76c234e67c178c48195c229cd14feec06600e7ba"
+    },
+    {
+      "bytes": 2900,
+      "path": "lineage/source/tests/test_target_dgi_dpfi_qualification.py",
+      "sha256": "87a29e795108b4c25b677b01432ef770d444fa1a964faf921acfe550a1337ba5"
+    },
+    {
+      "bytes": 1718,
+      "path": "lineage/source/tests/test_target_four_method_noise.py",
+      "sha256": "ca5f71d8b04c5a3df5dcd353cfab1ceab82389be6218165ac49c4519f5d0a421"
+    },
+    {
+      "bytes": 3343,
+      "path": "lineage/source/tests/test_target_four_method_noiseless.py",
+      "sha256": "9816be2b14fc2c33f19016e24b5fc258512c73781a322944844d081c16bdd8c5"
+    },
+    {
+      "bytes": 7866,
+      "path": "lineage/source/tests/test_target_three_state_profiles.py",
+      "sha256": "c3c0c1c2808030064c8e3ca1cd6bdc4e68329a1d16a1e7f1a61bec89e7903e44"
+    },
+    {
+      "bytes": 30734,
+      "path": "presentation/figure_4_target_four_method_noiseless_common_scale.pdf",
+      "sha256": "7931af98f0202e8e1b07507bfabc16474a165a3bd9679c783ce1c3f53ba4bda1"
+    },
+    {
+      "bytes": 96366,
+      "path": "presentation/figure_4_target_four_method_noiseless_common_scale.png",
+      "sha256": "8b630140372e8feecc3f519f71d5e7ebf0a8843f5e1bf748a4f2233d9ff399d6"
+    },
+    {
+      "bytes": 41429,
+      "path": "presentation/figure_4_target_four_method_noisy_200us.pdf",
+      "sha256": "eae09b25b0d2d3b25c8b16216b5942ec6d9a8a7b1080586981cd2e6153aeb9f3"
+    },
+    {
+      "bytes": 129605,
+      "path": "presentation/figure_4_target_four_method_noisy_200us.png",
+      "sha256": "93437eefd3d002fc41db8ec9f57b22d21b8478e61cefc74094e9779e3c20734b"
+    },
+    {
+      "bytes": 27490,
+      "path": "presentation/figure_4_target_four_method_snr.pdf",
+      "sha256": "d381ffad8099e1f92c45e5ff6fcab7b232fc7db860865b63a61408e152e971fe"
+    },
+    {
+      "bytes": 220285,
+      "path": "presentation/figure_4_target_four_method_snr.png",
+      "sha256": "c765091e89658d11f99159e8d1f763c355db7248865df827c41d87fc8e76eee5"
+    },
+    {
+      "bytes": 11883,
+      "path": "provenance.json",
+      "sha256": "43bb84dcc53b9d960f2d02998bfe196ca6490fd93daefd9720660a0ac93fde17"
+    },
+    {
+      "bytes": 4322,
+      "path": "summary.json",
+      "sha256": "b2ae97f385df16f4e45cac509c0a470df0fb3ffb72f91fa35dbf5523bc826ac3"
+    }
+  ],
+  "claim_boundary": {
+    "does_not_support": [
+      "universal method superiority or installed-apparatus performance",
+      "feature precision, spacing recovery, state classification or experimental probability",
+      "a globally single-valued ID density inversion",
+      "calibrated extinction, port-gain balance, registration or differential-transfer performance",
+      "an optimum pulse duration, detector threshold or experimental validation",
+      "Oxford, multiframe, Chapter-5, binary-mixture or dynamical claims"
+    ],
+    "supports": [
+      "common-I0 noiseless fractional camera response for PCI, DGI, DFFI and DPFI under the declared final Trap-III geometry",
+      "one fixed draw-0 200-us noisy camera acquisition for each of the four methods and three target states under the declared ideal detector model",
+      "whole-image template SNR over the 25-300-us duration grid",
+      "configuration-specific continuation with DPFI first and DGI second by whole-image SNR for each state at 200 us",
+      "forward ID response with explicit stronger-branch phase wrapping"
+    ]
+  },
+  "consumable": true,
+  "family": "chapter_4_three_state_four_method_static_v3",
+  "schema_version": 1,
+  "self_hash_policy": "manifest_excluded",
+  "status": "admitted_immutable",
+  "total_bytes": 24474517
+}

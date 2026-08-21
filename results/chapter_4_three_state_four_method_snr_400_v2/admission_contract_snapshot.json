@@ -1,0 +1,41 @@
+{
+  "admitted": true,
+  "claim_boundary": {
+    "does_not_support": [
+      "feature precision, state-classification performance or a universal method ranking",
+      "experimental camera performance or an installed-apparatus operating point",
+      "an optimum pulse duration or globally single-valued density inversion"
+    ],
+    "supports": [
+      "whole-image template SNR for PCI, DGI, DFFI and DPFI over 25-400 us for the declared static BEC, SSP and ID targets",
+      "exact replay of the 25-300 us predecessor rows and deterministic extension to 400 us without new random draws",
+      "the declared full-well margin over this simulated duration grid"
+    ]
+  },
+  "consumable": true,
+  "family": "chapter_4_three_state_four_method_snr_400_v2",
+  "mode": "authenticated byte-preserving successor admission",
+  "recomputation": {
+    "new_fits": 0,
+    "new_optical_propagations": 0,
+    "new_random_draws": 0,
+    "new_thermodynamic_solves": 0
+  },
+  "schema_version": 1,
+  "sources": [
+    {
+      "directory": ".scratch/target_three_state_four_method_snr_400_v1",
+      "manifest_sha256": "148a4e3fef138d1872af176334a5335e933352e4dcd24288a0dc5fd7c84e9c6b",
+      "name": "snr_400_candidate",
+      "selected_files": [
+        "config_snapshot.json",
+        "data/four_method_snr_25_400us.csv",
+        "figures/figure_4_target_four_method_snr.pdf",
+        "figures/figure_4_target_four_method_snr.png",
+        "provenance.json",
+        "summary.json"
+      ]
+    }
+  ],
+  "status": "admitted_immutable"
+}

@@ -1,0 +1,73 @@
+{
+  "admitted": false,
+  "claim_boundary": {
+    "does_not_support": [
+      "noise_or_SNR_ranking",
+      "installed_camera_calibration",
+      "experimental_state_classification_probability",
+      "historical_Oxford_perpendicular_geometry_comparison",
+      "single_valued_density_recovery_from_a_phase_wrapped_readout",
+      "any_superseded_profile_family_as_a_primary_object"
+    ],
+    "supports": [
+      "noiseless_fractional_camera_response_under_one_target_geometry_and_one_incident_I0_denominator",
+      "visibility_of_the_three_control_morphologies_after_the_declared_testbed_transfer",
+      "exact_unanalysed_DGI_collection_of_common_and_Faraday_intensities",
+      "explicit_inventory_of_circular_branch_phase_wrapping_for_the_final_Trap_III_profiles"
+    ]
+  },
+  "common_I0_zero_centred_display_limit": 2.011999399447263,
+  "dgi_negative_pixel_count": 1251,
+  "dpfi_difference_negative_pixel_count": 2685,
+  "label": "target_three_state_four_method_noiseless_v4",
+  "maximum_absolute_circular_branch_phase_rad": 3.7073737479043483,
+  "methods": [
+    "pci",
+    "dgi",
+    "dffi",
+    "dpfi"
+  ],
+  "phase_diagnostics_by_state_and_branch": {
+    "connected_modulated": {
+      "sigma_minus": {
+        "maximum_absolute_phase_rad": 2.241647575585717,
+        "wrapped_pixel_count": 0
+      },
+      "sigma_plus": {
+        "maximum_absolute_phase_rad": 0.024633489841601287,
+        "wrapped_pixel_count": 0
+      }
+    },
+    "separated_droplets": {
+      "sigma_minus": {
+        "maximum_absolute_phase_rad": 3.7073737479043483,
+        "wrapped_pixel_count": 137
+      },
+      "sigma_plus": {
+        "maximum_absolute_phase_rad": 0.040740370856091744,
+        "wrapped_pixel_count": 0
+      }
+    },
+    "smooth_bec": {
+      "sigma_minus": {
+        "maximum_absolute_phase_rad": 0.7069264469771568,
+        "wrapped_pixel_count": 0
+      },
+      "sigma_plus": {
+        "maximum_absolute_phase_rad": 0.007768422494254471,
+        "wrapped_pixel_count": 0
+      }
+    }
+  },
+  "phase_wrapping_present": true,
+  "random_draws": 0,
+  "reference_pulse_duration_us": 200,
+  "schema_version": 1,
+  "states": [
+    "smooth_bec",
+    "connected_modulated",
+    "separated_droplets"
+  ],
+  "status": "diagnostic_not_retained",
+  "wrapped_circular_branch_pixel_count": 137
+}

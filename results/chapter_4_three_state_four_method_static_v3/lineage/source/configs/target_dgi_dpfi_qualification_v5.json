@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "label": "target_dgi_dpfi_qualification_v5",
+  "purpose": "Select the two downstream Trap-III readouts from the validated four-method noisy comparison without introducing feature extraction, using physically bounded readout terminology.",
+  "sources": {
+    "parents": [
+      {"name": "noise_manifest", "path": ".scratch/target_three_state_four_method_noise_v5/artifact_manifest.json", "sha256": "c6190cc31af3c46bca1270fc4999924db9fc6290f4c1617432258c549832f98e"},
+      {"name": "noise_arrays", "path": ".scratch/target_three_state_four_method_noise_v5/data/four_method_noise_arrays.npz", "sha256": "04f969962be2ade2fd43b80b2a0534169eef4ce1739a2b8fdc3e28472628df20"},
+      {"name": "noise_snr_csv", "path": ".scratch/target_three_state_four_method_noise_v5/data/four_method_snr.csv", "sha256": "8ae12590e954d14577a853f809eb6ad9555d6c15a9b82289b4a52a9ef774b460"},
+      {"name": "noise_seed_ledger", "path": ".scratch/target_three_state_four_method_noise_v5/data/seed_ledger.csv", "sha256": "7209071bb016d0e9c86238ea5d40b02cd7b283056e03d48bc814376dc0ff2763"},
+      {"name": "noise_summary", "path": ".scratch/target_three_state_four_method_noise_v5/summary.json", "sha256": "b0daa88a5e53c15a8c677860d17b2d2046fb19dd3164970449d891b117f94e4f"},
+      {"name": "noiseless_manifest", "path": ".scratch/target_three_state_four_method_noiseless_v4/artifact_manifest.json", "sha256": "4f5b8f7fcbea44435470ede1229c9322fd1c1d0c8d86655905c76700ae2446d9"},
+      {"name": "noiseless_summary", "path": ".scratch/target_three_state_four_method_noiseless_v4/summary.json", "sha256": "64ab11dcbbf7b2e4e12acd33742f200d10b9c4f1e5e010ef7337e8e8de05a843"}
+    ],
+    "generation": [
+      {"path": "src/non_destructive_image/target_dgi_dpfi_qualification.py", "sha256": "35d6784b036b037283f4e071fe3342d73b6b85fb5a4970380231d082d8e98de8"},
+      {"path": "scripts/run_target_dgi_dpfi_qualification.py", "sha256": "b9890328fed76bd5e0143f91f2c4198d8bc76ea130b8fda5641a1d4adf5a53fa"},
+      {"path": "tests/test_target_dgi_dpfi_qualification.py", "sha256": "87a29e795108b4c25b677b01432ef770d444fa1a964faf921acfe550a1337ba5"}
+    ]
+  },
+  "selection_contract": {
+    "candidate_methods": ["pci", "dgi", "dffi", "dpfi"],
+    "selected_methods": ["dpfi", "dgi"],
+    "evidence_rule": "DPFI_first_and_DGI_second_by_whole_image_SNR_for_each_state_at_200_us",
+    "dpfi_role": "signed_port_difference_with_leading_order_linear_response",
+    "dgi_role": "dark_background_quadratic_comparator",
+    "pci_and_dffi_policy": "freeze_after_the_four_method_chapter_4_comparison",
+    "scope": "this_Trap_III_geometry_ideal_readout_and_declared_detector_model_only",
+    "not_a_universal_method_ranking": true
+  },
+  "dgi_acquisition": {
+    "stop_optical_depth": 4.0,
+    "residual_reference_field_amplitude": 0.01,
+    "open_to_stop_gain": 1.0,
+    "stop_leakage": "uniform_and_exactly_calibrated_in_the_primary_numerical_case",
+    "stop_position_error": "not_modelled",
+    "raw_roles": ["atom_stop", "leakage_stop", "stop_dark", "open_reference", "open_dark"],
+    "processed_quantity": "((atom_stop-stop_dark)-(leakage_stop-stop_dark))/(open_reference-open_dark)",
+    "signed_residual_policy": "retain_without_clipping"
+  },
+  "dpfi_acquisition": {
+    "port_convention": "H_plus_V_minus",
+    "h_gain": 1.0,
+    "v_gain": 1.0,
+    "cross_port_leakage_fraction": 0.0,
+    "registration": "exact",
+    "shared_psf": true,
+    "raw_roles": ["atom_h", "atom_v", "blank_h", "blank_v", "dark_h", "dark_v"],
+    "processed_quantity": "((atom_h-dark_h)-(atom_v-dark_v))/((blank_h-dark_h)+(blank_v-dark_v))",
+    "calibration_boundary": "finite_extinction_gain_imbalance_differential_transfer_and_registration_error_require_apparatus_calibration_and_are_not_in_the_primary_ideal_case"
+  },
+  "detector": {
+    "pulse_duration_us": 200,
+    "read_noise_electrons_rms": 0.7,
+    "dark_mean_electrons": 0.0,
+    "full_well_electrons": 15000.0,
+    "full_well_gate": "maximum_expected_plus_6sigma_below_full_well",
+    "clipping": false
+  },
+  "claim_boundary": {
+    "supports": [
+      "configuration_specific_DPFI_DGI_selection",
+      "DPFI_as_the_strongest_signed_port_difference_readout_with_leading_order_linear_response_in_the_declared_whole_image_SNR_comparison",
+      "DGI_as_the_second_ranked_dark_background_quadratic_comparator",
+      "complete_selected_raw_role_and_processing_contracts",
+      "explicit_ideal_calibration_assumptions_and_full_well_margin"
+    ],
+    "does_not_support": [
+      "universal_DPFI_or_DGI_superiority",
+      "feature_precision_or_state_classification",
+      "globally_single_valued_ID_density_inversion",
+      "installed_port_gain_extinction_registration_or_differential_transfer_performance",
+      "real_apparatus_prediction_without_calibration"
+    ]
+  },
+  "lifecycle": {
+    "status": "diagnostic_not_retained",
+    "admitted": false,
+    "output_directory": ".scratch/target_dgi_dpfi_qualification_v5",
+    "random_draws": 0,
+    "overwrite": false,
+    "results_writes": 0
+  }
+}

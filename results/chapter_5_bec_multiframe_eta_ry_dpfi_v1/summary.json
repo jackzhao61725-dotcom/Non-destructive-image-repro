@@ -1,0 +1,44 @@
+{
+  "admitted": true,
+  "claim_boundary": {
+    "does_not_support": [
+      "coverage or an experimental detection probability",
+      "a maximum usable frame or measured condensate depletion",
+      "installed-apparatus precision or validation",
+      "an optimum pulse duration",
+      "a DGI multi-frame recovery result"
+    ],
+    "supports": [
+      "conditional same-model DPFI recovery of eta and rho_y for the eight admitted pulse durations and q=1,...,15",
+      "paired within-sequence q-given-1 changes with complete supported-pair counts",
+      "a presentation of the known equilibrium inputs with recovered medians and conditional 16--84 percentile ranges at 25, 200 and 400 us"
+    ]
+  },
+  "durations_us": [
+    25,
+    100,
+    150,
+    200,
+    250,
+    300,
+    350,
+    400
+  ],
+  "eta_supported_count": 7680,
+  "family": "chapter_5_bec_multiframe_eta_ry_dpfi_v1",
+  "images_per_sequence": 15,
+  "method": "DPFI",
+  "new_endpoint_fits": 0,
+  "new_optical_propagations": 0,
+  "new_random_draws": 0,
+  "presentation_durations_us": [
+    25,
+    200,
+    400
+  ],
+  "presentation_row_count": 90,
+  "rho_y_supported_count": 7680,
+  "schema_version": 1,
+  "sequences_per_duration": 64,
+  "status": "admitted_immutable"
+}
